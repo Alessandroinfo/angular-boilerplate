@@ -1,6 +1,6 @@
 {
   "name": "angular-tailwind",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "start": "ngtw build && ng serve -o --port 3001 && ngtw watch",
     "build": "ngtw build --purge && ng build -c production",
