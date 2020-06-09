@@ -1,7 +1,7 @@
 {
-  "name": "angular-tailwind",
-  "short_name": "angular-tailwind",
-  "description": "AngularTailwind",
+  "name": "angular-boilerplate",
+  "short_name": "angular-boilerplate",
+  "description": "AngularBoilerplate",
   "orientation": "any",
   "theme_color": "#1aa3ff",
   "background_color": "#1aa3ff",

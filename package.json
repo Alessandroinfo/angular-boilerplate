@@ -1,5 +1,5 @@
 {
-  "name": "angular-tailwind",
+  "name": "angular-boilerplate",
   "version": "0.0.1",
   "scripts": {
     "start": "ngtw build && ng serve -o --port 3001 && ngtw watch",

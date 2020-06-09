@@ -3,7 +3,7 @@ set -e
 branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
 # Add here DevOps conf, if you don't want to be pushed on a certain branch
-if [ "$branch" != "master_" ] && [ "$branch" != "quality_" ]; then
+if [ "$branch" != "notpushhere" ] && [ "$branch" != "andnotpushhere" ]; then
   echo "You are pushing in: $branch"
   echo "You can push!"
   npm version patch
