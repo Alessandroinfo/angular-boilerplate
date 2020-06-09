@@ -2,12 +2,16 @@
   "name": "angular-tailwind",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ngtw build && ng serve -o --port 3001 && ngtw watch",
+    "build": "ngtw build --purge && ng build -c production",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build-tailwind": "ngtw build",
+    "pwa-assets-generator": "pwa-asset-generator src/assets/imgs/logo.svg src/assets/icons -t png -f true -i src/index.html -m src/manifest.webmanifest --path-override assets/icons --opaque false -p 0 && npm run format-index",
+    "firebase-init": "firebase init",
+    "firebase-deploy": "firebase deploy",
+    "deploy-open-app": "npm run pwa-assets-generator && npm run build && npm run firebase-deploy && start https://test-e0560.firebaseapp.com/ && npm run build-tailwind",
+    "format-index": "prettier src/index.html --write"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +23,7 @@
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
+    "@angular/service-worker": "~9.1.9",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -27,10 +32,11 @@
     "@angular-devkit/build-angular": "~0.901.7",
     "@angular/cli": "~9.1.7",
     "@angular/compiler-cli": "~9.1.9",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.12.45",
     "codelyzer": "^5.1.2",
+    "husky": "^4.2.5",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~5.0.0",
@@ -38,7 +44,10 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "prettier": "^2.0.5",
     "protractor": "~7.0.0",
+    "tailwindcss": "^1.4.6",
+    "tailwindcss-children": "^2.1.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
