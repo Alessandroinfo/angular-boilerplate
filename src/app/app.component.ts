@@ -4,7 +4,7 @@ import {environment} from '../environments/environment';
 @Component({
   selector: 'app-root',
   template: `
-    <div class="bold select-none grid transition-all font-thin text-xs transform flex ">{{appVersion}}.0.1</div>
+    <div class="px-2 bg-gray-200 absolute bottom-0 right-0 bold font-thin text-xs">{{appVersion}}</div>
   `,
   styleUrls: ['./app.component.scss']
 })

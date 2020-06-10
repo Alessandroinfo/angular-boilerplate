@@ -11,7 +11,9 @@
     "firebase-init": "firebase init",
     "firebase-deploy": "firebase deploy",
     "deploy-open-app": "npm run pwa-assets-generator && npm run build && npm run firebase-deploy && start https://test-e0560.firebaseapp.com/ && npm run build-tailwind",
-    "format-index": "prettier src/index.html --write"
+    "format-index": "prettier src/index.html --write",
+    "npm-check-update": "ncu",
+    "npm-check-unused-pckg": "depcheck"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +39,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.12.45",
     "codelyzer": "^5.1.2",
+    "depcheck": "^0.9.2",
     "husky": "^4.2.5",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -45,12 +48,13 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "npm-check-updates": "^7.0.1",
     "prettier": "^2.0.5",
     "protractor": "~7.0.0",
     "tailwindcss": "^1.4.6",
     "tailwindcss-children": "^2.1.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.8.3"
+    "typescript": "^3.8.3"
   }
 }
