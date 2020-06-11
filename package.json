@@ -7,11 +7,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "build-tailwind": "ngtw build",
-    "pwa-assets-generator": "pwa-asset-generator src/assets/imgs/logo.svg src/assets/icons -t png -f true -i src/index.html -m src/manifest.webmanifest --path-override assets/icons --opaque false -p 0 && npm run format-index",
+    "pwa-assets-generator": "pwa-asset-generator src/assets/imgs/logo.svg src/assets/icons -t png -f true -i src/index.html -m src/manifest.webmanifest --path-override assets/icons --opaque false -p 0",
     "firebase-init": "firebase init",
     "firebase-deploy": "firebase deploy",
-    "deploy-open-app": "npm run pwa-assets-generator && npm run build && npm run firebase-deploy && start https://test-e0560.firebaseapp.com/ && npm run build-tailwind",
-    "format-index": "prettier src/index.html --write",
+    "deploy-open-app": "npm run pwa-assets-generator && npm run build && npm run format-code && npm run firebase-deploy && start https://test-e0560.firebaseapp.com/ && npm run build-tailwind",
+    "format-code": "prettier --write ./{src,e2e}/**/*.{ts,js,html,scss} --ignore-path .prettierignore",
     "npm-check-update": "ncu",
     "npm-check-unused-pckg": "depcheck"
   },
@@ -56,5 +56,17 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "^3.8.3"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "overrides": [
+      {
+        "files": "*.scss",
+        "options": {
+          "singleQuote": false
+        }
+      }
+    ]
   }
 }

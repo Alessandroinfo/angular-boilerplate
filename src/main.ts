@@ -37,5 +37,5 @@ if (environment.hmr) {
     console.log('Are you using the --hmr flag for ng serve?');
   }
 } else {
-  bootstrap().catch(err => console.error(err));
+  bootstrap().catch((err) => console.error(err));
 }
