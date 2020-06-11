@@ -4,6 +4,7 @@
   "scripts": {
     "start": "ngtw build && ng serve -c test --hmr -o --port 3001 && ngtw watch",
     "start:app-shell": "ng run angular-boilerplate:app-shell",
+    "start:app-shell:prod": "ng run angular-boilerplate:app-shell:production",
     "build": "ngtw build --purge && ng build -c production",
     "test": "ng test",
     "lint": "ng lint",

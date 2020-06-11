@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-app-shell',
   template: `
     <p>
-      app-shell works!
+      app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works! app-shell works!
     </p>
   `,
   styleUrls: ['./app-shell.component.scss']

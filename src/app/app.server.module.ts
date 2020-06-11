@@ -3,7 +3,7 @@ import { ServerModule } from '@angular/platform-server';
 
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
-import { Routes, RouterModule } from '@angular/router';
+import {Routes, RouterModule, Router} from '@angular/router';
 import { AppShellComponent } from './app-shell/app-shell.component';
 
 const routes: Routes = [ { path: 'shell', component: AppShellComponent }];
@@ -17,4 +17,9 @@ const routes: Routes = [ { path: 'shell', component: AppShellComponent }];
   bootstrap: [AppComponent],
   declarations: [AppShellComponent],
 })
-export class AppServerModule {}
+export class AppServerModule {
+  // The important part to avoid route ** bug and not shoe shell compo:
+  constructor(private router: Router) {
+    this.router.resetConfig(routes);
+  }
+}
