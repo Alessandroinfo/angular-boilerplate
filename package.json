@@ -3,6 +3,7 @@
   "version": "0.0.6",
   "scripts": {
     "start": "ngtw build && ng serve -c test --hmr -o --port 3001 && ngtw watch",
+    "start:app-shell": "ng run angular-boilerplate:app-shell",
     "build": "ngtw build --purge && ng build -c production",
     "test": "ng test",
     "lint": "ng lint",
@@ -24,6 +25,7 @@
     "@angular/forms": "~9.1.9",
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
+    "@angular/platform-server": "~9.1.9",
     "@angular/router": "~9.1.9",
     "@angular/service-worker": "~9.1.9",
     "rxjs": "~6.5.4",
