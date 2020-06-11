@@ -1,6 +1,6 @@
 {
   "name": "angular-boilerplate",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "scripts": {
     "start": "ngtw build && ng serve -c test --hmr -o --port 3001 && ngtw watch",
     "start:app-shell": "ng run angular-boilerplate:app-shell",
