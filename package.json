@@ -1,6 +1,6 @@
 {
   "name": "angular-boilerplate",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "start": "ngtw build && ng serve -c test --hmr -o --port 3001 && ngtw watch",
     "build": "ngtw build --purge && ng build -c production",
