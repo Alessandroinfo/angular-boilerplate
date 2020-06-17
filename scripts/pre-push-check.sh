@@ -1,4 +1,6 @@
 #!/bin/bash
+# Edit notpushere to block push on some branch
+# This also patch your project so update the version number
 set -e
 branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 

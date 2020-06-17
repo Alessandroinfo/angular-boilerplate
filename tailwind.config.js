@@ -9,6 +9,10 @@ module.exports = {
       spacing: {
         '96': '24rem',
         '128': '32rem',
+      },
+      transitionDelay: {
+        '0': '0ms',
+        '2000': '2000ms',
       }
     }
   },
