@@ -1,6 +1,6 @@
 export const environment = {
-  env: 'prod',
-  production: true,
+  env: 'demo',
+  production: false,
   hmr: false,
   appVersion: require('../../package.json').version,
 };

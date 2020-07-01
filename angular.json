@@ -53,7 +53,6 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
               "src/assets",
               "src/robots.txt",
               "src/manifest.webmanifest"
@@ -105,6 +104,16 @@
               "optimization": false,
               "sourceMap": true,
               "buildOptimizer": false
+            },
+            "demo": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.demo.ts"
+                }
+              ],
+              "optimization": false,
+              "sourceMap": true
             }
           }
         },
@@ -119,6 +128,9 @@
             },
             "test": {
               "browserTarget": "angular-boilerplate:build:test"
+            },
+            "demo": {
+              "browserTarget": "angular-boilerplate:build:demo"
             }
           }
         },
@@ -189,6 +201,16 @@
               ],
               "sourceMap": false,
               "optimization": true
+            },
+            "demo": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.demo.ts"
+                }
+              ],
+              "optimization": false,
+              "sourceMap": true
             }
           }
         },
@@ -203,10 +225,15 @@
             "production": {
               "browserTarget": "angular-boilerplate:build:production",
               "serverTarget": "angular-boilerplate:server:production"
+            },
+            "demo": {
+              "browserTarget": "angular-boilerplate:build:demo",
+              "serverTarget": "angular-boilerplate:server:demo"
             }
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "angular-boilerplate"
 }

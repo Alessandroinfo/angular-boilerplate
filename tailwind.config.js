@@ -3,8 +3,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#5c6ac4',
-        secondary: '#ecc94b',
+        primary: '#2EC4B6',
+        secondary: '#ECC94B',
       },
       spacing: {
         '96': '24rem',
