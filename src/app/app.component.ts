@@ -9,14 +9,22 @@ import {ApiService} from './core/services/api.service';
 @Component({
   selector: 'app-root',
   template: `
+    <button mat-raised-button color="primary"
+            matBadge="8"
+            matBadgePosition="before"
+            matBadgeColor="accent"
+            (click)="aapi()">
+      Action
+    </button>
+    <div class="break-words">{{text}}</div>
     <app-loader class="fixed top-0 right-0 left-0" [state]="loadingState"></app-loader>
     <app-version></app-version>
-    <button (click)="aapi()">press</button>
     <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, OnDestroy {
+  text = new Array(5545).fill('ciao');
   // FLAG FOR COMPLETE, UNSUBSCRIBE OBSERVABLES
   alive = true;
 

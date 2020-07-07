@@ -3344,7 +3344,6 @@
   ".whitespace-pre-line",
   ".whitespace-pre-wrap",
   ".break-normal",
-  ".break-words",
   ".break-all",
   ".truncate",
   ".children\\:w-0 > *",
