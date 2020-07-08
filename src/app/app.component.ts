@@ -9,14 +9,15 @@ import {ApiService} from './core/services/api.service';
 @Component({
   selector: 'app-root',
   template: `
-    <button mat-raised-button color="primary"
-            matBadge="8"
-            matBadgePosition="before"
-            matBadgeColor="accent"
-            (click)="aapi()">
-      Action
-    </button>
-    <div class="break-words">{{text}}</div>
+    <div class="w-1/2 m-auto relative box-content">
+      <button mat-raised-button
+              color="primary"
+              (click)="callApi()">
+        Action
+      </button>
+      <div class="break-words">{{text}}</div>
+    </div>
+
     <app-loader class="fixed top-0 right-0 left-0" [state]="loadingState"></app-loader>
     <app-version></app-version>
     <router-outlet></router-outlet>
@@ -53,9 +54,9 @@ export class AppComponent implements OnInit, OnDestroy {
     ).subscribe();
   }
 
-  aapi() {
-    this.api.api().pipe(tap(val => {
-      console.log(val);
+  callApi() {
+    this.api.getInfo().pipe(tap((val: any) => {
+      this.text = val.body;
     })).subscribe();
   }
 

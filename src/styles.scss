@@ -86,10 +86,6 @@ button:-moz-focusring,
   display: none;
 }
 
-p {
-  margin: 0;
-}
-
 button {
   background-color: transparent;
   background-image: none;
@@ -135,6 +131,7 @@ code {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+svg,
 object {
   display: block;
   vertical-align: middle;
@@ -158,6 +155,10 @@ object {
 
 .border {
   border-width: 1px;
+}
+
+.box-content {
+  box-sizing: content-box;
 }
 
 .flex {
@@ -201,6 +202,10 @@ object {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
 .top-0 {
   top: 0;
 }
@@ -219,4 +224,19 @@ object {
 
 .break-words {
   overflow-wrap: break-word;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.transform {
+  --transform-translate-x: 0;
+  --transform-translate-y: 0;
+  --transform-rotate: 0;
+  --transform-skew-x: 0;
+  --transform-skew-y: 0;
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
 }

@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {GlobalDataService} from './global-data.service';
+import {delay} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,9 @@ export class ApiService {
   ) {
   }
 
-  api() {
-    return this.http.get('http://slowwly.robertomurray.co.uk/delay/70000/url/http://www.google.co.uk', this.loaderOptions.top);
+  getInfo() {
+    return this.http.get(
+      'http://slowwly.robertomurray.co.uk/delay/10000/url/http://www.google.co.uk',
+      {...this.loaderOptions.top, observe: 'response'});
   }
 }
