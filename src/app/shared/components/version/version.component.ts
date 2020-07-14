@@ -5,7 +5,7 @@ import {environment} from '../../../../environments/environment';
   selector: 'app-version',
   template: `
     <div
-      class="px-2 bg-gray-200 absolute right-0 bold font-thin text-xs"
+      class="px-2 bg-gray-200 absolute right-0 bottom-0 bold font-thin text-xs"
     >
       {{ appVersion }}
     </div>

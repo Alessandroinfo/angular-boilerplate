@@ -5,19 +5,13 @@ import {GenericFacilityService} from './core/services/generic-facility.service';
 import {GlobalDataService} from './core/services/global-data.service';
 import {environment} from '../environments/environment';
 import {ApiService} from './core/services/api.service';
+import {NavigationEnd, NavigationStart, Router, RouterEvent} from '@angular/router';
 
 @Component({
   selector: 'app-root',
   template: `
-    <div class="w-1/2 m-auto relative box-content">
-      <button mat-raised-button
-              color="primary"
-              (click)="callApi()">
-        Action
-      </button>
-      <div class="break-words">{{text}}</div>
-    </div>
-
+    <a class="nav-link" routerLink="/module">Home</a>
+    <button class="content-center" (click)="callApi()">Click</button>
     <app-loader class="fixed top-0 right-0 left-0" [state]="loadingState"></app-loader>
     <app-version></app-version>
     <router-outlet></router-outlet>
@@ -25,7 +19,6 @@ import {ApiService} from './core/services/api.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, OnDestroy {
-  text = new Array(5545).fill('ciao');
   // FLAG FOR COMPLETE, UNSUBSCRIBE OBSERVABLES
   alive = true;
 
@@ -36,7 +29,8 @@ export class AppComponent implements OnInit, OnDestroy {
     @Inject(LOCALE_ID) protected localeId: string,
     private gcfSvc: GenericFacilityService,
     private gcdSvc: GlobalDataService,
-    public api: ApiService
+    public api: ApiService,
+    public router: Router
   ) {
     // TODO REMOVE THIS, ONLY TO KNOW WHAT LANGUAGE IS
     if (!environment.production) {
@@ -52,11 +46,23 @@ export class AppComponent implements OnInit, OnDestroy {
         this.loadingState = state;
       })
     ).subscribe();
+
+    // Check when navigation Start and End
+    // To show the loading based on the configuration
+    this.router.events.subscribe(
+      (event: RouterEvent): void => {
+        if (event instanceof NavigationStart) {
+          this.loadingState = {...this.loadingState, isLoading: true, topLoading: true};
+        } else if (event instanceof NavigationEnd) {
+          this.loadingState = {...this.loadingState, isLoading: false, topLoading: false};
+        }
+      }
+    );
   }
 
   callApi() {
     this.api.getInfo().pipe(tap((val: any) => {
-      this.text = val.body;
+      console.log();
     })).subscribe();
   }
 
