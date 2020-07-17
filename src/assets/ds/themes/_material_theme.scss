@@ -15,8 +15,8 @@ $custom-typography: mat-typography-config($font-family: $font-family);
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$primary: mat-palette($mat-light-blue);
-$secondary: mat-palette($mat-blue-gray, A400, A200, A600);
+$primary: mat-palette($primary-palette);
+$secondary: mat-palette($secondary-palette);
 
 // The warn palette is optional (defaults to red).
 $warn: mat-palette($mat-red);

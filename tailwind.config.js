@@ -1,10 +1,17 @@
+// Remember to edit
+// theme.extend.colors.primary
+// theme.extend.colors.secondary
+// with same primary and secondary angular material
+// theme colors in assets/ds/abstract/_palettes.scss
+// Choice they wisely on https://material.io/resources/color
+
 module.exports = {
   purge: [],
   theme: {
     extend: {
       colors: {
         primary: '#2EC4B6',
-        secondary: '#ECC94B',
+        secondary: '#2E88C4',
       },
       spacing: {
         '96': '24rem',

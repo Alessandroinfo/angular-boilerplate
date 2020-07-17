@@ -4,13 +4,15 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
 
 const MODULES = [
   MatProgressBarModule,
   MatProgressSpinnerModule,
   MatButtonModule,
   MatBadgeModule,
-  MatIconModule
+  MatIconModule,
+  MatDividerModule
 ];
 
 const PROVIDERS = [];
