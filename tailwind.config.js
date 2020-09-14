@@ -23,6 +23,9 @@ module.exports = {
       }
     }
   },
+  corePlugins: {
+    preflight: true,
+  },
   variants: {
     zIndex: ['children', 'default', 'responsive'],
     padding: ['children', 'default', 'responsive'],
