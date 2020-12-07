@@ -15,28 +15,22 @@
         },
         "@schematics/angular:class": {
           "skipTests": true,
-          "skipTests": true
         },
         "@schematics/angular:directive": {
-          "skipTests": true,
           "skipTests": true,
           "inlineTemplate": true
         },
         "@schematics/angular:guard": {
           "skipTests": true,
-          "skipTests": true
         },
         "@schematics/angular:module": {
           "skipTests": true,
-          "skipTests": true
         },
         "@schematics/angular:pipe": {
           "skipTests": true,
-          "skipTests": true
         },
         "@schematics/angular:service": {
           "skipTests": true,
-          "skipTests": true
         }
       },
       "root": "",
