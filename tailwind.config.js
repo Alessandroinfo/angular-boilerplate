@@ -5,26 +5,37 @@
 // theme colors in assets/ds/abstract/_palettes.scss
 // Choice they wisely on https://material.io/resources/color
 
-module.exports = {
-  purge: [],
+module.exports = (isProd) => ({
+  prefix: '',
+  purge: {
+    enabled: isProd,
+    content: [
+      '**/*.html',
+      '**/*.ts'
+    ],
+    keyframes: true,
+    fontFace: true,
+    rejected: true,
+  },
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
         primary: '#2EC4B6',
-        secondary: '#2E88C4',
+        secondary: '#2E88C4'
       },
       spacing: {
         '96': '24rem',
-        '128': '32rem',
+        '128': '32rem'
       },
       transitionDelay: {
         '0': '0ms',
-        '2000': '2000ms',
+        '2000': '2000ms'
       }
     }
   },
   corePlugins: {
-    preflight: true,
+    preflight: true
   },
   variants: {
     zIndex: ['children', 'default', 'responsive'],
@@ -37,10 +48,11 @@ module.exports = {
     backgroundColor: ['children', 'default', 'children-hover', 'hover', 'focus', 'responsive'],
     display: ['children', 'default', 'responsive'],
     justifyContent: ['children', 'default', 'responsive'],
-    alignItems: ['children', 'default', 'responsive'],
+    alignItems: ['children', 'default', 'responsive']
   },
   plugins: [
     // https://github.com/benface/tailwindcss-children
-    require('tailwindcss-children'),
-  ],
-}
+    require('tailwindcss-children')
+  ]
+
+});
