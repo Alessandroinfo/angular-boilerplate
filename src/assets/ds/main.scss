@@ -16,25 +16,25 @@
  * Not every directory is necessary for every projects
  *
 **/
-@import "abstract/variables";
-@import "abstract/palettes";
-@import "abstract/mixins";
-@import "abstract/functions";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\abstract\_variables.scss";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\abstract\_palettes.scss";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\abstract\_mixins.scss";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\abstract\_functions.scss";
 
-@import "base/reset";
-@import "base/typography";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\base\_reset.scss";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\base\_typography.scss";
 
-@import "components/buttons";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\components\_buttons.scss";
 
-@import "layout/grid";
-@import "layout/header";
-@import "layout/footer";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\layout\_grid.scss";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\layout\_header.scss";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\layout\_footer.scss";
 
-@import "pages/home";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\pages\_home.scss";
 
-@import "themes/theme";
-@import "themes/material_theme";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\themes\_theme.scss";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\themes\_material_theme.scss";
 
-@import "vendors/material";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\vendors\_material.scss";
 
-@import "shame";
+@import "C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\ds\_shame.scss";

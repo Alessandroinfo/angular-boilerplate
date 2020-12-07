@@ -54,7 +54,7 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/assets/ds/abstract"
+                "src/assets/ds/"
               ]
             },
             "styles": [
