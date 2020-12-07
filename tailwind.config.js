@@ -35,7 +35,7 @@ module.exports = (isProd) => ({
     }
   },
   corePlugins: {
-    preflight: true
+    preflight: false
   },
   /*variants: {
     zIndex: ['children', 'default', 'responsive'],
