@@ -9,5 +9,4 @@ import {MaterialModule} from './modules/material.module';
   imports: [CommonModule, MaterialModule],
   exports: [CommonModule, MaterialModule, VersionComponent, LoaderComponent],
 })
-export class SharedModule {
-}
+export class SharedModule {}

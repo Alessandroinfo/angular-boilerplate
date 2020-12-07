@@ -6,18 +6,15 @@ import {ApiService} from './services/api.service';
 import {CommonModule} from '@angular/common';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    HttpClientModule,
-  ],
+  imports: [CommonModule, HttpClientModule],
   providers: [
     ApiService,
     GenericFacilityService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: LoaderInterceptorService,
-      multi: true // PERMIT TO USE MULTI INTERCEPTOR FOR HTTP INTERCEPTORS
-    }
+      multi: true, // PERMIT TO USE MULTI INTERCEPTOR FOR HTTP INTERCEPTORS
+    },
   ],
 })
 export class CoreModule {

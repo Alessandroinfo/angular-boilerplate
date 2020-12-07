@@ -37,7 +37,7 @@ module.exports = (isProd) => ({
   corePlugins: {
     preflight: true
   },
-  variants: {
+  /*variants: {
     zIndex: ['children', 'default', 'responsive'],
     padding: ['children', 'default', 'responsive'],
     margin: ['children', 'default', 'responsive'],
@@ -49,7 +49,7 @@ module.exports = (isProd) => ({
     display: ['children', 'default', 'responsive'],
     justifyContent: ['children', 'default', 'responsive'],
     alignItems: ['children', 'default', 'responsive']
-  },
+  },*/
   plugins: [
     // https://github.com/benface/tailwindcss-children
     require('tailwindcss-children')

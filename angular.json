@@ -14,23 +14,23 @@
           "inlineTemplate": true
         },
         "@schematics/angular:class": {
-          "skipTests": true,
+          "skipTests": true
         },
         "@schematics/angular:directive": {
           "skipTests": true,
           "inlineTemplate": true
         },
         "@schematics/angular:guard": {
-          "skipTests": true,
+          "skipTests": true
         },
         "@schematics/angular:module": {
-          "skipTests": true,
+          "skipTests": true
         },
         "@schematics/angular:pipe": {
-          "skipTests": true,
+          "skipTests": true
         },
         "@schematics/angular:service": {
-          "skipTests": true,
+          "skipTests": true
         }
       },
       "root": "",
@@ -52,6 +52,11 @@
               "src/manifest.webmanifest",
               "src/preloaded.js"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/ds/abstract"
+              ]
+            },
             "styles": [
               "src/styles.scss",
               "src/assets/ds/main.scss"
@@ -66,7 +71,7 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "with": "src/environments/environment.production.ts"
                 }
               ],
               "optimization": true,
@@ -198,7 +203,7 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "with": "src/environments/environment.production.ts"
                 }
               ],
               "sourceMap": false,

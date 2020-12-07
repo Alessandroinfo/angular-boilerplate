@@ -4,25 +4,32 @@ import {AngularError, LanguageItem, LoadingState} from '../../shared/models';
 import {GlobalDataService} from './global-data.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GenericFacilityService {
-
   // ------------------------------------------------------------ ATTRIBUTES ------------------------------------------------------------ //
 
   // SUBJECT FOR KNOW IF THERE IS AN ERROR ON THE APP
-  private errorAngular$: BehaviorSubject<AngularError> = new BehaviorSubject<AngularError>(null);
+  private errorAngular$: BehaviorSubject<AngularError> = new BehaviorSubject<AngularError>(
+    null
+  );
 
   // THIS OBS IS FOR LOADER STATUS
-  private loadingState$: BehaviorSubject<LoadingState> = new BehaviorSubject<LoadingState>(this.gldSvc.LoadingDefaultOffState);
+  private loadingState$: BehaviorSubject<LoadingState> = new BehaviorSubject<LoadingState>(
+    this.gldSvc.LoadingDefaultOffState
+  );
 
   // ACTIVE LANGUAGE OF THE APP
-  private languageActive$: BehaviorSubject<LanguageItem> = new BehaviorSubject<LanguageItem>(null);
+  private languageActive$: BehaviorSubject<LanguageItem> = new BehaviorSubject<LanguageItem>(
+    null
+  );
 
   // private languageActive$: BehaviorSubject<LanguageItem> = new BehaviorSubject<LanguageItem>(this.gldSvc.getLanguagesDefault());
 
-  constructor(private gldSvc: GlobalDataService,
-              @Inject(LOCALE_ID) protected localeId: string) {
+  constructor(
+    private gldSvc: GlobalDataService,
+    @Inject(LOCALE_ID) protected localeId: string
+  ) {
     // CHECK IF THERE IS A LOCALEID IN LOCALSTORAGE
     // Retrieve the object from storage
     // try {
@@ -33,7 +40,6 @@ export class GenericFacilityService {
     // } catch (e) {
     //   console.error('There isn\'t a language setted in local storage:', e);
     // }
-
   }
 
   // ---------------------------------------------------------- GETTER & SETTER --------------------------------------------------------- //
@@ -64,6 +70,4 @@ export class GenericFacilityService {
   setLanguageActive(lang: LanguageItem) {
     this.languageActive$.next(lang);
   }
-
 }
-
