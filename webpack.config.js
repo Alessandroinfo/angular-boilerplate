@@ -5,6 +5,9 @@ module.exports = (config) => {
   const isProd = config.mode === 'production';
   const tailwindConfig = require('./tailwind.config.js')(isProd);
 
+  // This custom postcss and autoprefixer configuration are for
+  // made to work import and path in assets folder and so on
+  // Try to find a better solution, this is from an ejected 1.7.4 Angular CLI
   const maximumInlineSize = 10;
   const projectRoot = process.cwd();
   const baseHref = "";
