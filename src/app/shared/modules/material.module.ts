@@ -12,7 +12,7 @@ const MODULES = [
   MatButtonModule,
   MatBadgeModule,
   MatIconModule,
-  MatDividerModule,
+  MatDividerModule
 ];
 
 const PROVIDERS = [];
@@ -21,8 +21,9 @@ const PROVIDERS = [];
   declarations: [],
   imports: [...MODULES],
   exports: [...MODULES],
-  providers: [...PROVIDERS],
+  providers: [...PROVIDERS]
 })
 export class MaterialModule {
-  constructor() {}
+  constructor() {
+  }
 }
