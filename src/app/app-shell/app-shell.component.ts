@@ -26,12 +26,10 @@ import {Component, OnInit} from '@angular/core';
       </svg>
     </div>
   `,
-  styleUrls: ['./app-shell.component.scss']
+  styleUrls: ['./app-shell.component.scss'],
 })
 export class AppShellComponent implements OnInit {
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

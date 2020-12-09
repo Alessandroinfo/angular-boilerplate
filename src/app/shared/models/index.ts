@@ -45,8 +45,7 @@ export interface AngularError {
   stack: any;
 }
 
-export interface LanguagesList extends Array<LanguageItem> {
-}
+export interface LanguagesList extends Array<LanguageItem> {}
 
 export interface LanguageItem {
   code: string;

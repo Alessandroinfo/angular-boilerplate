@@ -10,8 +10,8 @@ module.exports = (config) => {
   // Try to find a better solution, this is from an ejected 1.7.4 Angular CLI
   const maximumInlineSize = 10;
   const projectRoot = process.cwd();
-  const baseHref = "";
-  const deployUrl = "";
+  const baseHref = '';
+  const deployUrl = '';
 
   const autoprefixer = require('autoprefixer');
   const postcssUrl = require('postcss-url');

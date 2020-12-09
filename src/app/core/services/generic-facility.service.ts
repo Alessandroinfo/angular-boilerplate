@@ -4,7 +4,7 @@ import {AngularError, LanguageItem, LoadingState} from '../../shared/models';
 import {GlobalDataService} from './global-data.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GenericFacilityService {
   // ------------------------------------------------------------ ATTRIBUTES ------------------------------------------------------------ //

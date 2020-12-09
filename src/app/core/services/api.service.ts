@@ -4,7 +4,7 @@ import {GlobalDataService} from './global-data.service';
 import {delay} from 'rxjs/internal/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
   // THIS CREATE HEADER FOR CENTER AND TOP CONST THAT HAVE EACH STRING FOR SET LOADING
@@ -12,13 +12,13 @@ export class ApiService {
     headers: new HttpHeaders().set(
       this.gldSvc.loadingHeaders.CENTERLOADER,
       this.gldSvc.loadingHeaders.CENTERLOADER
-    )
+    ),
   };
   top = {
     headers: new HttpHeaders().set(
       this.gldSvc.loadingHeaders.TOPLOADER,
       this.gldSvc.loadingHeaders.TOPLOADER
-    )
+    ),
   };
 
   // THIS CONTAIN BOTH LOADING TYPE
@@ -26,14 +26,15 @@ export class ApiService {
   loaderOptions = {top: this.top, center: this.center};
 
   // TODO MANAGE ERRORS OF HTTP
-  constructor(private http: HttpClient, private gldSvc: GlobalDataService) {
-  }
+  constructor(private http: HttpClient, private gldSvc: GlobalDataService) {}
 
   getInfo() {
-    return this.http.get(
-      'http://slowwly.robertomurray.co.uk/delay/3000/url/http://www.google.co.uk',
-      {...this.loaderOptions.top, observe: 'response'}
-    ).pipe(delay(4000));
+    return this.http
+      .get(
+        'http://slowwly.robertomurray.co.uk/delay/3000/url/http://www.google.co.uk',
+        {...this.loaderOptions.top, observe: 'response'}
+      )
+      .pipe(delay(4000));
   }
 
   // This show how to add custom headers

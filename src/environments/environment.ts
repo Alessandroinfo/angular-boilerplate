@@ -6,7 +6,7 @@ export const environment = {
   env: '',
   production: false,
   hmr: false,
-  appVersion: require('../../package.json').version
+  appVersion: require('../../package.json').version,
 };
 
 /*

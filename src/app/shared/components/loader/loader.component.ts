@@ -22,7 +22,7 @@ import {LoadingState} from '../../models';
       </div>
     </ng-container>
   `,
-  styleUrls: ['./loader.component.scss']
+  styleUrls: ['./loader.component.scss'],
 })
 export class LoaderComponent implements OnInit {
   // CHECK IF IS IN LOADING OR NOT
@@ -30,12 +30,10 @@ export class LoaderComponent implements OnInit {
     isLoading: false,
     blockOverlay: false,
     centerLoading: false,
-    topLoading: false
+    topLoading: false,
   };
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
