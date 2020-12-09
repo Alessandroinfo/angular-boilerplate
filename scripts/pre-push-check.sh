@@ -13,7 +13,8 @@ if [ "$branch" != "notpushhere" ] && [ "$branch" != "andnotpushhere" ]; then
   npm run-script build || echo \" ----- Error from Husky: check app errors! ----- \"
 
   # Manage a better way to increase versions
-  if [ git-branch-is -r "^feature/" ]; then
+  isFeature=$(git-branch-is -r "^feature/")
+  if [ "$isFeature" ]; then
     npm version patch
   fi
 else
