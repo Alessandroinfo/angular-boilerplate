@@ -17,7 +17,7 @@ module.exports = (isProd) => ({
     ],
     keyframes: true,
     fontFace: true,
-    rejected: true,
+    rejected: true
   },
   darkMode: false, // or 'media' or 'class'
   theme: {

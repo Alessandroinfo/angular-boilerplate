@@ -13,9 +13,9 @@ import {CommonModule} from '@angular/common';
     {
       provide: HTTP_INTERCEPTORS,
       useClass: LoaderInterceptorService,
-      multi: true, // PERMIT TO USE MULTI INTERCEPTOR FOR HTTP INTERCEPTORS
-    },
-  ],
+      multi: true // PERMIT TO USE MULTI INTERCEPTOR FOR HTTP INTERCEPTORS
+    }
+  ]
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {

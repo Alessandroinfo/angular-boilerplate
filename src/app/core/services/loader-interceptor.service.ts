@@ -1,24 +1,19 @@
 import {Injectable} from '@angular/core';
-import {
-  HttpEvent,
-  HttpHandler,
-  HttpInterceptor,
-  HttpRequest,
-  HttpResponse,
-} from '@angular/common/http';
+import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 import {GlobalDataService} from './global-data.service';
 import {GenericFacilityService} from './generic-facility.service';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class LoaderInterceptorService implements HttpInterceptor {
   constructor(
     private gcfSvc: GenericFacilityService,
     private gldSvc: GlobalDataService
-  ) {}
+  ) {
+  }
 
   intercept(
     request: HttpRequest<any>,
@@ -57,7 +52,7 @@ export class LoaderInterceptorService implements HttpInterceptor {
 
       // CREATE NEW REQUEST WITH CHECK BEFORE
       request = request.clone({
-        headers,
+        headers
       });
     }
 
@@ -75,31 +70,31 @@ export class LoaderInterceptorService implements HttpInterceptor {
           ...this.gldSvc.LoadingDefaultOffState,
           isLoading: true,
           topLoading: true,
-          blockOverlay: true,
+          blockOverlay: true
         });
       } else if (TOPLOADER_H) {
         this.gcfSvc.setLoadingState({
           ...this.gldSvc.LoadingDefaultOffState,
           isLoading: true,
-          topLoading: true,
+          topLoading: true
         });
       } else if (CENTERLOADER_H) {
         this.gcfSvc.setLoadingState({
           ...this.gldSvc.LoadingDefaultOffState,
           isLoading: true,
           centerLoading: true,
-          blockOverlay: true,
+          blockOverlay: true
         });
       } else if (BLOCKOVERLAY_H) {
         this.gcfSvc.setLoadingState({
           ...this.gldSvc.LoadingDefaultOffState,
           isLoading: true,
-          blockOverlay: true,
+          blockOverlay: true
         });
       } else {
         this.gcfSvc.setLoadingState({
           ...this.gldSvc.LoadingDefaultOffState,
-          isLoading: true,
+          isLoading: true
         });
       }
     });
