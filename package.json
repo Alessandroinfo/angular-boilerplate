@@ -52,6 +52,7 @@
     "autoprefixer": "10.0.4",
     "codelyzer": "^6.0.0",
     "depcheck": "^1.3.1",
+    "git-branch-is": "^4.0.0",
     "husky": "^4.2.5",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
