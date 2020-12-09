@@ -1,7 +1,5 @@
 const webpackMerge = require('webpack-merge');
 
-const maximumInlineSize = 10;
-
 console.error();
 
 module.exports = (config) => {
@@ -10,6 +8,7 @@ module.exports = (config) => {
   const isProd = config.mode === 'production';
   const tailwindConfig = require('./tailwind.config.js')(isProd);
 
+  const maximumInlineSize = 10;
   const autoprefixer = require('autoprefixer');
   const postcssUrl = require('postcss-url');
   const postcssImports = require('postcss-import');
