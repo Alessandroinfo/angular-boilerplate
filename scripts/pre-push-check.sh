@@ -14,7 +14,7 @@ if [ "$branch" != "notpushhere" ] && [ "$branch" != "andnotpushhere" ]; then
 
   # Manage a better way to increase versions
   isFeature=$(git-branch-is -i -r -q "^feature/")
-  echo $isFeature
+  echo "$isFeature"
   if [ "$isFeature" ]; then
     npm version minor
   fi
