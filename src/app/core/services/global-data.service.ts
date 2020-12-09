@@ -5,7 +5,6 @@ import {LanguageItem, LanguagesList, LoadingHeaders, LoadingState} from '../../s
   providedIn: 'root'
 })
 export class GlobalDataService {
-
   // CODE FOR LANGUAGE LIST
   // WITH DEFAULT CONF IS THIS THE LANG
   // DEFAULT LOADING STATE
@@ -13,7 +12,7 @@ export class GlobalDataService {
     isLoading: false,
     blockOverlay: false,
     centerLoading: false,
-    topLoading: false,
+    topLoading: false
   };
   // HTTP HEADER FOR LOADER
   public loadingHeaders: LoadingHeaders = {
@@ -58,4 +57,3 @@ export class GlobalDataService {
     this.languageDefault = langDef;
   }
 }
-

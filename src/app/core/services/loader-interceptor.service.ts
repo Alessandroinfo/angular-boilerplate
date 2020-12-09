@@ -15,8 +15,10 @@ export class LoaderInterceptorService implements HttpInterceptor {
   ) {
   }
 
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
+  intercept(
+    request: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
     // CHECK IF EXIST NO BLOCK OVERLAY HEADER
     const blockoverlay = this.gldSvc.loadingHeaders.BLOCKOVERLAY;
     const BLOCKOVERLAY_H = !!request.headers.get(blockoverlay);
@@ -63,45 +65,39 @@ export class LoaderInterceptorService implements HttpInterceptor {
     // CENTER
     // EVERY TIME IS LOADING
     setTimeout(() => {
-        if (TOPLOADER_H && BLOCKOVERLAY_H) {
-          this.gcfSvc.setLoadingState({
-            ...this.gldSvc.LoadingDefaultOffState,
-            isLoading: true,
-            topLoading: true,
-            blockOverlay: true
-          });
-
-        } else if (TOPLOADER_H) {
-          this.gcfSvc.setLoadingState({
-            ...this.gldSvc.LoadingDefaultOffState,
-            isLoading: true,
-            topLoading: true
-          });
-
-        } else if (CENTERLOADER_H) {
-          this.gcfSvc.setLoadingState({
-            ...this.gldSvc.LoadingDefaultOffState,
-            isLoading: true,
-            centerLoading: true,
-            blockOverlay: true
-          });
-
-        } else if (BLOCKOVERLAY_H) {
-          this.gcfSvc.setLoadingState({
-            ...this.gldSvc.LoadingDefaultOffState,
-            isLoading: true,
-            blockOverlay: true
-          });
-
-        } else {
-          this.gcfSvc.setLoadingState({
-            ...this.gldSvc.LoadingDefaultOffState,
-            isLoading: true
-          });
-
-        }
+      if (TOPLOADER_H && BLOCKOVERLAY_H) {
+        this.gcfSvc.setLoadingState({
+          ...this.gldSvc.LoadingDefaultOffState,
+          isLoading: true,
+          topLoading: true,
+          blockOverlay: true
+        });
+      } else if (TOPLOADER_H) {
+        this.gcfSvc.setLoadingState({
+          ...this.gldSvc.LoadingDefaultOffState,
+          isLoading: true,
+          topLoading: true
+        });
+      } else if (CENTERLOADER_H) {
+        this.gcfSvc.setLoadingState({
+          ...this.gldSvc.LoadingDefaultOffState,
+          isLoading: true,
+          centerLoading: true,
+          blockOverlay: true
+        });
+      } else if (BLOCKOVERLAY_H) {
+        this.gcfSvc.setLoadingState({
+          ...this.gldSvc.LoadingDefaultOffState,
+          isLoading: true,
+          blockOverlay: true
+        });
+      } else {
+        this.gcfSvc.setLoadingState({
+          ...this.gldSvc.LoadingDefaultOffState,
+          isLoading: true
+        });
       }
-    );
+    });
 
     // RETURN THE SAME REQUEST CALLED AND MANAGE THE OFF OF LOADING
     return next.handle(request).pipe(
@@ -114,7 +110,7 @@ export class LoaderInterceptorService implements HttpInterceptor {
         }
       }),
       // IF THERE IS SOME ERRORS GO TO OFF LOADING AND RETURN ERRORS
-      catchError(err => {
+      catchError((err) => {
         setTimeout(() => {
           // if (!noLoading) {
           this.gcfSvc.setLoadingState(this.gldSvc.LoadingDefaultOffState);

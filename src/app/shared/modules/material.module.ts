@@ -23,7 +23,6 @@ const PROVIDERS = [];
   exports: [...MODULES],
   providers: [...PROVIDERS]
 })
-
 export class MaterialModule {
   constructor() {
   }

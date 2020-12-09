@@ -5,7 +5,7 @@
  * Follow those for CSS guidelines
  * https://cssguidelin.es
  *
- * Respect import order to mixion or function
+ * Respect import order to mixin or function
  * you need to import before the use
  *
  * In abstract write the variables, mixin and
@@ -16,7 +16,6 @@
  * Not every directory is necessary for every projects
  *
 **/
-
 @import "abstract/variables";
 @import "abstract/palettes";
 @import "abstract/mixins";
