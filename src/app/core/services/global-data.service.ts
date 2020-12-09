@@ -1,10 +1,6 @@
 import {Injectable} from '@angular/core';
-import {
-  LanguageItem,
-  LanguagesList,
-  LoadingHeaders,
-  LoadingState,
-} from '../../shared/models';
+import {LoadingHeaders, LoadingState} from '@app/shared/models/loading-app';
+import {LanguageItem, LanguagesList} from '@app/shared/models/language-app';
 
 @Injectable({
   providedIn: 'root',

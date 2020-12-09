@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {LoadingState} from '../../models';
+import {LoadingState} from '@app/shared/models/loading-app';
 
 @Component({
   selector: 'app-loader',

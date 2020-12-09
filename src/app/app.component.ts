@@ -1,6 +1,5 @@
 import {Component, Inject, LOCALE_ID, OnDestroy, OnInit} from '@angular/core';
 import {takeWhile, tap} from 'rxjs/operators';
-import {LoadingState} from './shared/models';
 import {GenericFacilityService} from './core/services/generic-facility.service';
 import {GlobalDataService} from './core/services/global-data.service';
 import {environment} from '../environments/environment';
@@ -11,16 +10,17 @@ import {
   Router,
   RouterEvent,
 } from '@angular/router';
+import {LoadingState} from '@app/shared/models/loading-app';
 
 @Component({
   selector: 'app-root',
   template: `
-    <p>
-      <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+    <p>{{2324 | filesize}}
+      <span bl matBadge="4" matBadgeOverlap="false">Text with a badge</span>
     </p>
 
     <p>
-      <span matBadge="1" matBadgeSize="large">Text with large badge</span>
+      <span ol matBadge="1" matBadgeSize="large">Text with large badge</span>
     </p>
 
     <p>
