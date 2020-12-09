@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {GlobalDataService} from './global-data.service';
+import {delay} from 'rxjs/internal/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -29,9 +30,9 @@ export class ApiService {
 
   getInfo() {
     return this.http.get(
-      'http://slowwly.robertomurray.co.uk/delay/10000/url/http://www.google.co.uk',
+      'http://slowwly.robertomurray.co.uk/delay/3000/url/http://www.google.co.uk',
       {...this.loaderOptions.top, observe: 'response'}
-    );
+    ).pipe(delay(4000));
   }
 
   // This show how to add custom headers

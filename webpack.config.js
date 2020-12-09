@@ -9,12 +9,10 @@ module.exports = (config) => {
 
   const isProd = config.mode === 'production';
   const tailwindConfig = require('./tailwind.config.js')(isProd);
-  const tailwindcss = require('tailwindcss');
 
   const autoprefixer = require('autoprefixer');
   const postcssUrl = require('postcss-url');
   const postcssImports = require('postcss-import');
-
   const postcssPlugins = function (loader) {
     return [
       postcssImports({
