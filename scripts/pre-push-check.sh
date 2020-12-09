@@ -8,7 +8,9 @@ branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 if [ "$branch" != "notpushhere" ] && [ "$branch" != "andnotpushhere" ]; then
   echo "You are pushing in: $branch"
   echo "You can push!"
-  npm version patch
+  # Manage a new way to bump versions
+  # npm version patch
+
   # If the build fails you cannot push
   npm run-script build || echo \" ----- Error from Husky: check app errors! ----- \"
 else
