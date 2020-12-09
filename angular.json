@@ -53,9 +53,7 @@
               "src/preloaded.js"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/assets/ds/"
-              ]
+              "includePaths": []
             },
             "styles": [
               "src/styles.scss",
@@ -156,6 +154,9 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": []
+            },
             "styles": [
               "src/styles.scss",
               "src/assets/ds/main.scss"

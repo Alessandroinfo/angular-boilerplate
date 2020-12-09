@@ -100,7 +100,7 @@ import {
       <div class="example-label">Flat</div>
       <div class="example-button-row">
         <button mat-flat-button>Basic</button>
-        <button mat-flat-button color="primary">Primary</button>
+        <button class="bg" mat-flat-button color="primary">Primary</button>
         <button mat-flat-button color="accent">Accent</button>
         <button mat-flat-button color="warn">Warn</button>
         <button mat-flat-button disabled>Disabled</button>

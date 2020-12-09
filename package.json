@@ -3,7 +3,7 @@
   "version": "0.0.25",
   "scripts": {
     "pwa-assets-generator": "pwa-asset-generator src/assets/imgs/logo.svg src/assets/icons -t png -f true -i src/index.html -m src/manifest.webmanifest --path-override assets/icons --opaque false -p 0 --mstile",
-    "start": "ng serve -c test --hmr -o --port 3001",
+    "start": "ng serve -c test --hmr --o --port 3001",
     "start-dist": "start http://127.0.0.1:8080/ && cd dist && http-server -c-1 .",
     "build": "ng build -c production",
     "build:app-shell:demo": "npm run pwa-assets-generator && npm run format-index && ng run angular-boilerplate:app-shell:demo",
@@ -35,7 +35,6 @@
     "@angular/platform-server": "~11.0.3",
     "@angular/router": "~11.0.3",
     "@angular/service-worker": "~11.0.3",
-    "@ngneat/tailwind": "^3.0.6",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -46,6 +45,7 @@
     "@angular/cli": "~11.0.3",
     "@angular/compiler-cli": "~11.0.3",
     "@angularclass/hmr": "^3.0.0",
+    "@ngneat/tailwind": "^3.0.6",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.12.45",
@@ -65,6 +65,7 @@
     "postcss-import": "13.0.0",
     "postcss-loader": "4.1.0",
     "postcss-scss": "3.0.4",
+    "postcss-url": "^10.1.1",
     "prettier": "^2.2.1",
     "protractor": "~7.0.0",
     "pwa-asset-generator": "^4.0.1",

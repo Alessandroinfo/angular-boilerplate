@@ -4,7 +4,7 @@
 // or
 // https://github.com/google/fonts/
 
-// Fonts are preloaded in ~/preloaded.js
+// Fonts are preloaded in /preloaded.js
 
 /* roboto-100 - latin */
 @font-face {
@@ -13,9 +13,9 @@
   font-weight: 100;
   font-display: $font-display;
   src: local("Roboto Thin"), local("Roboto-Thin"),
-    url("C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\fonts\roboto\roboto-v20-latin-100.woff2") format("woff2"),
+  url("/assets/fonts/roboto/roboto-v20-latin-100.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\fonts\roboto\roboto-v20-latin-100.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  url("/assets/fonts/roboto/roboto-v20-latin-100.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* roboto-regular - latin */
@@ -25,9 +25,9 @@
   font-weight: 400;
   font-display: $font-display;
   src: local("Roboto"), local("Roboto-Regular"),
-    url("C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\fonts\roboto\roboto-v20-latin-regular.woff2") format("woff2"),
+  url("/assets/fonts/roboto/roboto-v20-latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\fonts\roboto\roboto-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  url("/assets/fonts/roboto/roboto-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* roboto-500 - latin */
@@ -37,7 +37,7 @@
   font-weight: 500;
   font-display: $font-display;
   src: local("Roboto Medium"), local("Roboto-Medium"),
-    url("C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\fonts\roboto\roboto-v20-latin-500.woff2") format("woff2"),
+  url("/assets/fonts/roboto/roboto-v20-latin-500.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("C:\Users\Alessandro Vivobook\WebstormProjects\angular-boilerplate\src\assets\fonts\roboto\roboto-v20-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  url("/assets/fonts/roboto/roboto-v20-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }

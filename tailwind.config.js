@@ -4,8 +4,10 @@
 // with same primary and secondary angular material
 // theme colors in assets/ds/abstract/_palettes.scss
 // Choice they wisely on https://material.io/resources/color
+// Check if it's good the important true to override Material styles
 
 module.exports = (isProd) => ({
+  important: true,
   prefix: '',
   purge: {
     enabled: isProd,
@@ -35,21 +37,21 @@ module.exports = (isProd) => ({
     }
   },
   corePlugins: {
-    preflight: false
+    preflight: true
   },
-  /*variants: {
-    zIndex: ['children', 'default', 'responsive'],
-    padding: ['children', 'default', 'responsive'],
-    margin: ['children', 'default', 'responsive'],
-    height: ['children', 'default', 'responsive'],
-    width: ['children', 'default', 'responsive'],
-    flexGrow: ['children', 'default', 'responsive'],
-    lineHeight: ['children', 'default', 'responsive'],
-    backgroundColor: ['children', 'default', 'children-hover', 'hover', 'focus', 'responsive'],
-    display: ['children', 'default', 'responsive'],
-    justifyContent: ['children', 'default', 'responsive'],
-    alignItems: ['children', 'default', 'responsive']
-  },*/
+  variants: {
+    display: ['children', 'DEFAULT', 'responsive'],
+    zIndex: ['children', 'DEFAULT ', 'responsive'],
+    padding: ['children', 'DEFAULT ', 'responsive'],
+    margin: ['children', 'DEFAULT ', 'responsive'],
+    height: ['children', 'DEFAULT ', 'responsive'],
+    width: ['children', 'DEFAULT ', 'responsive'],
+    flexGrow: ['children', 'DEFAULT ', 'responsive'],
+    lineHeight: ['children', 'DEFAULT ', 'responsive'],
+    backgroundColor: ['children', 'DEFAULT ', 'children-hover', 'hover', 'focus', 'responsive'],
+    justifyContent: ['children', 'DEFAULT ', 'responsive'],
+    alignItems: ['children', 'DEFAULT ', 'responsive']
+  },
   plugins: [
     // https://github.com/benface/tailwindcss-children
     require('tailwindcss-children')
