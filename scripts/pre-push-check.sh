@@ -10,7 +10,7 @@ if [ "$branch" != "notpushhere" ] && [ "$branch" != "andnotpushhere" ]; then
   echo "You can push!"
 
   # If the build fails you cannot push
-  #npm run-script build || echo \" ----- Error from Husky: check app errors! ----- \"
+  npm run-script build || echo \" ----- Error from Husky: check app errors! ----- \"
 
   # Manage a better way to increase versions
   # isFeature=$(git-branch-is -i -r "^feature/")
