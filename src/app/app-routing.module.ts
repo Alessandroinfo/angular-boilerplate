@@ -14,7 +14,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {relativeLinkResolution: 'legacy'})],
+  imports: [RouterModule.forRoot(routes, {relativeLinkResolution: 'legacy', useHash: true})],
+  // use , useHash: true for reoutes issue (Cordova too)
   exports: [RouterModule]
 })
 export class AppRoutingModule {
