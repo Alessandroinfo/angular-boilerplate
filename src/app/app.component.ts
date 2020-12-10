@@ -15,12 +15,12 @@ import {LoadingState} from '@app/shared/models/loading-app';
 @Component({
   selector: 'app-root',
   template: `
-    <p>{{2324 | filesize}}
-      <span bl matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+    <p>{{12059964 | filesize}}
+      <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
     </p>
 
     <p>
-      <span ol matBadge="1" matBadgeSize="large">Text with large badge</span>
+      <span [ol] matBadge="1" matBadgeSize="large">Text with large badge</span>
     </p>
 
     <p>
