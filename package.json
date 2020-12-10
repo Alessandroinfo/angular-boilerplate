@@ -6,6 +6,7 @@
     "start": "ng serve -c test --hmr --o --port 3001",
     "start-dist": "start http://127.0.0.1:8080/ && cd dist && http-server -c-1 .",
     "build": "ng build -c production",
+    "build-cordova": "ng build -c cordova-production --base-href . --output-path cordova/www/",
     "build:app-shell:demo": "npm run pwa-assets-generator && npm run format-index && ng run angular-boilerplate:app-shell:demo",
     "build:app-shell:production": "npm run pwa-assets-generator && npm run format-index && ng run angular-boilerplate:app-shell:production",
     "build-start-open:app-shell:demo": "npm run build:app-shell:demo && npm run start-dist",

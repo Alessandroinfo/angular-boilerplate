@@ -11,6 +11,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // App divided into:
 // Core module: only singleton one instantiated services
 // Shared module: component, pipe, directive, other common module for UI
+// App-shell contain only first painted static html component
 
 @NgModule({
   declarations: [AppComponent],

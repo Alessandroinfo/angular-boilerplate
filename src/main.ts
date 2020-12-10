@@ -1,6 +1,6 @@
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {AppModule} from './app/app.module';
+import {AppModule} from '@app/app.module';
 import {environment} from './environments/environment';
 import {hmrBootstrap} from './hmr';
 
@@ -37,7 +37,18 @@ if (environment.hmr) {
     console.log('Are you using the --hmr flag for ng serve?');
   }
 } else {
-  document.addEventListener('DOMContentLoaded', () => {
-    bootstrap().catch((err) => console.error(err));
-  });
+
+  if (!environment.cordova) {
+    // Content loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      bootstrap().catch((err) => console.error(err));
+    });
+  } else {
+    // Content loaded
+    document.addEventListener('deviceready', () => {
+      bootstrap().catch((err) => console.error(err));
+    }, false);
+  }
+
+
 }

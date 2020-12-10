@@ -5,6 +5,7 @@
 export const environment = {
   env: '',
   production: false,
+  cordova: false,
   hmr: false,
   appVersion: require('../../package.json').version,
 };

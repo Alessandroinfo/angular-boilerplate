@@ -1,7 +1,9 @@
+// This file is for cordova export
+
 export const environment = {
-  env: 'production',
+  env: 'cordova-production',
   production: true,
-  cordova: false,
+  cordova: true,
   hmr: false,
   appVersion: require('../../package.json').version,
 };
