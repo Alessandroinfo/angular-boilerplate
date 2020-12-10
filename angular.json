@@ -9,27 +9,28 @@
         "@schematics/angular:component": {
           "style": "scss",
           "skipImport": false,
+          "export": true,
           "skipTests": true,
           "inlineTemplate": true
         },
         "@schematics/angular:class": {
-          "spec": false
+          "skipTests": true
         },
         "@schematics/angular:directive": {
-          "spec": false,
+          "skipTests": true,
           "inlineTemplate": true
         },
         "@schematics/angular:guard": {
-          "spec": false
+          "skipTests": true
         },
         "@schematics/angular:module": {
-          "spec": false
+          "skipTests": true
         },
         "@schematics/angular:pipe": {
-          "spec": false
+          "skipTests": true
         },
         "@schematics/angular:service": {
-          "spec": false
+          "skipTests": true
         }
       },
       "root": "",
@@ -37,31 +38,38 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
               "src/assets",
               "src/robots.txt",
-              "src/manifest.webmanifest"
+              "src/manifest.webmanifest",
+              "src/preloaded.js"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": []
+            },
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/ds/main.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "with": "src/environments/environment.production.ts"
                 }
               ],
               "optimization": true,
@@ -97,13 +105,24 @@
               "optimization": false,
               "sourceMap": true,
               "buildOptimizer": false
+            },
+            "demo": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.demo.ts"
+                }
+              ],
+              "optimization": false,
+              "sourceMap": true
             }
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "angular-boilerplate:build"
+            "browserTarget": "angular-boilerplate:build",
+            "hmrWarning": false
           },
           "configurations": {
             "production": {
@@ -111,6 +130,9 @@
             },
             "test": {
               "browserTarget": "angular-boilerplate:build:test"
+            },
+            "demo": {
+              "browserTarget": "angular-boilerplate:build:demo"
             }
           }
         },
@@ -121,7 +143,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-builders/custom-webpack:karma",
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
@@ -132,10 +154,17 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": []
+            },
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/ds/main.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "webpack.config.js"
+            }
           }
         },
         "lint": {
@@ -162,8 +191,58 @@
               "devServerTarget": "angular-boilerplate:serve:production"
             }
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/",
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.production.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            },
+            "demo": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.demo.ts"
+                }
+              ],
+              "optimization": false,
+              "sourceMap": true
+            }
+          }
+        },
+        "app-shell": {
+          "builder": "@angular-devkit/build-angular:app-shell",
+          "options": {
+            "browserTarget": "angular-boilerplate:build",
+            "serverTarget": "angular-boilerplate:server",
+            "route": "shell"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "angular-boilerplate:build:production",
+              "serverTarget": "angular-boilerplate:server:production"
+            },
+            "demo": {
+              "browserTarget": "angular-boilerplate:build:demo",
+              "serverTarget": "angular-boilerplate:server:demo"
+            }
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "angular-boilerplate"
 }
