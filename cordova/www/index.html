@@ -17,8 +17,9 @@
   <!--    gtag('config', 'XXXXXXXXX');-->
   <!--  </script>-->
 
-  <!-- Cordova import -->
-  <meta http-equiv="Content-Security-Policy">
+  <!-- Cordova security -->
+  <!--  <meta http-equiv="Content-Security-Policy"-->
+  <!--        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
 
   <!-- Scales -->
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -306,11 +307,14 @@
     'background: black; color: red'
   );
 </script>
+<!-- Cordova import -->
+<script type="text/javascript" src="cordova.js"></script>
+<!-- Angular App tag -->
 <app-root></app-root>
 <noscript
 >Please enable JavaScript to continue using this application.
 </noscript>
 <!-- Preloaded js -->
 <!--<link rel="preload" href="preloaded.js" as="script">-->
-<script src="runtime-es2015.1e4718b6fc7b32c4e487.js" type="module"></script><script src="runtime-es5.1e4718b6fc7b32c4e487.js" nomodule defer></script><script src="polyfills-es5.c9d8640fa9e523040579.js" nomodule defer></script><script src="polyfills-es2015.6022d6f28e0500e60d30.js" type="module"></script><script src="styles-es2015.19ba5d69354137d82ccb.js" type="module"></script><script src="styles-es5.19ba5d69354137d82ccb.js" nomodule defer></script><script src="main-es2015.be83134f6d76c978408f.js" type="module"></script><script src="main-es5.be83134f6d76c978408f.js" nomodule defer></script></body>
+<script src="runtime-es2015.1e4718b6fc7b32c4e487.js" type="module"></script><script src="runtime-es5.1e4718b6fc7b32c4e487.js" nomodule defer></script><script src="polyfills-es5.c9d8640fa9e523040579.js" nomodule defer></script><script src="polyfills-es2015.6022d6f28e0500e60d30.js" type="module"></script><script src="styles-es2015.19ba5d69354137d82ccb.js" type="module"></script><script src="styles-es5.19ba5d69354137d82ccb.js" nomodule defer></script><script src="main-es2015.a6306da17269ecba9971.js" type="module"></script><script src="main-es5.a6306da17269ecba9971.js" nomodule defer></script></body>
 </html>

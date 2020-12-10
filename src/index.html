@@ -17,8 +17,9 @@
   <!--    gtag('config', 'XXXXXXXXX');-->
   <!--  </script>-->
 
-  <!-- Cordova import -->
-  <meta http-equiv="Content-Security-Policy">
+  <!-- Cordova security -->
+  <!--  <meta http-equiv="Content-Security-Policy"-->
+  <!--        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
 
   <!-- Scales -->
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -306,6 +307,9 @@
     'background: black; color: red'
   );
 </script>
+<!-- Cordova import -->
+<script type="text/javascript" src="cordova.js"></script>
+<!-- Angular App tag -->
 <app-root></app-root>
 <noscript
 >Please enable JavaScript to continue using this application.

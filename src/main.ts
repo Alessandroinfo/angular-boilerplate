@@ -21,7 +21,7 @@ if (environment.hmr) {
     // Remove this if you want to preserve log
     console.clear();
 
-    // Old way
+    // Bootstrap with HMR
     module['hot'].accept();
     hmrBootstrap(module, bootstrap);
 
@@ -44,9 +44,8 @@ if (environment.hmr) {
       bootstrap().catch((err) => console.error(err));
     });
   } else {
-    // Content loaded
-    // It should be deviceready not DOMContentLoaded
-    document.addEventListener('DOMContentLoaded', () => {
+    // Content loaded for deviceready Cordova API
+    document.addEventListener('deviceready', () => {
       bootstrap().catch((err) => console.error(err));
     }, false);
   }
