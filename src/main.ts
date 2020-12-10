@@ -45,6 +45,7 @@ if (environment.hmr) {
     });
   } else {
     // Content loaded
+    // It should be deviceready not DOMContentLoaded
     document.addEventListener('deviceready', () => {
       bootstrap().catch((err) => console.error(err));
     }, false);
