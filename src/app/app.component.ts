@@ -166,7 +166,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
               color="accent"
               aria-label="Example icon button with a bookmark icon"
             >
-              <mat-icon>bookmark</mat-icon>
+              <mat-icon>&#xE0DA;</mat-icon>
             </button>
           </div>
           <div class="example-button-container">

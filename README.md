@@ -29,3 +29,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 https://dev.to/seankerwin/angular-8-tailwind-css-guide-3m45
+
+## Cordova
+Remember that Material Icons names should be replace with codepoint because WebView don't support ligatures https://github.com/google/material-design-icons/issues/813
+
+Note: https://tddpirate.zak.co.il/2018/09/06/do-material-design-icons-fail-to-show-in-your-cordova-vue-vuetify-android-application/

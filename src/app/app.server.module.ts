@@ -14,7 +14,7 @@ const routes: Routes = [{path: 'shell', component: AppShellComponent}];
   declarations: [AppShellComponent],
 })
 export class AppServerModule {
-  // The important part to avoid route ** bug and not shoe shell compo:
+  // The important part to avoid route ** bug and not show shell compo:
   constructor(private router: Router) {
     this.router.resetConfig(routes);
   }
