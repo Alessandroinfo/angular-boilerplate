@@ -35,7 +35,7 @@ export class ApiService {
         'https://jsonplaceholder.typicode.com/posts',
         {...this.loaderOptions.top, observe: 'response'}
       )
-      .pipe(delay(4000));
+      .pipe(delay(14000));
   }
 
   // This show how to add custom headers

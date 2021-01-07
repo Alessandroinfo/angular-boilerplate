@@ -40,6 +40,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "indexTransform": "./index-html-transform.ts",
             "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -59,7 +60,9 @@
               "src/styles.scss",
               "src/assets/ds/main.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "global.js"
+            ],
             "customWebpackConfig": {
               "path": "webpack.config.js"
             }
@@ -191,7 +194,9 @@
               "src/styles.scss",
               "src/assets/ds/main.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "global.js"
+            ],
             "customWebpackConfig": {
               "path": "webpack.config.js"
             }
