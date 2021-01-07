@@ -49,4 +49,5 @@ Thumbs.db
 
 # Auto generated files
 /src/assets/icons/*
-/cordova/www/*
+/cordova
+/cordova/*
