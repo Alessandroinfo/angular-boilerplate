@@ -1,7 +1,11 @@
+//Customize Tailwind
+
+// Note:
 // Remember to edit
 // theme.extend.colors.primary
+// and
 // theme.extend.colors.secondary
-// with same primary and secondary angular material
+// with same primary and secondary of angular material
 // theme colors in assets/ds/abstract/_palettes.scss
 // Choice they wisely on https://material.io/resources/color
 // Check if it's good the important true to override Material styles
@@ -22,6 +26,21 @@ module.exports = (isProd) => ({
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      zIndex: {
+        '-1': '-1',
+        '0': 0,
+        '10': 10,
+        '20': 20,
+        '30': 30,
+        '40': 40,
+        '50': 50,
+        '60': 60,
+        '70': 70,
+        '80': 80,
+        '90': 90,
+        '100': 100,
+        'auto': 'auto',
+      },
       colors: {
         primary: '#2EC4B6',
         secondary: '#2E88C4'

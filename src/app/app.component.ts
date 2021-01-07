@@ -4,12 +4,7 @@ import {GenericFacilityService} from './core/services/generic-facility.service';
 import {GlobalDataService} from './core/services/global-data.service';
 import {environment} from '../environments/environment';
 import {ApiService} from './core/services/api.service';
-import {
-  NavigationEnd,
-  NavigationStart,
-  Router,
-  RouterEvent,
-} from '@angular/router';
+import {NavigationEnd, NavigationStart, Router, RouterEvent} from '@angular/router';
 import {LoadingState} from '@app/shared/models/loading-app';
 
 @Component({
@@ -77,7 +72,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
         <button mat-raised-button color="warn">Warn</button>
         <button mat-raised-button disabled>Disabled</button>
         <a mat-raised-button href="https://www.google.com/" target="_blank"
-          >Link</a
+        >Link</a
         >
       </div>
     </section>
@@ -91,7 +86,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
         <button mat-stroked-button color="warn">Warn</button>
         <button mat-stroked-button disabled>Disabled</button>
         <a mat-stroked-button href="https://www.google.com/" target="_blank"
-          >Link</a
+        >Link</a
         >
       </div>
     </section>
@@ -105,7 +100,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
         <button mat-flat-button color="warn">Warn</button>
         <button mat-flat-button disabled>Disabled</button>
         <a mat-flat-button href="https://www.google.com/" target="_blank"
-          >Link</a
+        >Link</a
         >
       </div>
     </section>
@@ -248,7 +243,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
     <app-version></app-version>
     <router-outlet></router-outlet>
   `,
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
   // FLAG FOR COMPLETE, UNSUBSCRIBE OBSERVABLES
@@ -294,13 +289,13 @@ export class AppComponent implements OnInit, OnDestroy {
         this.loadingState = {
           ...this.loadingState,
           isLoading: true,
-          topLoading: true,
+          topLoading: true
         };
       } else if (event instanceof NavigationEnd) {
         this.loadingState = {
           ...this.loadingState,
           isLoading: false,
-          topLoading: false,
+          topLoading: false
         };
       }
     });

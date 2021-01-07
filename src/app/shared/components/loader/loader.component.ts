@@ -10,7 +10,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
       <mat-progress-bar
         *ngIf="state.topLoading"
         mode="indeterminate"
-        class="mat-progress-bar"
+        class="mat-progress-bar z-100"
       ></mat-progress-bar>
 
       <!--  Overlay with center loader -->
