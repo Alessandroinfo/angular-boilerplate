@@ -15,7 +15,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
     </p>
 
     <p>
-      <span [ol] matBadge="1" matBadgeSize="large">Text with large badge</span>
+      <span [appOl] matBadge="1" matBadgeSize="large">Text with large badge</span>
     </p>
 
     <p>

@@ -2,7 +2,7 @@ import {Directive, ElementRef, Input, OnInit} from '@angular/core';
 import {BoxLineModel} from '@app/shared/models/box-line';
 
 @Directive({
-  selector: '[bl]'
+  selector: '[appBl]'
 })
 export class BoxLineDirective implements OnInit {
 

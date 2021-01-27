@@ -2,7 +2,7 @@ import {Directive, ElementRef, Input, OnInit} from '@angular/core';
 import {OlModel} from '@app/shared/models/outline';
 
 @Directive({
-  selector: '[ol]'
+  selector: '[appOl]'
 })
 export class OlDirective implements OnInit {
 
