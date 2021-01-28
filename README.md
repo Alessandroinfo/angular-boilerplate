@@ -30,6 +30,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 https://dev.to/seankerwin/angular-8-tailwind-css-guide-3m45
 
+## App-Shell
+For app shell customizations edit src/app/app-shell component
+
+## Skip link
+For Skip link customizations edit src/app/Skip link component
+
+
 ## Cordova
 Remember that Material Icons names should be replace with codepoint because WebView don't support ligatures https://github.com/google/material-design-icons/issues/813
 

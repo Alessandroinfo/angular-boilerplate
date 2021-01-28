@@ -59,7 +59,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
         <button mat-button color="accent">Accent</button>
         <button mat-button color="warn">Warn</button>
         <button mat-button disabled>Disabled</button>
-        <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+        <a rel="noopener" mat-button href="https://www.google.com/" target="_blank">Link</a>
       </div>
     </section>
     <mat-divider></mat-divider>
@@ -71,7 +71,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
         <button mat-raised-button color="accent">Accent</button>
         <button mat-raised-button color="warn">Warn</button>
         <button mat-raised-button disabled>Disabled</button>
-        <a mat-raised-button href="https://www.google.com/" target="_blank"
+        <a rel="noopener" mat-raised-button href="https://www.google.com/" target="_blank"
         >Link</a
         >
       </div>
@@ -85,7 +85,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
         <button mat-stroked-button color="accent">Accent</button>
         <button mat-stroked-button color="warn">Warn</button>
         <button mat-stroked-button disabled>Disabled</button>
-        <a mat-stroked-button href="https://www.google.com/" target="_blank"
+        <a rel="noopener" mat-stroked-button href="https://www.google.com/" target="_blank"
         >Link</a
         >
       </div>
@@ -99,7 +99,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
         <button mat-flat-button color="accent">Accent</button>
         <button mat-flat-button color="warn">Warn</button>
         <button mat-flat-button disabled>Disabled</button>
-        <a mat-flat-button href="https://www.google.com/" target="_blank"
+        <a rel="noopener" mat-flat-button href="https://www.google.com/" target="_blank"
         >Link</a
         >
       </div>
