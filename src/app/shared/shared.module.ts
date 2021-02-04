@@ -5,10 +5,12 @@ import {LoaderComponent} from './components/loader/loader.component';
 import {MaterialModule} from './modules/material.module';
 import {PipesModule} from '@app/shared/pipes/pipes.module';
 import {DirectivesModule} from '@app/shared/directives/directives.module';
+import {SkipLinkComponent} from './components/skip-link/skip-link.component';
 
 @NgModule({
-  declarations: [VersionComponent, LoaderComponent],
+  declarations: [VersionComponent, LoaderComponent, SkipLinkComponent],
   imports: [CommonModule, MaterialModule, PipesModule, DirectivesModule],
-  exports: [CommonModule, MaterialModule, PipesModule, DirectivesModule, VersionComponent, LoaderComponent],
+  exports: [CommonModule, MaterialModule, PipesModule, DirectivesModule, VersionComponent, LoaderComponent, SkipLinkComponent]
 })
-export class SharedModule {}
+export class SharedModule {
+}

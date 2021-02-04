@@ -10,6 +10,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
 @Component({
   selector: 'app-root',
   template: `
+    <app-skip-link></app-skip-link>
     <p>{{12059964 | filesize}}
       <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
     </p>
@@ -234,8 +235,9 @@ import {LoadingState} from '@app/shared/models/loading-app';
         </div>
       </div>
     </section>
+    <div *ngFor="let a of array(0)">o</div>
     <a class="nav-link" routerLink="/module">Home</a>
-    <button class="content-center" (click)="callApi()">Click</button>
+    <button id="main-content" class="content-center" (click)="callApi()">Click</button>
     <app-loader
       class="fixed top-0 right-0 left-0"
       [state]="loadingState"
@@ -248,7 +250,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
 export class AppComponent implements OnInit, OnDestroy {
   // FLAG FOR COMPLETE, UNSUBSCRIBE OBSERVABLES
   alive = true;
-
+  array = Array;
   // FOR LOADING STATUS DEFAULT FALSE ALL
   loadingState: LoadingState = this.gcdSvc.LoadingDefaultOffState;
   hidden = false;

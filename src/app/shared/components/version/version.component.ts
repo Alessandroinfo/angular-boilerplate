@@ -5,12 +5,11 @@ import {environment} from '../../../../environments/environment';
   selector: 'app-version',
   template: `
     <div
-      class="px-2 bg-gray-200 absolute right-0 bottom-0 bold font-thin text-xs"
-    >
+      class="bg-gray-200 bold bottom-0 fixed font-thin opacity-40 px-2 right-0 text-xs">
       {{ appVersion }}
     </div>
   `,
-  styleUrls: ['./version.component.scss'],
+  styleUrls: ['./version.component.scss']
 })
 export class VersionComponent {
   appVersion = environment.appVersion;
