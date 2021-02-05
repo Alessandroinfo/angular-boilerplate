@@ -11,7 +11,8 @@ import {LoadingState} from '@app/shared/models/loading-app';
   selector: 'app-root',
   template: `
     <app-skip-link></app-skip-link>
-    <p>{{12059964 | filesize}}
+    <h1>Landmark</h1>
+    <p>{{2147483648 | fileSize}}
       <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
     </p>
 

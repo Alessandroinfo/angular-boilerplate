@@ -1,4 +1,4 @@
-a{
+.skip-link{
   @apply absolute h-0 w-0 -left-128 top-0 -z-1 overflow-hidden;
 
   &:focus, &:active{

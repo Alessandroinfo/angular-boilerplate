@@ -6,6 +6,9 @@
       "@app/*": [
         "src/app/*"
       ],
+      "@env/*": [
+        "src/environments/*"
+      ],
       "*": [
         "node_modules/*"
       ]

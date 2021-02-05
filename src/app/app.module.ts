@@ -8,6 +8,9 @@ import {CoreModule} from './core/core.module';
 import {SharedModule} from './shared/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
+import {HomeModule} from '@app/home/home.module';
+import {ShellModule} from '@app/shell/shell.module';
+import {AuthModule} from '@app/auth';
 
 // App divided into:
 // Core module: only singleton one instantiated services
@@ -19,6 +22,9 @@ import {RouterModule} from '@angular/router';
   imports: [
     CoreModule,
     SharedModule,
+    ShellModule,
+    HomeModule,
+    AuthModule,
     BrowserAnimationsModule,
     BrowserModule.withServerTransition({appId: 'serverApp'}),
     ServiceWorkerModule.register('ngsw-worker.js', {
