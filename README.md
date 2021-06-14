@@ -39,4 +39,7 @@ For Skip link customizations edit src/app/Skip link component
 ## Cordova
 Remember that Material Icons names should be replace with codepoint because WebView don't support ligatures https://github.com/google/material-design-icons/issues/813
 
+## Normalization CSS
+The normalize is that of TailwindCSS
+
 Note: https://tddpirate.zak.co.il/2018/09/06/do-material-design-icons-fail-to-show-in-your-cordova-vue-vuetify-android-application/

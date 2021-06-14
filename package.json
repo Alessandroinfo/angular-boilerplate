@@ -17,7 +17,7 @@
     "deploy-open-app-shell:production": "npm run build:app-shell:production && npm run firebase-deploy && start https://test-e0560.web.app/",
     "deploy-open-app": "npm run pwa-assets-generator && npm run format-index && npm run build && npm run firebase-deploy && start https://test-e0560.web.app/",
     "bundle-analyze": "ng build -c production --sourceMap=true && source-map-explorer dist/*.js",
-    "format-code": "prettier --write ./{src,e2e}/**/*.{ts,js,html,scss} --ignore-path .prettierignore",
+    "format-code": "prettier --hwrite ./{src,e2e}/**/*.{ts,js,html,scss} --ignore-path .prettierignore",
     "format-index": "prettier --write src/index.html --ignore-path .prettierignore",
     "npm-check-update": "ncu",
     "npm-check-unused-pckg": "depcheck",
