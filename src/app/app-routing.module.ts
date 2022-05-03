@@ -7,15 +7,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./module-name/module-name.module').then(
         (m) => m.ModuleNameModule
-      )
+      ),
   },
   // Fallback when no prior route is matched
-  {path: '**', redirectTo: '', pathMatch: 'full'}
+  {path: '**', redirectTo: '', pathMatch: 'full'},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {relativeLinkResolution: 'legacy'})],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

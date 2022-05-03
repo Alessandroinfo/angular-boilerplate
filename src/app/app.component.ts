@@ -15,7 +15,8 @@ import {LoadingState} from '@app/shared/models/loading-app';
 @Component({
   selector: 'app-root',
   template: `
-    <p>{{12059964 | filesize}}
+    <p>
+      {{ 12059964 | filesize }}
       <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
     </p>
 
@@ -311,7 +312,7 @@ export class AppComponent implements OnInit, OnDestroy {
       .getInfo()
       .pipe(
         tap((val: any) => {
-          console.log();
+          console.log(val);
         })
       )
       .subscribe();
