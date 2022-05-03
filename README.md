@@ -32,3 +32,4 @@ https://dev.to/seankerwin/angular-8-tailwind-css-guide-3m45
 
 ## TODO - Roadmap
 1. Securing firestore rules https://stackoverflow.com/questions/47997260/how-to-source-control-firestore-database-security-rules-and-update-them-automati
+2. Custom console message
