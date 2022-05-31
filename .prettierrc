@@ -1,0 +1,12 @@
+{
+  "singleQuote": true,
+  "bracketSpacing": false,
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}

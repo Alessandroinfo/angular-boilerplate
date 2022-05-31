@@ -1,22 +1,22 @@
-import {Component, Inject, LOCALE_ID, OnDestroy, OnInit} from '@angular/core';
-import {takeWhile, tap} from 'rxjs/operators';
-import {GenericFacilityService} from './core/services/generic-facility.service';
-import {GlobalDataService} from './core/services/global-data.service';
-import {environment} from '../environments/environment';
-import {ApiService} from './core/services/api.service';
+import { Component, Inject, LOCALE_ID, OnDestroy, OnInit } from '@angular/core';
+import { takeWhile, tap } from 'rxjs/operators';
+import { GenericFacilityService } from './core/services/generic-facility.service';
+import { GlobalDataService } from './core/services/global-data.service';
+import { environment } from '../environments/environment';
+import { ApiService } from './core/services/api.service';
 import {
   NavigationEnd,
   NavigationStart,
   Router,
   RouterEvent,
 } from '@angular/router';
-import {LoadingState} from '@app/shared/models/loading-app';
+import { LoadingState } from '@app/shared/models/loading-app';
 
 @Component({
   selector: 'app-root',
   template: `
     <p>
-      {{ 12059964 | filesize }}
+      {{ 50000000 | filesize }}
       <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
     </p>
 

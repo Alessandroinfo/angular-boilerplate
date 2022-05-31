@@ -10,27 +10,10 @@
           "style": "scss",
           "skipImport": false,
           "export": true,
-          "skipTests": true,
           "inlineTemplate": true
-        },
-        "@schematics/angular:class": {
-          "skipTests": true
         },
         "@schematics/angular:directive": {
-          "skipTests": true,
           "inlineTemplate": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:module": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:service": {
-          "skipTests": true
         }
       },
       "root": "",

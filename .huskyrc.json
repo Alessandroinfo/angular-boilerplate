@@ -1,5 +1,5 @@
 {
   "hooks": {
-    "pre-push": "./scripts/pre-push-check.sh"
+    "pre-push": "npm run format-code && ./scripts/pre-push-check.sh"
   }
 }
