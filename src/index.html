@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--  TODO: must edit all descriptions, numbers, colors, titles, urls  -->
+    <!--  TODO: must edit all descriptions, numbers, colors, titles, urls, analytics  -->
     <meta charset="utf-8" />
-    <!-- GOOGLE ANALITICS -->
+    <!-- GOOGLE ANALYTICS -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--  <script async src="https://www.googletagmanager.com/gtag/js?XXXXXXXXX"></script>-->
     <!--  <script>-->
@@ -20,11 +20,13 @@
     <!-- Scales -->
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-    <!-- Android full screen -->
+    <!-- Android full screen Web App -->
     <meta content="yes" name="mobile-web-app-capable" />
+    <!-- iOS full screen Web App -->
 
     <!-- Favicon -->
-    <link href="favicon.ico" rel="shortcut icon" />
+    <!--<link href="favicon.ico" rel="shortcut icon" />-->
+    <link href="assets/icons/generated/favicon-196.png" rel="shortcut icon" />
 
     <!-- Description -->
     <title>AngularBoilerplate</title>
@@ -88,7 +90,7 @@
     <!-- Mobile header color for Chrome, Firefox OS and Opera -->
     <meta content="#1aa3ff" name="theme-color" />
     <!-- Mobile header color Windows Phone -->
-    <meta content="#1aa3ff" name="msapplication-navbutton-color" />
+
     <!-- Mobile header color for iOS Safari (supports black, black-translucent or default) -->
     <meta
       content="black-translucent"
@@ -97,139 +99,204 @@
     <link href="manifest.webmanifest" rel="manifest" />
     <meta content="#1aa3ff" name="theme-color" />
 
+    <!--  Preloaded fonts, if you change this you must change _material_theme.scss custom font -->
+    <!--  Font face is in _typography.scss -->
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href="assets/fonts/roboto/roboto-v20-latin-regular.woff2"
+      rel="preload"
+    />
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href="assets/fonts/roboto/roboto-v20-latin-100.woff2"
+      rel="preload"
+    />
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href="assets/fonts/roboto/roboto-v20-latin-500.woff2"
+      rel="preload"
+    />
+
+    <!--  Material Icons -->
+    <!--  Font face is in _material.scss -->
+    <!--  https://github.com/google/material-design-icons -->
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href="assets/fonts/material-icons/MaterialIcons-Regular.woff2"
+      rel="preload"
+    />
+
+    <!--  Auto generated icons and favicon -->
+
     <link
       rel="icon"
       type="image/png"
       sizes="196x196"
-      href="assets/icons/favicon-196.png"
+      href="assets/icons/generated/favicon-196.png"
+    />
+
+    <meta
+      name="msapplication-square70x70logo"
+      content="assets/icons/generated/mstile-icon-128.png"
+    />
+    <meta
+      name="msapplication-square150x150logo"
+      content="assets/icons/generated/mstile-icon-270.png"
+    />
+    <meta
+      name="msapplication-square310x310logo"
+      content="assets/icons/generated/mstile-icon-558.png"
+    />
+    <meta
+      name="msapplication-wide310x150logo"
+      content="assets/icons/generated/mstile-icon-558-270.png"
     />
 
     <link
       rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/icons/apple-icon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="167x167"
-      href="assets/icons/apple-icon-167.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="assets/icons/apple-icon-152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="assets/icons/apple-icon-120.png"
+      href="assets/icons/generated/apple-icon-180.png"
     />
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-2048-2732.png"
+      href="assets/icons/generated/apple-splash-2048-2732.png"
       media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-2732-2048.png"
+      href="assets/icons/generated/apple-splash-2732-2048.png"
       media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-1668-2388.png"
+      href="assets/icons/generated/apple-splash-1668-2388.png"
       media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-2388-1668.png"
+      href="assets/icons/generated/apple-splash-2388-1668.png"
       media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-1668-2224.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-2224-1668.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-1536-2048.png"
+      href="assets/icons/generated/apple-splash-1536-2048.png"
       media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-2048-1536.png"
+      href="assets/icons/generated/apple-splash-2048-1536.png"
       media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-1242-2688.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+      href="assets/icons/generated/apple-splash-1668-2224.png"
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-2688-1242.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+      href="assets/icons/generated/apple-splash-2224-1668.png"
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-1125-2436.png"
+      href="assets/icons/generated/apple-splash-1620-2160.png"
+      media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="assets/icons/generated/apple-splash-2160-1620.png"
+      media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="assets/icons/generated/apple-splash-1284-2778.png"
+      media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="assets/icons/generated/apple-splash-2778-1284.png"
+      media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="assets/icons/generated/apple-splash-1170-2532.png"
+      media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="assets/icons/generated/apple-splash-2532-1170.png"
+      media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="assets/icons/generated/apple-splash-1125-2436.png"
       media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-2436-1125.png"
+      href="assets/icons/generated/apple-splash-2436-1125.png"
       media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-828-1792.png"
+      href="assets/icons/generated/apple-splash-1242-2688.png"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="assets/icons/generated/apple-splash-2688-1242.png"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      href="assets/icons/generated/apple-splash-828-1792.png"
       media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-1792-828.png"
+      href="assets/icons/generated/apple-splash-1792-828.png"
       media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-1242-2208.png"
+      href="assets/icons/generated/apple-splash-1242-2208.png"
       media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-2208-1242.png"
+      href="assets/icons/generated/apple-splash-2208-1242.png"
       media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-750-1334.png"
+      href="assets/icons/generated/apple-splash-750-1334.png"
       media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-1334-750.png"
+      href="assets/icons/generated/apple-splash-1334-750.png"
       media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-640-1136.png"
+      href="assets/icons/generated/apple-splash-640-1136.png"
       media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
     />
     <link
       rel="apple-touch-startup-image"
-      href="assets/icons/apple-splash-1136-640.png"
+      href="assets/icons/generated/apple-splash-1136-640.png"
       media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
     />
   </head>
   <body>
     <script>
+      // Global
       if (global === undefined) {
         var global = window;
       }
@@ -243,5 +310,7 @@
     <noscript
       >Please enable JavaScript to continue using this application.
     </noscript>
+    <!-- Preloaded js -->
+    <!--<link rel="preload" href="preloaded.js" as="script">-->
   </body>
 </html>

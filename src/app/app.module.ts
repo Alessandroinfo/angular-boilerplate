@@ -6,6 +6,7 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {CoreModule} from './core/core.module';
 import {SharedModule} from './shared/shared.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 // App divided into:
 // Core module: only singleton one instantiated services
@@ -16,11 +17,12 @@ import {SharedModule} from './shared/shared.module';
   imports: [
     CoreModule,
     SharedModule,
-    BrowserModule,
-    AppRoutingModule, // must be imported as the last module as it contains the fallback route
+    BrowserAnimationsModule,
+    BrowserModule.withServerTransition({appId: 'serverApp'}),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
+    AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
   providers: [],
   bootstrap: [AppComponent],
