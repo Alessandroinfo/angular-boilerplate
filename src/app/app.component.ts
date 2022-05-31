@@ -20,9 +20,14 @@ import {LoadingState} from '@app/shared/models/loading-app';
       <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
     </p>
 
-    <p>
-      <span [ol] matBadge="1" matBadgeSize="large">Text with large badge</span>
-    </p>
+    <div class="flex flex-col box-border p-6">
+      <span [appOutline] matBadge="1" matBadgeSize="large"
+        >Text with large badge</span
+      >
+      <span [appBoxLine] matBadge="1" matBadgeSize="large"
+        >Text with large badge</span
+      >
+    </div>
 
     <p>
       Button with a badge on the left
@@ -256,7 +261,7 @@ export class AppComponent implements OnInit, OnDestroy {
   alive = true;
 
   // FOR LOADING STATUS DEFAULT FALSE ALL
-  loadingState: LoadingState = this.gcdSvc.LoadingDefaultOffState;
+  loadingState: LoadingState = this.gcdSvc.loadingDefaultOffState;
   hidden = false;
 
   constructor(

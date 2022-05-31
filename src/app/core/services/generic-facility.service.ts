@@ -18,7 +18,7 @@ export class GenericFacilityService {
 
   // THIS OBS IS FOR LOADER STATUS
   private loadingState$: BehaviorSubject<LoadingState> = new BehaviorSubject<LoadingState>(
-    this.gldSvc.LoadingDefaultOffState
+    this.gldSvc.loadingDefaultOffState
   );
 
   // ACTIVE LANGUAGE OF THE APP

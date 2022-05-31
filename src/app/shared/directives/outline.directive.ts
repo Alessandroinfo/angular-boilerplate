@@ -2,11 +2,11 @@ import {Directive, ElementRef, Input, OnInit} from '@angular/core';
 import {OlModel} from '@app/shared/models/outline';
 
 @Directive({
-  selector: '[ol]'
+  selector: '[appOutline]'
 })
 export class OlDirective implements OnInit {
 
-  @Input() ol: OlModel = {
+  @Input() appOutline: OlModel = {
     style: 'dashed',
     color: '#ff00006b',
     size: '1px'
@@ -16,7 +16,7 @@ export class OlDirective implements OnInit {
   }
 
   ngOnInit() {
-    this.el.nativeElement.style.outline = [this.ol.size, this.ol.style, this.ol.color].join(' ');
+    this.el.nativeElement.style.outline = [this.appOutline.size, this.appOutline.style, this.appOutline.color].join(' ');
   }
 }
 

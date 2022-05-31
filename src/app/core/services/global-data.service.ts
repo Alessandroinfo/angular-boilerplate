@@ -9,7 +9,7 @@ export class GlobalDataService {
   // CODE FOR LANGUAGE LIST
   // WITH DEFAULT CONF IS THIS THE LANG
   // DEFAULT LOADING STATE
-  public LoadingDefaultOffState: LoadingState = {
+  public loadingDefaultOffState: LoadingState = {
     isLoading: false,
     blockOverlay: false,
     centerLoading: false,
@@ -37,7 +37,7 @@ export class GlobalDataService {
 
   constructor() {}
 
-  // ---------------------------------------------------------- GETTER & SETTER --------------------------------------------------------- //
+  // ----------------------- GETTER & SETTER ----------------------- //
 
   // LANGUAGES
   getLanguagesList(): LanguagesList {

@@ -2,11 +2,11 @@ import {Directive, ElementRef, Input, OnInit} from '@angular/core';
 import {BoxLineModel} from '@app/shared/models/box-line';
 
 @Directive({
-  selector: '[bl]'
+  selector: '[appBoxLine]'
 })
 export class BoxLineDirective implements OnInit {
 
-  @Input() bl: BoxLineModel = {
+  @Input() appBoxLine: BoxLineModel = {
     border: {
       style: 'solid',
       color: 'blue',
@@ -23,8 +23,17 @@ export class BoxLineDirective implements OnInit {
   }
 
   ngOnInit() {
-    this.el.nativeElement.style.outline = [this.bl.outline.size, this.bl.outline.style, this.bl.outline.color].join(' ');
-    this.el.nativeElement.style.border = [this.bl.border.size, this.bl.border.style, this.bl.border.color].join(' ');
+    this.el.nativeElement.style.outline = [
+      this.appBoxLine.outline.size,
+      this.appBoxLine.outline.style,
+      this.appBoxLine.outline.color
+    ].join(' ');
+
+    this.el.nativeElement.style.border = [
+      this.appBoxLine.border.size,
+      this.appBoxLine.border.style,
+      this.appBoxLine.border.color
+    ].join(' ');
   }
 }
 

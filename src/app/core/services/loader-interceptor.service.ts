@@ -72,33 +72,33 @@ export class LoaderInterceptorService implements HttpInterceptor {
     setTimeout(() => {
       if (TOPLOADER_H && BLOCKOVERLAY_H) {
         this.gcfSvc.setLoadingState({
-          ...this.gldSvc.LoadingDefaultOffState,
+          ...this.gldSvc.loadingDefaultOffState,
           isLoading: true,
           topLoading: true,
           blockOverlay: true,
         });
       } else if (TOPLOADER_H) {
         this.gcfSvc.setLoadingState({
-          ...this.gldSvc.LoadingDefaultOffState,
+          ...this.gldSvc.loadingDefaultOffState,
           isLoading: true,
           topLoading: true,
         });
       } else if (CENTERLOADER_H) {
         this.gcfSvc.setLoadingState({
-          ...this.gldSvc.LoadingDefaultOffState,
+          ...this.gldSvc.loadingDefaultOffState,
           isLoading: true,
           centerLoading: true,
           blockOverlay: true,
         });
       } else if (BLOCKOVERLAY_H) {
         this.gcfSvc.setLoadingState({
-          ...this.gldSvc.LoadingDefaultOffState,
+          ...this.gldSvc.loadingDefaultOffState,
           isLoading: true,
           blockOverlay: true,
         });
       } else {
         this.gcfSvc.setLoadingState({
-          ...this.gldSvc.LoadingDefaultOffState,
+          ...this.gldSvc.loadingDefaultOffState,
           isLoading: true,
         });
       }
@@ -110,7 +110,7 @@ export class LoaderInterceptorService implements HttpInterceptor {
         if (event instanceof HttpResponse) {
           // do stuff with response if you want
           setTimeout(() => {
-            this.gcfSvc.setLoadingState(this.gldSvc.LoadingDefaultOffState);
+            this.gcfSvc.setLoadingState(this.gldSvc.loadingDefaultOffState);
           });
         }
       }),
@@ -118,7 +118,7 @@ export class LoaderInterceptorService implements HttpInterceptor {
       catchError((err) => {
         setTimeout(() => {
           // if (!noLoading) {
-          this.gcfSvc.setLoadingState(this.gldSvc.LoadingDefaultOffState);
+          this.gcfSvc.setLoadingState(this.gldSvc.loadingDefaultOffState);
           // }
         });
         console.error('Error on interceptor handling request: ', err);
