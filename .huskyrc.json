@@ -2,6 +2,6 @@
   "hooks": {
     "pre-commit": "./scripts/pre-commit-scripts.sh",
     "pre-push": "./scripts/pre-push-scripts.sh",
-    "post-commit": "./scripts/post-commit-scripts.sh"
+    "post-merge": "./scripts/post-commit-scripts.sh"
   }
 }
