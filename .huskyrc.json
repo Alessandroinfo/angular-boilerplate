@@ -1,7 +1,7 @@
 {
   "hooks": {
-    "pre-commit": "./scripts/pre-commit-scripts.sh",
-    "pre-push": "./scripts/pre-push-scripts.sh",
-    "post-merge": "./scripts/post-commit-scripts.sh"
+    "pre-commit": "./scripts/pre-commit.sh",
+    "pre-push": "./scripts/pre-push.sh",
+    "post-merge": "./scripts/post-merge.sh"
   }
 }
