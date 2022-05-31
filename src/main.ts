@@ -1,6 +1,6 @@
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {AppModule} from './app/app.module';
+import {AppModule} from '@app/app.module';
 import {environment} from './environments/environment';
 import {hmrBootstrap} from './hmr';
 
@@ -14,7 +14,7 @@ if (environment.production) {
 const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
 
 // HMR
-/* tslint:disable:no-string-literal */
+/* eslint-disable @typescript-eslint/dot-notation */
 if (environment.hmr) {
   console.log(environment);
   if (module['hot']) {

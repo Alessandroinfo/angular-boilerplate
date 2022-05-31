@@ -10,7 +10,7 @@ import {environment} from '../../../../environments/environment';
       {{ appVersion }}
     </div>
   `,
-  styleUrls: ['./version.component.scss']
+  styleUrls: ['./version.component.scss'],
 })
 export class VersionComponent {
   appVersion = environment.appVersion;

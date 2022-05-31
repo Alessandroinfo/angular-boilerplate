@@ -1,6 +1,6 @@
 # Angular Boilerplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+The GOAL of this project is to have all the tools ready to use to develop a complete app from every point of view.
 
 ## Development server
 
@@ -29,3 +29,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 https://dev.to/seankerwin/angular-8-tailwind-css-guide-3m45
+
+## TODO - Roadmap
+1. Securing firestore rules https://stackoverflow.com/questions/47997260/how-to-source-control-firestore-database-security-rules-and-update-them-automati
+2. Custom console message

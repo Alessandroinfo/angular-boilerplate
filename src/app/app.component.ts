@@ -1,22 +1,33 @@
 import {Component, Inject, LOCALE_ID, OnDestroy, OnInit} from '@angular/core';
 import {takeWhile, tap} from 'rxjs/operators';
-import {LoadingState} from './shared/models';
 import {GenericFacilityService} from './core/services/generic-facility.service';
 import {GlobalDataService} from './core/services/global-data.service';
 import {environment} from '../environments/environment';
 import {ApiService} from './core/services/api.service';
-import {NavigationEnd, NavigationStart, Router, RouterEvent} from '@angular/router';
+import {
+  NavigationEnd,
+  NavigationStart,
+  Router,
+  RouterEvent,
+} from '@angular/router';
+import {LoadingState} from '@app/shared/models/loading-app';
 
 @Component({
   selector: 'app-root',
   template: `
     <p>
+      {{ 12059964 | filesize }}
       <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
     </p>
 
-    <p>
-      <span matBadge="1" matBadgeSize="large">Text with large badge</span>
-    </p>
+    <div class="flex flex-col box-border p-6">
+      <span [appOutline] matBadge="1" matBadgeSize="large"
+        >Text with large badge</span
+      >
+      <span [appBoxLine] matBadge="1" matBadgeSize="large"
+        >Text with large badge</span
+      >
+    </div>
 
     <p>
       Button with a badge on the left
@@ -72,7 +83,7 @@ import {NavigationEnd, NavigationStart, Router, RouterEvent} from '@angular/rout
         <button mat-raised-button color="warn">Warn</button>
         <button mat-raised-button disabled>Disabled</button>
         <a mat-raised-button href="https://www.google.com/" target="_blank"
-        >Link</a
+          >Link</a
         >
       </div>
     </section>
@@ -86,7 +97,7 @@ import {NavigationEnd, NavigationStart, Router, RouterEvent} from '@angular/rout
         <button mat-stroked-button color="warn">Warn</button>
         <button mat-stroked-button disabled>Disabled</button>
         <a mat-stroked-button href="https://www.google.com/" target="_blank"
-        >Link</a
+          >Link</a
         >
       </div>
     </section>
@@ -100,7 +111,7 @@ import {NavigationEnd, NavigationStart, Router, RouterEvent} from '@angular/rout
         <button mat-flat-button color="warn">Warn</button>
         <button mat-flat-button disabled>Disabled</button>
         <a mat-flat-button href="https://www.google.com/" target="_blank"
-        >Link</a
+          >Link</a
         >
       </div>
     </section>
@@ -243,14 +254,14 @@ import {NavigationEnd, NavigationStart, Router, RouterEvent} from '@angular/rout
     <app-version></app-version>
     <router-outlet></router-outlet>
   `,
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, OnDestroy {
   // FLAG FOR COMPLETE, UNSUBSCRIBE OBSERVABLES
   alive = true;
 
   // FOR LOADING STATUS DEFAULT FALSE ALL
-  loadingState: LoadingState = this.gcdSvc.LoadingDefaultOffState;
+  loadingState: LoadingState = this.gcdSvc.loadingDefaultOffState;
   hidden = false;
 
   constructor(
@@ -289,13 +300,13 @@ export class AppComponent implements OnInit, OnDestroy {
         this.loadingState = {
           ...this.loadingState,
           isLoading: true,
-          topLoading: true
+          topLoading: true,
         };
       } else if (event instanceof NavigationEnd) {
         this.loadingState = {
           ...this.loadingState,
           isLoading: false,
-          topLoading: false
+          topLoading: false,
         };
       }
     });
@@ -306,7 +317,7 @@ export class AppComponent implements OnInit, OnDestroy {
       .getInfo()
       .pipe(
         tap((val: any) => {
-          console.log();
+          console.log(val);
         })
       )
       .subscribe();

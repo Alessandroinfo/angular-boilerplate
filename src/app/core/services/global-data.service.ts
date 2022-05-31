@@ -1,24 +1,25 @@
 import {Injectable} from '@angular/core';
-import {LanguageItem, LanguagesList, LoadingHeaders, LoadingState} from '../../shared/models';
+import {LoadingHeaders, LoadingState} from '@app/shared/models/loading-app';
+import {LanguageItem, LanguagesList} from '@app/shared/models/language-app';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GlobalDataService {
   // CODE FOR LANGUAGE LIST
   // WITH DEFAULT CONF IS THIS THE LANG
   // DEFAULT LOADING STATE
-  public LoadingDefaultOffState: LoadingState = {
+  public loadingDefaultOffState: LoadingState = {
     isLoading: false,
     blockOverlay: false,
     centerLoading: false,
-    topLoading: false
+    topLoading: false,
   };
   // HTTP HEADER FOR LOADER
   public loadingHeaders: LoadingHeaders = {
     BLOCKOVERLAY: 'blockoverlay',
     CENTERLOADER: 'centerloader',
-    TOPLOADER: 'toploader'
+    TOPLOADER: 'toploader',
   };
 
   // LANGUAGE LIST
@@ -28,16 +29,15 @@ export class GlobalDataService {
     {code: 'es', label: 'Espanol'},
     {code: 'fr', label: 'Françoise'},
     {code: 'it', label: 'Italiano'},
-    {code: 'de', label: 'Deutsch'}
+    {code: 'de', label: 'Deutsch'},
   ];
 
   // DEFAULT LANGUAGE
   private languageDefault = {code: 'en', label: 'English'};
 
-  constructor() {
-  }
+  constructor() {}
 
-  // ---------------------------------------------------------- GETTER & SETTER --------------------------------------------------------- //
+  // ----------------------- GETTER & SETTER ----------------------- //
 
   // LANGUAGES
   getLanguagesList(): LanguagesList {

@@ -1,10 +1,12 @@
 import {Inject, Injectable, LOCALE_ID} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {AngularError, LanguageItem, LoadingState} from '../../shared/models';
 import {GlobalDataService} from './global-data.service';
+import {LanguageItem} from '@app/shared/models/language-app';
+import {AngularError} from '@app/shared/models/angular-error';
+import {LoadingState} from '@app/shared/models/loading-app';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GenericFacilityService {
   // ------------------------------------------------------------ ATTRIBUTES ------------------------------------------------------------ //
@@ -16,7 +18,7 @@ export class GenericFacilityService {
 
   // THIS OBS IS FOR LOADER STATUS
   private loadingState$: BehaviorSubject<LoadingState> = new BehaviorSubject<LoadingState>(
-    this.gldSvc.LoadingDefaultOffState
+    this.gldSvc.loadingDefaultOffState
   );
 
   // ACTIVE LANGUAGE OF THE APP
