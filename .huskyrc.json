@@ -1,6 +1,7 @@
 {
   "hooks": {
-    "pre-commit": "npm run lint && npm run format-code",
-    "pre-push": "./scripts/pre-push-scripts.sh"
+    "pre-commit": "./scripts/pre-commit-scripts.sh",
+    "pre-push": "./scripts/pre-push-scripts.sh",
+    "post-commit": "./scripts/post-commit-scripts.sh"
   }
 }
