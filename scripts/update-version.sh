@@ -8,10 +8,10 @@
 branch=$(git branch --show-current | sed -n -e 's/^\* \(.*\)/\1/p')
 echo "$branch"
 if [[ "feature" == *"$branch"* ]]; then
-  echo "It's there."
+  echo "feature"
 elif
   [[ "fix" == *"$branch"* ]] || [[ "bugfix" == *"$branch"* ]] || [[ "hotfix" == *"$branch"* ]]; then
-    echo "It's here."
+    echo "fix"
 else
-  echo "It's"
+  echo "origin"
 fi
