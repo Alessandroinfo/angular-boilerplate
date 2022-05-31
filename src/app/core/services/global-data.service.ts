@@ -17,9 +17,9 @@ export class GlobalDataService {
   };
   // HTTP HEADER FOR LOADER
   public loadingHeaders: LoadingHeaders = {
-    BLOCKOVERLAY: 'blockoverlay',
-    CENTERLOADER: 'centerloader',
-    TOPLOADER: 'toploader',
+    blockOverlay: 'blockoverlay',
+    centerLoader: 'centerloader',
+    topLoader: 'toploader',
   };
 
   // LANGUAGE LIST

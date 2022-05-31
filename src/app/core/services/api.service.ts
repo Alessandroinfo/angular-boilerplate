@@ -10,14 +10,14 @@ export class ApiService {
   // THIS CREATE HEADER FOR CENTER AND TOP CONST THAT HAVE EACH STRING FOR SET LOADING
   center = {
     headers: new HttpHeaders().set(
-      this.gldSvc.loadingHeaders.CENTERLOADER,
-      this.gldSvc.loadingHeaders.CENTERLOADER
+      this.gldSvc.loadingHeaders.centerloader,
+      this.gldSvc.loadingHeaders.centerloader
     )
   };
   top = {
     headers: new HttpHeaders().set(
-      this.gldSvc.loadingHeaders.TOPLOADER,
-      this.gldSvc.loadingHeaders.TOPLOADER
+      this.gldSvc.loadingHeaders.toploader,
+      this.gldSvc.loadingHeaders.toploader
     )
   };
 

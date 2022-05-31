@@ -4,7 +4,7 @@ set -e
 branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
 # Edit here if you don't want to be pushed on a certain branches
-if [ "$branch" != "notpushhere" ] && [ "$branch" != "andnotpushhere" ]; then
+if [ "$branch" != "feature/pre_push_checks" ] && [ "$branch" != "andnotpushhere" ]; then
   echo "You are pushing in: $branch"
   echo "You can push!"
 

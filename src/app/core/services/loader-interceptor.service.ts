@@ -25,15 +25,15 @@ export class LoaderInterceptorService implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     // CHECK IF EXIST NO BLOCK OVERLAY HEADER
-    const blockoverlay = this.gldSvc.loadingHeaders.BLOCKOVERLAY;
+    const blockoverlay = this.gldSvc.loadingHeaders.blockOverlay;
     const BLOCKOVERLAY_H = !!request.headers.get(blockoverlay);
 
     // CHECK IF EXIST NO BLOCK OVERLAY HEADER
-    const centerloader = this.gldSvc.loadingHeaders.CENTERLOADER;
+    const centerloader = this.gldSvc.loadingHeaders.centerLoader;
     const CENTERLOADER_H = !!request.headers.get(centerloader);
 
     // CHECK IF EXIST NO BLOCK OVERLAY HEADER
-    const toploader = this.gldSvc.loadingHeaders.TOPLOADER;
+    const toploader = this.gldSvc.loadingHeaders.topLoader;
     const TOPLOADER_H = !!request.headers.get(toploader);
 
     // CHECK IF ALMOST ONE IS TRUE FOR NOT CLONE HEADERS WITHOUT MOTIVATIONS
