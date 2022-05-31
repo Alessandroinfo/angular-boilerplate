@@ -12,4 +12,6 @@ if [[ "feature" == *"$branch"* ]]; then
 elif
   [[ "fix" == *"$branch"* ]] || [[ "bugfix" == *"$branch"* ]] || [[ "hotfix" == *"$branch"* ]]; then
     echo "It's here."
+else
+  echo "It's"
 fi
