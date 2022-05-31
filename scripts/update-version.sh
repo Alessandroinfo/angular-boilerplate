@@ -4,7 +4,6 @@
 # If it's the branch name contain fix it will make a patch
 # If it's a feature/branch-name it will make a minor
 
-#!/bin/bash
 echo 'Updating version...'
 stringContain() { [ -z "$1" ] || { [ -z "${2##*$1*}" ] && [ -n "$2" ];};}
 
