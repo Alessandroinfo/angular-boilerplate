@@ -10,14 +10,13 @@ stringContain() { [ -z "$1" ] || { [ -z "${2##*$1*}" ] && [ -n "$2" ];};}
 
 branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
-if stringContain "feature" $branch; then
+if stringContain "feature" "$branch"; then
+  echo 'npm version minor'
   npm version minor
-  git add *;
-  git commit -m "Bump version"
-  git push
-  npm publish
-elif stringContain "fix" $branch; then
+elif stringContain "fix" "$branch"; then
+  echo 'npm version patch'
   npm version patch
 else
+  echo 'npm version major'
   npm version major
 fi
