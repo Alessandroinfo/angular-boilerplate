@@ -1,4 +1,4 @@
-import { Component, Inject, LOCALE_ID, OnDestroy, OnInit} from '@angular/core';
+import {Component, Inject, LOCALE_ID, OnDestroy, OnInit} from '@angular/core';
 import {takeWhile, tap} from 'rxjs/operators';
 import {GenericFacilityService} from './core/services/generic-facility.service';
 import {GlobalDataService} from './core/services/global-data.service';
