@@ -3,4 +3,5 @@ export const environment = {
   production: false,
   hmr: true,
   appVersion: require('../../package.json').version,
+  appURL: 'https://test-e0560.web.app/'
 };
