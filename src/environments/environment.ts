@@ -6,8 +6,7 @@ export const environment = {
   env: '',
   production: false,
   hmr: false,
-  appVersion: require('../../package.json').version,
-  appURL: 'https://test-e0560.web.app/'
+  appVersion: require('../../package.json').version
 };
 
 /*
