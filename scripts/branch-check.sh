@@ -1,5 +1,5 @@
 #!/bin/bash
-# Edit notpushere to block push on some branch
+# Check if you can push on some branches
 set -e
 branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
