@@ -10,27 +10,11 @@
           "style": "scss",
           "skipImport": false,
           "export": true,
-          "skipTests": true,
           "inlineTemplate": true
-        },
-        "@schematics/angular:class": {
-          "skipTests": true
         },
         "@schematics/angular:directive": {
-          "skipTests": true,
-          "inlineTemplate": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:module": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:service": {
-          "skipTests": true
+          "inlineTemplate": true,
+          "export": true
         }
       },
       "root": "",
@@ -55,10 +39,7 @@
             "stylePreprocessorOptions": {
               "includePaths": []
             },
-            "styles": [
-              "src/styles.scss",
-              "src/assets/ds/main.scss"
-            ],
+            "styles": ["src/styles.scss", "src/assets/design-system/main.scss"],
             "scripts": [],
             "customWebpackConfig": {
               "path": "webpack.config.js"
@@ -157,10 +138,7 @@
             "stylePreprocessorOptions": {
               "includePaths": []
             },
-            "styles": [
-              "src/styles.scss",
-              "src/assets/ds/main.scss"
-            ],
+            "styles": ["src/styles.scss", "src/assets/design-system/main.scss"],
             "scripts": [],
             "customWebpackConfig": {
               "path": "webpack.config.js"
@@ -170,10 +148,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         },
         "e2e": {

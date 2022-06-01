@@ -1,0 +1,4 @@
+{
+  "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+  "*.{js,jsx,json,ts,tsx,html,scss}": "prettier --write './{src,e2e,scripts}/**/*.{js,jsx,json,ts,tsx,html,scss}' --ignore-path .prettierignore --no-error-on-unmatched-pattern --check"
+}

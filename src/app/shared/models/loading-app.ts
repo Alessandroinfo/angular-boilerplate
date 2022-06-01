@@ -6,7 +6,7 @@ export interface LoadingState {
 }
 
 export interface LoadingHeaders {
-  BLOCKOVERLAY: string;
-  CENTERLOADER: string;
-  TOPLOADER: string;
+  blockOverlay: string;
+  centerLoader: string;
+  topLoader: string;
 }

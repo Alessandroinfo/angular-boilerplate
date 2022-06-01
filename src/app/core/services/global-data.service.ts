@@ -15,11 +15,12 @@ export class GlobalDataService {
     centerLoading: false,
     topLoading: false,
   };
+
   // HTTP HEADER FOR LOADER
   public loadingHeaders: LoadingHeaders = {
-    BLOCKOVERLAY: 'blockoverlay',
-    CENTERLOADER: 'centerloader',
-    TOPLOADER: 'toploader',
+    blockOverlay: 'blockoverlay',
+    centerLoader: 'centerloader',
+    topLoader: 'toploader',
   };
 
   // LANGUAGE LIST
