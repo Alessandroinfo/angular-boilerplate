@@ -16,9 +16,11 @@ import {LoadingState} from '@app/shared/models/loading-app';
   selector: 'app-root',
   template: `
     <button (click)="isTwo = 2">metti focus</button>
+    <label for="focus"></label>
     <input
       [appFocus]="isTwo == 2"
-      name="focusqua"
+      name="focus"
+      id="focus"
       value="qua" />
 
     <p>

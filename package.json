@@ -4,7 +4,7 @@
   "scripts": {
     "generate-asset": "pwa-asset-generator src/assets/imgs/logo.svg src/assets/icons/generated -t png -f true -i src/index.html -m src/manifest.webmanifest --path-override assets/icons/generated --opaque false -p 0 --mstile",
     "start": "ng serve -c test --hmr --o --port 3001",
-    "start-dist": "http-server -c-1 -o .",
+    "start-dist": "cd dist && http-server -c-1 -o .",
     "build": "ng build -c production",
     "build:app-shell:demo": "npm run generate-asset && npm run format-index && ng run angular-boilerplate:app-shell:demo",
     "build:app-shell:production": "npm run generate-asset && npm run format-index && ng run angular-boilerplate:app-shell:production",
