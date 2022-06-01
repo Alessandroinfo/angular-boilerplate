@@ -2,7 +2,6 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 ./scripts/update-version.sh
-git add *;
 git commit -m "Bump version"
 
 ./scripts/branch-check.sh
