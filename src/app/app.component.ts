@@ -16,7 +16,10 @@ import {LoadingState} from '@app/shared/models/loading-app';
   selector: 'app-root',
   template: `
     <button (click)="isTwo = 2">metti focus</button>
-    <input [appFocus]="isTwo == 2" name="focusqua" value="qua">
+    <input
+      [appFocus]="isTwo == 2"
+      name="focusqua"
+      value="qua" />
 
     <p>
       {{ 50000000 | filesize }}
@@ -64,8 +67,9 @@ import {LoadingState} from '@app/shared/models/loading-app';
         Hide
       </button>
     </p>
-    <div *ngFor="let a of array"
-    class="w-64">
+    <div
+      *ngFor="let a of array"
+      class="w-64">
       <mat-card class="demo-inline-calendar-card">
         <mat-calendar [(selected)]="selected"></mat-calendar>
       </mat-card>

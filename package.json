@@ -20,7 +20,8 @@
     "npm-check-update": "ncu",
     "npm-check-unused-pckg": "depcheck",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -68,7 +69,7 @@
     "firebase-tools": "^10.7.2",
     "git-branch-is": "^4.0.0",
     "http-server": "^14.1.0",
-    "husky": "^4.2.5",
+    "husky": "^8.0.1",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.1.1",
