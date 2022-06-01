@@ -15,6 +15,7 @@ export class GlobalDataService {
     centerLoading: false,
     topLoading: false,
   };
+
   // HTTP HEADER FOR LOADER
   public loadingHeaders: LoadingHeaders = {
     blockOverlay: 'blockoverlay',

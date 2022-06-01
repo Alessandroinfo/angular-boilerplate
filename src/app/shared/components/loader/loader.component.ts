@@ -1,13 +1,13 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {LoadingState} from '@app/shared/models/loading-app';
 
 @Component({
   selector: 'app-loader',
   template: `
-    <!--  CLICK ON TRUE FOR TAKE CLICK AND DONT PERMIT CLICK UNDER OVERLAY  -->
+    <!--  appStopPropagation is for prevent click under overlay  -->
     <ng-container
-      (click)="true"
-      *ngIf="state.isLoading">
+      *ngIf="state.isLoading"
+      appStopPropagation>
       <!-- Progress bar -->
       <mat-progress-bar
         *ngIf="state.topLoading"
@@ -26,7 +26,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
   `,
   styleUrls: ['./loader.component.scss'],
 })
-export class LoaderComponent implements OnInit {
+export class LoaderComponent {
   // CHECK IF IS IN LOADING OR NOT
   @Input() state: LoadingState = {
     isLoading: false,
@@ -36,6 +36,4 @@ export class LoaderComponent implements OnInit {
   };
 
   constructor() {}
-
-  ngOnInit() {}
 }

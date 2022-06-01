@@ -15,6 +15,9 @@ import {LoadingState} from '@app/shared/models/loading-app';
 @Component({
   selector: 'app-root',
   template: `
+    <button (click)="isTwo = 2">metti focus</button>
+    <input [appFocus]="isTwo == 2" name="focusqua" value="qua">
+
     <p>
       {{ 50000000 | filesize }}
       <span
@@ -61,7 +64,13 @@ import {LoadingState} from '@app/shared/models/loading-app';
         Hide
       </button>
     </p>
-
+    <div *ngFor="let a of array"
+    class="w-64">
+      <mat-card class="demo-inline-calendar-card">
+        <mat-calendar [(selected)]="selected"></mat-calendar>
+      </mat-card>
+      <p>Selected date: {{ selected }}</p>
+    </div>
     <p>
       Icon with a badge
       <mat-icon
@@ -348,6 +357,9 @@ import {LoadingState} from '@app/shared/models/loading-app';
 export class AppComponent implements OnInit, OnDestroy {
   // FLAG FOR COMPLETE, UNSUBSCRIBE OBSERVABLES
   alive = true;
+  array = Array(1);
+  selected: Date | null;
+  isTwo;
 
   // FOR LOADING STATUS DEFAULT FALSE ALL
   loadingState: LoadingState = this.gcdSvc.loadingDefaultOffState;
@@ -405,7 +417,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.api
       .getInfo()
       .pipe(
-        tap((val: any) => {
+        tap((val: object) => {
           console.log(val);
         })
       )

@@ -13,7 +13,8 @@
           "inlineTemplate": true
         },
         "@schematics/angular:directive": {
-          "inlineTemplate": true
+          "inlineTemplate": true,
+          "export": true
         }
       },
       "root": "",
@@ -38,7 +39,7 @@
             "stylePreprocessorOptions": {
               "includePaths": []
             },
-            "styles": ["src/styles.scss", "src/assets/ds/main.scss"],
+            "styles": ["src/styles.scss", "src/assets/design-system/main.scss"],
             "scripts": [],
             "customWebpackConfig": {
               "path": "webpack.config.js"
@@ -137,7 +138,7 @@
             "stylePreprocessorOptions": {
               "includePaths": []
             },
-            "styles": ["src/styles.scss", "src/assets/ds/main.scss"],
+            "styles": ["src/styles.scss", "src/assets/design-system/main.scss"],
             "scripts": [],
             "customWebpackConfig": {
               "path": "webpack.config.js"

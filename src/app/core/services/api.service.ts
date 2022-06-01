@@ -31,10 +31,10 @@ export class ApiService {
   getInfo() {
     return this.http
       .get('https://jsonplaceholder.typicode.com/posts', {
-        ...this.loaderOptions.top,
+        ...this.loaderOptions.center,
         observe: 'response',
       })
-      .pipe(delay(4000));
+      .pipe(delay(10000));
   }
 
   // This show how to add custom headers
