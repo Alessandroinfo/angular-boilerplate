@@ -1,8 +1,0 @@
-{
-  "hooks": {
-    "pre-commit": "./scripts/.husky/pre-commit.sh",
-    "pre-push": "./scripts/.husky/pre-push.sh",
-    "post-merge": "./scripts/.husky/post-merge.sh",
-    "post-commit": ""
-  }
-}

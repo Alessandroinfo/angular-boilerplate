@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run lint &&
-npm run format-code
+# Uncomment this and comment npm scripts if you want use lint-staged
+npx lint-staged
+# npm run lint && npm run format-code
