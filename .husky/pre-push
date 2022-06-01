@@ -1,9 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-./scripts/update-version.sh
-git commit -m "Bump version"
-
 ./scripts/branch-check.sh
 # Comment this if you don't want build before push
 # && ./scripts/build-check.sh
