@@ -4,7 +4,6 @@
 ./scripts/update-version.sh
 git add *;
 git commit -m "Bump version"
-git push
 
 ./scripts/branch-check.sh
 # Comment this if you don't want build before push
