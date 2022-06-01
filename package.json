@@ -1,6 +1,6 @@
 {
   "name": "angular-boilerplate",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "scripts": {
     "generate-asset": "pwa-asset-generator src/assets/imgs/logo.svg src/assets/icons/generated -t png -f true -i src/index.html -m src/manifest.webmanifest --path-override assets/icons/generated --opaque false -p 0 --mstile",
     "start": "ng serve -c test --hmr --o --port 3001",
