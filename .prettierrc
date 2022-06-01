@@ -1,6 +1,9 @@
 {
   "singleQuote": true,
   "bracketSpacing": false,
+  "bracketSameLine": true,
+  "singleAttributePerLine": true,
+  "htmlWhitespaceSensitivity": "ignore",
   "overrides": [
     {
       "files": "*.scss",

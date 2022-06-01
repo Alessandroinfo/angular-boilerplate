@@ -1,6 +1,7 @@
 module.exports = (config) => {
   const webpackMerge = require('webpack-merge');
-  const merge = webpackMerge && webpackMerge.merge ? webpackMerge.merge : webpackMerge;
+  const merge =
+    webpackMerge && webpackMerge.merge ? webpackMerge.merge : webpackMerge;
 
   const isProd = config.mode === 'production';
   const tailwindConfig = require('./tailwind.config.js')(isProd);
@@ -16,7 +17,7 @@ module.exports = (config) => {
   const autoprefixer = require('autoprefixer');
   const postcssUrl = require('postcss-url');
   const postcssImports = require('postcss-import');
-  const postcssPlugins = function(loader) {
+  const postcssPlugins = function (loader) {
     return [
       postcssImports({
         resolve: (url, context) => {
@@ -26,23 +27,27 @@ module.exports = (config) => {
               url = url.substr(1);
               hadTilde = true;
             }
-            loader.resolve(context, (hadTilde ? '' : './') + url, (err, result) => {
-              if (err) {
-                if (hadTilde) {
-                  reject(err);
-                  return;
-                }
-                loader.resolve(context, url, (err, result) => {
-                  if (err) {
+            loader.resolve(
+              context,
+              (hadTilde ? '' : './') + url,
+              (err, result) => {
+                if (err) {
+                  if (hadTilde) {
                     reject(err);
-                  } else {
-                    resolve(result);
+                    return;
                   }
-                });
-              } else {
-                resolve(result);
+                  loader.resolve(context, url, (err, result) => {
+                    if (err) {
+                      reject(err);
+                    } else {
+                      resolve(result);
+                    }
+                  });
+                } else {
+                  resolve(result);
+                }
               }
-            });
+            );
           });
         },
         load: (filename) => {
@@ -56,14 +61,18 @@ module.exports = (config) => {
               resolve(content);
             });
           });
-        }
+        },
       }),
       postcssUrl({
         filter: ({url}) => url.startsWith('~'),
         url: ({url}) => {
-          const fullPath = path.join(projectRoot, 'node_modules', url.substr(1));
+          const fullPath = path.join(
+            projectRoot,
+            'node_modules',
+            url.substr(1)
+          );
           return path.relative(loader.context, fullPath).replace(/\\/g, '/');
-        }
+        },
       }),
       postcssUrl([
         {
@@ -75,28 +84,34 @@ module.exports = (config) => {
               return `${deployUrl.replace(/\/$/, '')}${url}`;
             } else if (baseHref.match(/:\/\//)) {
               // If baseHref contains a scheme, include it as is.
-              return baseHref.replace(/\/$/, '') +
-                `/${deployUrl}/${url}`.replace(/\/\/+/g, '/');
+              return (
+                baseHref.replace(/\/$/, '') +
+                `/${deployUrl}/${url}`.replace(/\/\/+/g, '/')
+              );
             } else {
               // Join together base-href, deploy-url and the original URL.
               // Also dedupe multiple slashes into single ones.
               return `/${baseHref}/${deployUrl}/${url}`.replace(/\/\/+/g, '/');
             }
-          }
+          },
         },
         {
           // TODO: inline .cur if not supporting IE (use browserslist to check)
           filter: (asset) => {
-            return maximumInlineSize > 0 && !asset.hash && !asset.absolutePath.endsWith('.cur');
+            return (
+              maximumInlineSize > 0 &&
+              !asset.hash &&
+              !asset.absolutePath.endsWith('.cur')
+            );
           },
           url: 'inline',
           // NOTE: maxSize is in KB
           maxSize: maximumInlineSize,
-          fallback: 'rebase'
+          fallback: 'rebase',
         },
-        {url: 'rebase'}
+        {url: 'rebase'},
       ]),
-      autoprefixer({grid: true})
+      autoprefixer({grid: true}),
     ];
   };
 
@@ -110,14 +125,11 @@ module.exports = (config) => {
             postcssOptions: {
               ident: 'postcss',
               syntax: 'postcss-scss',
-              plugins: [
-                postcssPlugins,
-                require('tailwindcss')(tailwindConfig)
-              ]
-            }
-          }
-        }
-      ]
-    }
+              plugins: [postcssPlugins, require('tailwindcss')(tailwindConfig)],
+            },
+          },
+        },
+      ],
+    },
   });
 };

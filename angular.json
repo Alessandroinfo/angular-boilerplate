@@ -38,10 +38,7 @@
             "stylePreprocessorOptions": {
               "includePaths": []
             },
-            "styles": [
-              "src/styles.scss",
-              "src/assets/ds/main.scss"
-            ],
+            "styles": ["src/styles.scss", "src/assets/ds/main.scss"],
             "scripts": [],
             "customWebpackConfig": {
               "path": "webpack.config.js"
@@ -140,10 +137,7 @@
             "stylePreprocessorOptions": {
               "includePaths": []
             },
-            "styles": [
-              "src/styles.scss",
-              "src/assets/ds/main.scss"
-            ],
+            "styles": ["src/styles.scss", "src/assets/ds/main.scss"],
             "scripts": [],
             "customWebpackConfig": {
               "path": "webpack.config.js"
@@ -153,10 +147,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         },
         "e2e": {

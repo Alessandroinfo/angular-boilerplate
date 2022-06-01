@@ -1,1 +1,3 @@
-src/styles.scss
+node_modules
+.firebase
+.github

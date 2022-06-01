@@ -9,6 +9,13 @@ import {DirectivesModule} from '@app/shared/directives/directives.module';
 @NgModule({
   declarations: [VersionComponent, LoaderComponent],
   imports: [CommonModule, MaterialModule, PipesModule, DirectivesModule],
-  exports: [CommonModule, MaterialModule, PipesModule, DirectivesModule, VersionComponent, LoaderComponent],
+  exports: [
+    CommonModule,
+    MaterialModule,
+    PipesModule,
+    DirectivesModule,
+    VersionComponent,
+    LoaderComponent,
+  ],
 })
 export class SharedModule {}

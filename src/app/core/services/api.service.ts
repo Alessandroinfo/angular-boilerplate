@@ -4,21 +4,21 @@ import {GlobalDataService} from './global-data.service';
 import {delay} from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
   // THIS CREATE HEADER FOR CENTER AND TOP CONST THAT HAVE EACH STRING FOR SET LOADING
   center = {
     headers: new HttpHeaders().set(
-      this.gldSvc.loadingHeaders.centerloader,
-      this.gldSvc.loadingHeaders.centerloader
-    )
+      this.gldSvc.loadingHeaders.centerLoader,
+      this.gldSvc.loadingHeaders.centerLoader
+    ),
   };
   top = {
     headers: new HttpHeaders().set(
-      this.gldSvc.loadingHeaders.toploader,
-      this.gldSvc.loadingHeaders.toploader
-    )
+      this.gldSvc.loadingHeaders.topLoader,
+      this.gldSvc.loadingHeaders.topLoader
+    ),
   };
 
   // THIS CONTAIN BOTH LOADING TYPE
@@ -26,15 +26,14 @@ export class ApiService {
   loaderOptions = {top: this.top, center: this.center};
 
   // TODO MANAGE ERRORS OF HTTP
-  constructor(private http: HttpClient, private gldSvc: GlobalDataService) {
-  }
+  constructor(private http: HttpClient, private gldSvc: GlobalDataService) {}
 
   getInfo() {
     return this.http
-      .get(
-        'https://jsonplaceholder.typicode.com/posts',
-        {...this.loaderOptions.top, observe: 'response'}
-      )
+      .get('https://jsonplaceholder.typicode.com/posts', {
+        ...this.loaderOptions.top,
+        observe: 'response',
+      })
       .pipe(delay(4000));
   }
 

@@ -4,7 +4,6 @@ import {OlDirective} from '@app/shared/directives/outline.directive';
 
 @NgModule({
   declarations: [BoxLineDirective, OlDirective],
-  exports: [BoxLineDirective, OlDirective]
+  exports: [BoxLineDirective, OlDirective],
 })
-export class DirectivesModule {
-}
+export class DirectivesModule {}
