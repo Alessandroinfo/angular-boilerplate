@@ -3,6 +3,6 @@
     "pre-commit": "./scripts/.husky/pre-commit.sh",
     "pre-push": "./scripts/.husky/pre-push.sh",
     "post-merge": "./scripts/.husky/post-merge.sh",
-    "post-commit": "echo $GIT_PARAMS && echo $HUSKY_GIT_PARAMS && echo $1 '-' $2"
+    "post-commit": ""
   }
 }

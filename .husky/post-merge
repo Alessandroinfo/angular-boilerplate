@@ -1,3 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
 # TODO: check the branch name that will merge
 ./scripts/update-version.sh

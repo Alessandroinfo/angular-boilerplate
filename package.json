@@ -20,7 +20,8 @@
     "npm-check-update": "ncu",
     "npm-check-unused-pckg": "depcheck",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
