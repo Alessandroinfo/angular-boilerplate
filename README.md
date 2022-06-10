@@ -33,3 +33,13 @@ https://dev.to/seankerwin/angular-8-tailwind-css-guide-3m45
 ## DOC THIS
 Remember to add executable permissions for husky and other scripts with chmod +x PATH_TO_HUSKY_FILE
 git hooks scripts
+if from windows remember to
+Save your current files in Git, so that none of your work is lost.
+$ git add . -u
+$ git commit -m "Saving files before refreshing line endings"
+Add all your changed files back and normalize the line endings.
+$ git add --renormalize .
+Show the rewritten, normalized files.
+$ git status
+Commit the changes to your repository.
+$ git commit -m "Normalize all the line endings"
