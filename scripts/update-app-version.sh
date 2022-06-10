@@ -9,6 +9,7 @@ stringContain() { [ -z "$1" ] || { [ -z "${2##*$1*}" ] && [ -n "$2" ];};}
 
 branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
+echo "[update-app-version] Branch name is $branch"
 if stringContain "feature" "$branch" || stringContain "release" "$branch"; then
   echo '[update-app-version] npm version minor'
   npm version minor
