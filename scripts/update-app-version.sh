@@ -19,4 +19,3 @@ else
   echo '[update-app-version] npm version major'
   npm version major
 fi
-pause
