@@ -1,8 +1,8 @@
 import {NgModule, Optional, SkipSelf} from '@angular/core';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {LoaderInterceptorService} from './services/loader-interceptor.service';
-import {GenericFacilityService} from './services/generic-facility.service';
-import {ApiService} from './services/api.service';
+import {LoaderInterceptorService} from './loader-interceptor/loader-interceptor.service';
+import {GenericFacilityService} from './generic-facility/generic-facility.service';
+import {ApiService} from './api/api.service';
 import {CommonModule} from '@angular/common';
 
 @NgModule({

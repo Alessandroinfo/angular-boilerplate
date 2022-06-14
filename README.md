@@ -43,3 +43,10 @@ Remember that Material Icons names should be replace with codepoint because WebV
 The normalize is that of TailwindCSS
 
 Note: https://tddpirate.zak.co.il/2018/09/06/do-material-design-icons-fail-to-show-in-your-cordova-vue-vuetify-android-application/
+npm i -D ngx-spec@^2.0.0 for missing specs
+HOW TO REMOVE
+TAILWIND
+MATERIAL
+OR YOUR DS
+remember to add shared module when you need
+untildestroy

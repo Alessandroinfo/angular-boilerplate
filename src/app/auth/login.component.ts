@@ -4,8 +4,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { finalize } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
-import { Logger, UntilDestroy, untilDestroyed } from '@core';
 import { AuthenticationService } from './authentication.service';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { Logger } from '@app/core/logger/logger.service';
 
 const log = new Logger('Login');
 
@@ -13,10 +14,10 @@ const log = new Logger('Login');
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  version: string | null = environment.version;
+  version: string | null = environment.appVersion;
   error: string | undefined;
   loginForm!: FormGroup;
   isLoading = false;
@@ -30,7 +31,8 @@ export class LoginComponent implements OnInit {
     this.createForm();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   login() {
     this.isLoading = true;
@@ -59,7 +61,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
-      remember: true,
+      remember: true
     });
   }
 }

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {GlobalDataService} from './global-data.service';
+import {GlobalDataService} from '../global-data/global-data.service';
 import {delay} from 'rxjs/operators';
 
 @Injectable({

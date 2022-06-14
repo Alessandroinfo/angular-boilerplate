@@ -8,8 +8,8 @@ import {
 } from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
-import {GlobalDataService} from './global-data.service';
-import {GenericFacilityService} from './generic-facility.service';
+import {GlobalDataService} from '../global-data/global-data.service';
+import {GenericFacilityService} from '../generic-facility/generic-facility.service';
 
 @Injectable({
   providedIn: 'root',

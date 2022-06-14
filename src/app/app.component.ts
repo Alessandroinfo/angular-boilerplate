@@ -1,9 +1,9 @@
 import {Component, Inject, LOCALE_ID, OnDestroy, OnInit} from '@angular/core';
 import {takeWhile, tap} from 'rxjs/operators';
-import {GenericFacilityService} from './core/services/generic-facility.service';
-import {GlobalDataService} from './core/services/global-data.service';
-import {environment} from '../environments/environment';
-import {ApiService} from './core/services/api.service';
+import {GenericFacilityService} from './core/generic-facility/generic-facility.service';
+import {GlobalDataService} from './core/global-data/global-data.service';
+import {environment} from '@env/environment';
+import {ApiService} from './core/api/api.service';
 import {NavigationEnd, NavigationStart, Router, RouterEvent} from '@angular/router';
 import {LoadingState} from '@app/shared/models/loading-app';
 
@@ -44,7 +44,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
         Hide
       </button>
     </p>
-
+    <mat-icon>code</mat-icon>
     <p>
       Icon with a badge
       <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>

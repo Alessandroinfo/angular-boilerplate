@@ -1,21 +1,27 @@
 
-.login-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.login-box {
+:host {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
+  background-color: #f5f5f5;
+}
+
+.inline-loader {
+  display: inline-block;
+}
+
+.version {
+  margin: 0;
+}
+
+.login-container,
+.mat-form-field {
   width: 100%;
-  min-height: 100%;
 }
 
-.ng-invalid.ng-touched:not(form) {
+.login-fields > :not(:last-child) {
+  margin-bottom: 8px;
 }
 
+.login-error {
+  color: mat-color($app-warn);
+}

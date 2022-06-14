@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-shell',
-  templateUrl: './shell.component.html',
+  template: `<app-header></app-header><router-outlet></router-outlet>`,
   styleUrls: ['./shell.component.scss'],
 })
 export class ShellComponent implements OnInit {
