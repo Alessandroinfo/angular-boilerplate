@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { finalize } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
-import { AuthenticationService } from './authentication.service';
+import { AuthenticationService } from '@app/auth/authentication.service';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { Logger } from '@app/core/logger/logger.service';
 

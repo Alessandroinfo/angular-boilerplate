@@ -14,6 +14,9 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatInputModule } from '@angular/material/input';
 
 const MODULES = [
   MatProgressBarModule,
@@ -22,7 +25,10 @@ const MODULES = [
   MatBadgeModule,
   MatIconModule,
   MatDividerModule,
-  MatCardModule
+  MatCardModule,
+  MatFormFieldModule,
+  MatSlideToggleModule,
+  MatInputModule
 ];
 
 const PROVIDERS = [];

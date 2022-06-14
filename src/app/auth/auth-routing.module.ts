@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { marker } from '@biesbjerg/ngx-translate-extract-marker';
 
-import { LoginComponent } from './login.component';
+import { LoginComponent } from './components/login/login.component';
 
-const routes: Routes = [{ path: 'login', component: LoginComponent, data: { title: marker('Login') } }];
+const routes: Routes = [{ path: 'login', component: LoginComponent, data: { title: 'Login' } }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

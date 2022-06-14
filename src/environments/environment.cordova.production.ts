@@ -6,4 +6,5 @@ export const environment = {
   cordova: true,
   hmr: false,
   appVersion: require('../../package.json').version,
+  serverUrl: '/api'
 };

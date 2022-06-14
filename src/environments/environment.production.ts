@@ -4,4 +4,5 @@ export const environment = {
   cordova: false,
   hmr: false,
   appVersion: require('../../package.json').version,
+  serverUrl: 'https://jsonplaceholder.typicode.com'
 };
