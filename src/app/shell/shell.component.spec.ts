@@ -14,9 +14,7 @@ describe('ShellComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
+      imports: [RouterTestingModule],
       providers: [
         {provide: AuthenticationService, useClass: MockAuthenticationService},
         {provide: CredentialsService, useClass: MockCredentialsService},
