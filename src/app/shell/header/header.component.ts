@@ -5,7 +5,9 @@ import {AuthenticationService, CredentialsService} from '@app/auth';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
+  template: `
+<div class="flex"></div>
+  `,
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {

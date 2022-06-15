@@ -11,9 +11,6 @@ import {RouterModule} from '@angular/router';
 import {HomeModule} from '@app/home/home.module';
 import {ShellModule} from '@app/shell/shell.module';
 import {AuthModule} from '@app/auth';
-import {HTTP_INTERCEPTORS} from '@angular/common/http';
-import {ApiPrefixInterceptor} from '@app/core/http/api-prefix.interceptor';
-import {ErrorHandlerInterceptor} from '@app/core/http/error-handler.interceptor';
 
 // App divided into:
 // Core module: only singleton one instantiated services

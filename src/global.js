@@ -7,7 +7,7 @@ console.log(
   '%c Welcome to Angular-boilerplate console.',
   'background: black; color: green'
 );
-console.warn(
+console.log(
   '%c Be careful if someone ask to get something from there.',
   'background: black; color: orange'
 );

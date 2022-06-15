@@ -57,7 +57,7 @@ export class AppComponent implements OnInit {
 
     // If you want disable log depending
     // on the environment configuration
-    if (environment.logConsole) {
+    if (!environment.logConsole) {
       Logger.disableLog();
     }
 

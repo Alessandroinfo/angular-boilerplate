@@ -59,7 +59,7 @@ export class Logger {
    * Current logging level.
    * Set it to LogLevel.Off to disable logs completely.
    */
-  static level = LogLevel.Off;
+  static level = LogLevel.Debug;
 
   /**
    * Additional log outputs.
