@@ -30,6 +30,9 @@
  * If you want to process logs through other outputs than console, you can add LogOutput functions to Logger.outputs.
  */
 
+import {environment} from '@env/environment';
+import {enableProdMode} from '@angular/core';
+
 /**
  * The possible log levels.
  * LogLevel.Off is never emitted and only used with Logger.level property to disable logs.
@@ -45,14 +48,18 @@ export enum LogLevel {
 /**
  * Log output handler function.
  */
-export type LogOutput = (source: string | undefined, level: LogLevel, ...objects: any[]) => void;
+export type LogOutput = (
+  source: string | undefined,
+  level: LogLevel,
+  ...objects: any[]
+) => void;
 
 export class Logger {
   /**
    * Current logging level.
    * Set it to LogLevel.Off to disable logs completely.
    */
-  static level = LogLevel.Debug;
+  static level = LogLevel.Off;
 
   /**
    * Additional log outputs.
@@ -65,6 +72,13 @@ export class Logger {
    */
   static enableProductionMode() {
     Logger.level = LogLevel.Warning;
+  }
+
+  /**
+   * Disable logging.
+   */
+  static disableLog() {
+    Logger.level = LogLevel.Off;
   }
 
   constructor(private source?: string) {}
@@ -103,9 +117,13 @@ export class Logger {
 
   private log(func: (...args: any[]) => void, level: LogLevel, objects: any[]) {
     if (level <= Logger.level) {
-      const log = this.source ? ['[' + this.source + ']'].concat(objects) : objects;
+      const log = this.source
+        ? ['[' + this.source + ']'].concat(objects)
+        : objects;
       func.apply(console, log);
-      Logger.outputs.forEach((output) => output.apply(output, [this.source, level, ...objects]));
+      Logger.outputs.forEach((output) =>
+        output.apply(output, [this.source, level, ...objects])
+      );
     }
   }
 }

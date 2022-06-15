@@ -21,19 +21,21 @@ export class LoaderInterceptorService implements HttpInterceptor {
   ) {}
 
   intercept(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     request: HttpRequest<any>,
     next: HttpHandler
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ): Observable<HttpEvent<any>> {
     // CHECK IF EXIST NO BLOCK OVERLAY HEADER
-    const blockoverlay = this.gldSvc.loadingHeaders.BLOCKOVERLAY;
+    const blockoverlay = this.gldSvc.loadingHeaders.blockOverlay;
     const BLOCKOVERLAY_H = !!request.headers.get(blockoverlay);
 
     // CHECK IF EXIST NO BLOCK OVERLAY HEADER
-    const centerloader = this.gldSvc.loadingHeaders.CENTERLOADER;
+    const centerloader = this.gldSvc.loadingHeaders.centerLoader;
     const CENTERLOADER_H = !!request.headers.get(centerloader);
 
     // CHECK IF EXIST NO BLOCK OVERLAY HEADER
-    const toploader = this.gldSvc.loadingHeaders.TOPLOADER;
+    const toploader = this.gldSvc.loadingHeaders.topLoader;
     const TOPLOADER_H = !!request.headers.get(toploader);
 
     // CHECK IF ALMOST ONE IS TRUE FOR NOT CLONE HEADERS WITHOUT MOTIVATIONS
@@ -72,33 +74,33 @@ export class LoaderInterceptorService implements HttpInterceptor {
     setTimeout(() => {
       if (TOPLOADER_H && BLOCKOVERLAY_H) {
         this.gcfSvc.setLoadingState({
-          ...this.gldSvc.LoadingDefaultOffState,
+          ...this.gldSvc.loadingDefaultOffState,
           isLoading: true,
           topLoading: true,
           blockOverlay: true,
         });
       } else if (TOPLOADER_H) {
         this.gcfSvc.setLoadingState({
-          ...this.gldSvc.LoadingDefaultOffState,
+          ...this.gldSvc.loadingDefaultOffState,
           isLoading: true,
           topLoading: true,
         });
       } else if (CENTERLOADER_H) {
         this.gcfSvc.setLoadingState({
-          ...this.gldSvc.LoadingDefaultOffState,
+          ...this.gldSvc.loadingDefaultOffState,
           isLoading: true,
           centerLoading: true,
           blockOverlay: true,
         });
       } else if (BLOCKOVERLAY_H) {
         this.gcfSvc.setLoadingState({
-          ...this.gldSvc.LoadingDefaultOffState,
+          ...this.gldSvc.loadingDefaultOffState,
           isLoading: true,
           blockOverlay: true,
         });
       } else {
         this.gcfSvc.setLoadingState({
-          ...this.gldSvc.LoadingDefaultOffState,
+          ...this.gldSvc.loadingDefaultOffState,
           isLoading: true,
         });
       }
@@ -106,11 +108,12 @@ export class LoaderInterceptorService implements HttpInterceptor {
 
     // RETURN THE SAME REQUEST CALLED AND MANAGE THE OFF OF LOADING
     return next.handle(request).pipe(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       tap((event: HttpEvent<any>) => {
         if (event instanceof HttpResponse) {
           // do stuff with response if you want
           setTimeout(() => {
-            this.gcfSvc.setLoadingState(this.gldSvc.LoadingDefaultOffState);
+            this.gcfSvc.setLoadingState(this.gldSvc.loadingDefaultOffState);
           });
         }
       }),
@@ -118,7 +121,7 @@ export class LoaderInterceptorService implements HttpInterceptor {
       catchError((err) => {
         setTimeout(() => {
           // if (!noLoading) {
-          this.gcfSvc.setLoadingState(this.gldSvc.LoadingDefaultOffState);
+          this.gcfSvc.setLoadingState(this.gldSvc.loadingDefaultOffState);
           // }
         });
         console.error('Error on interceptor handling request: ', err);

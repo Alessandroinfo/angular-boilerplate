@@ -6,7 +6,7 @@
 // and
 // theme.extend.colors.secondary
 // with same primary and secondary of angular material
-// theme colors in assets/ds/abstract/_palettes.scss
+// theme colors in assets/design-system/abstract/_palettes.scss
 // Choice they wisely on https://material.io/resources/color
 // Check if it's good the important true to override Material styles
 

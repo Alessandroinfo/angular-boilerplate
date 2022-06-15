@@ -9,17 +9,18 @@ export class GlobalDataService {
   // CODE FOR LANGUAGE LIST
   // WITH DEFAULT CONF IS THIS THE LANG
   // DEFAULT LOADING STATE
-  public LoadingDefaultOffState: LoadingState = {
+  public loadingDefaultOffState: LoadingState = {
     isLoading: false,
     blockOverlay: false,
     centerLoading: false,
     topLoading: false,
   };
+
   // HTTP HEADER FOR LOADER
   public loadingHeaders: LoadingHeaders = {
-    BLOCKOVERLAY: 'blockoverlay',
-    CENTERLOADER: 'centerloader',
-    TOPLOADER: 'toploader',
+    blockOverlay: 'blockoverlay',
+    centerLoader: 'centerloader',
+    topLoader: 'toploader',
   };
 
   // LANGUAGE LIST
@@ -37,7 +38,7 @@ export class GlobalDataService {
 
   constructor() {}
 
-  // ---------------------------------------------------------- GETTER & SETTER --------------------------------------------------------- //
+  // ----------------------- GETTER & SETTER ----------------------- //
 
   // LANGUAGES
   getLanguagesList(): LanguagesList {

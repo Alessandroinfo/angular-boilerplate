@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { GenericFacilityService } from './generic-facility.service';
+import {GenericFacilityService} from './generic-facility.service';
 
 describe('GenericFacilityService', () => {
   let service: GenericFacilityService;

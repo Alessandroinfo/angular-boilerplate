@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 
-import { AuthenticationService, CredentialsService } from '@app/auth';
+import {AuthenticationService, CredentialsService} from '@app/auth';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   menuHidden = true;
 
   constructor(
@@ -17,14 +17,14 @@ export class HeaderComponent implements OnInit {
     private credentialsService: CredentialsService
   ) {}
 
-  ngOnInit() {}
-
   toggleMenu() {
     this.menuHidden = !this.menuHidden;
   }
 
   logout() {
-    this.authenticationService.logout().subscribe(() => this.router.navigate(['/login'], { replaceUrl: true }));
+    this.authenticationService
+      .logout()
+      .subscribe(() => this.router.navigate(['/login'], {replaceUrl: true}));
   }
 
   get username(): string | null {

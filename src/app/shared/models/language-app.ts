@@ -1,4 +1,4 @@
-export interface LanguagesList extends Array<LanguageItem> {}
+export type LanguagesList = LanguageItem[];
 
 export interface LanguageItem {
   code: string;

@@ -11,6 +11,10 @@
           "skipImport": false,
           "export": true,
           "inlineTemplate": true
+        },
+        "@schematics/angular:directive": {
+          "inlineTemplate": true,
+          "export": true
         }
       },
       "root": "",
@@ -38,10 +42,10 @@
             },
             "styles": [
               "src/styles.scss",
-              "src/assets/ds/main.scss"
+              "src/assets/design-system/main.scss"
             ],
             "scripts": [
-              "global.js"
+              "src/global.js"
             ],
             "customWebpackConfig": {
               "path": "webpack.config.js"
@@ -169,10 +173,10 @@
             },
             "styles": [
               "src/styles.scss",
-              "src/assets/ds/main.scss"
+              "src/assets/design-system/main.scss"
             ],
             "scripts": [
-              "global.js"
+              "src/global.js"
             ],
             "customWebpackConfig": {
               "path": "webpack.config.js"
@@ -180,16 +184,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json",
-              "tsconfig.server.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         },

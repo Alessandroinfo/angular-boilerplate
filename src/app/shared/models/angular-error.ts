@@ -1,9 +1,9 @@
 export interface AngularError {
-  name: any;
-  time: any;
-  id: any;
-  url: any;
-  status: any;
-  message: any;
-  stack: any;
+  name: string;
+  time: string;
+  id: string;
+  url: string;
+  status: string;
+  message: string;
+  stack: string;
 }

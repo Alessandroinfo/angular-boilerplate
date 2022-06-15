@@ -1,38 +1,60 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="https://github.com/ngx-rocket" translate>APP_NAME</a>
+    <a
+      class="navbar-brand"
+      href="https://github.com/ngx-rocket"
+      translate>
+      APP_NAME
+    </a>
     <button
       class="navbar-toggler"
       type="button"
       aria-controls="navbar-menu"
       aria-label="Toggle navigation"
       (click)="toggleMenu()"
-      [attr.aria-expanded]="!menuHidden"
-    >
+      [attr.aria-expanded]="!menuHidden">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div id="navbar-menu" class="collapse navbar-collapse float-xs-none">
+    <div
+      id="navbar-menu"
+      class="collapse navbar-collapse float-xs-none">
       <div class="navbar-nav">
-        <a class="nav-item nav-link text-uppercase" routerLink="/home" routerLinkActive="active">
+        <a
+          class="nav-item nav-link text-uppercase"
+          routerLink="/home"
+          routerLinkActive="active">
           <i class="fas fa-home"></i>
           <span translate>Home</span>
         </a>
-        <a class="nav-item nav-link text-uppercase" routerLink="/about" routerLinkActive="active">
+        <a
+          class="nav-item nav-link text-uppercase"
+          routerLink="/about"
+          routerLinkActive="active">
           <i class="fas fa-question-circle"></i>
           <span translate>About</span>
         </a>
       </div>
       <div class="navbar-nav ml-auto">
         <div class="nav-item">
-          <a id="user-dropdown" class="nav-link">
+          <a
+            id="user-dropdown"
+            class="nav-link">
             <i class="fas fa-user-circle"></i>
           </a>
-          <div aria-labelledby="user-dropdown" class="dropdown-menu dropdown-menu-right">
+          <div
+            aria-labelledby="user-dropdown"
+            class="dropdown-menu dropdown-menu-right">
             <h6 class="dropdown-header">
-              <span translate>Logged in as</span> <b>{{ username }}</b>
+              <span translate>Logged in as</span>
+              <b>{{ username }}</b>
             </h6>
             <div class="dropdown-divider"></div>
-            <button class="dropdown-item" (click)="logout()" translate>Logout</button>
+            <button
+              class="dropdown-item"
+              (click)="logout()"
+              translate>
+              Logout
+            </button>
           </div>
         </div>
       </div>

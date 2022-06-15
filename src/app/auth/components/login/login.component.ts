@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { finalize } from 'rxjs/operators';
+import {Component, OnInit} from '@angular/core';
+import {Router, ActivatedRoute} from '@angular/router';
+import {FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {finalize} from 'rxjs/operators';
 
-import { environment } from '@env/environment';
-import { AuthenticationService } from '@app/auth/authentication.service';
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { Logger } from '@app/core/logger/logger.service';
+import {environment} from '@env/environment';
+import {AuthenticationService} from '@app/auth/services/authentication.service';
+import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
+import {Logger} from '@app/core/logger/logger.service';
 
 const log = new Logger('Login');
 
@@ -14,7 +14,7 @@ const log = new Logger('Login');
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
   version: string | null = environment.appVersion;
@@ -31,8 +31,7 @@ export class LoginComponent implements OnInit {
     this.createForm();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   login() {
     this.isLoading = true;
@@ -48,7 +47,10 @@ export class LoginComponent implements OnInit {
       .subscribe(
         (credentials) => {
           log.debug(`${credentials.username} successfully logged in`);
-          this.router.navigate([this.route.snapshot.queryParams.redirect || '/'], { replaceUrl: true });
+          this.router.navigate(
+            [this.route.snapshot.queryParams.redirect || '/'],
+            {replaceUrl: true}
+          );
         },
         (error) => {
           log.debug(`Login error: ${error}`);
@@ -61,7 +63,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
-      remember: true
+      remember: true,
     });
   }
 }

@@ -1,10 +1,13 @@
-import { Type } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import {Type} from '@angular/core';
+import {TestBed} from '@angular/core/testing';
+import {
+  HttpClientTestingModule,
+  HttpTestingController,
+} from '@angular/common/http/testing';
+import {HTTP_INTERCEPTORS, HttpClient} from '@angular/common/http';
 
-import { environment } from '@env/environment';
-import { ApiPrefixInterceptor } from './api-prefix.interceptor';
+import {environment} from '@env/environment';
+import {ApiPrefixInterceptor} from './api-prefix.interceptor';
 
 describe('ApiPrefixInterceptor', () => {
   let http: HttpClient;
@@ -23,7 +26,9 @@ describe('ApiPrefixInterceptor', () => {
     });
 
     http = TestBed.inject(HttpClient);
-    httpMock = TestBed.inject(HttpTestingController as Type<HttpTestingController>);
+    httpMock = TestBed.inject(
+      HttpTestingController as Type<HttpTestingController>
+    );
   });
 
   afterEach(() => {
@@ -35,7 +40,7 @@ describe('ApiPrefixInterceptor', () => {
     http.get('/toto').subscribe();
 
     // Assert
-    httpMock.expectOne({ url: environment.serverUrl + '/toto' });
+    httpMock.expectOne({url: environment.serverUrl + '/toto'});
   });
 
   it('should not prepend environment.serverUrl to request url', () => {
@@ -43,6 +48,6 @@ describe('ApiPrefixInterceptor', () => {
     http.get('hTtPs://domain.com/toto').subscribe();
 
     // Assert
-    httpMock.expectOne({ url: 'hTtPs://domain.com/toto' });
+    httpMock.expectOne({url: 'hTtPs://domain.com/toto'});
   });
 });

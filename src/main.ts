@@ -1,6 +1,6 @@
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {AppModule} from './app/app.module';
+import {AppModule} from '@app/app.module';
 import {environment} from './environments/environment';
 import {hmrBootstrap} from './hmr';
 
@@ -15,7 +15,7 @@ if (environment.production) {
 const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
 
 // HMR
-/* tslint:disable:no-string-literal */
+/* eslint-disable @typescript-eslint/dot-notation */
 if (environment.hmr) {
   console.log(environment);
   if (module['hot']) {
@@ -38,7 +38,6 @@ if (environment.hmr) {
     console.log('Are you using the --hmr flag for ng serve?');
   }
 } else {
-
   if (!environment.cordova) {
     // Content loaded
     document.addEventListener('DOMContentLoaded', () => {
@@ -46,9 +45,12 @@ if (environment.hmr) {
     });
   } else {
     // Content loaded for deviceready Cordova API
-    document.addEventListener('deviceready', () => {
-      bootstrap().catch((err) => console.error(err));
-    }, false);
+    document.addEventListener(
+      'deviceready',
+      () => {
+        bootstrap().catch((err) => console.error(err));
+      },
+      false
+    );
   }
-
 }

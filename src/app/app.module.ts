@@ -11,6 +11,9 @@ import {RouterModule} from '@angular/router';
 import {HomeModule} from '@app/home/home.module';
 import {ShellModule} from '@app/shell/shell.module';
 import {AuthModule} from '@app/auth';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {ApiPrefixInterceptor} from '@app/core/http/api-prefix.interceptor';
+import {ErrorHandlerInterceptor} from '@app/core/http/error-handler.interceptor';
 
 // App divided into:
 // Core module: only singleton one instantiated services
@@ -29,12 +32,11 @@ import {AuthModule} from '@app/auth';
     BrowserAnimationsModule,
     BrowserModule.withServerTransition({appId: 'serverApp'}),
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production
+      enabled: environment.production,
     }),
-    AppRoutingModule // must be imported as the last module as it contains the fallback route
+    AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

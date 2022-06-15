@@ -13,10 +13,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatInputModule } from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatCardModule} from '@angular/material/card';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatInputModule} from '@angular/material/input';
 
 const MODULES = [
   MatProgressBarModule,
@@ -28,7 +30,11 @@ const MODULES = [
   MatCardModule,
   MatFormFieldModule,
   MatSlideToggleModule,
-  MatInputModule
+  MatInputModule,
+  MatDividerModule,
+  MatDatepickerModule,
+  MatCardModule,
+  MatNativeDateModule,
 ];
 
 const PROVIDERS = [];
@@ -37,9 +43,8 @@ const PROVIDERS = [];
   declarations: [],
   imports: [...MODULES],
   exports: [...MODULES],
-  providers: [...PROVIDERS]
+  providers: [...PROVIDERS],
 })
 export class MaterialModule {
-  constructor() {
-  }
+  constructor() {}
 }

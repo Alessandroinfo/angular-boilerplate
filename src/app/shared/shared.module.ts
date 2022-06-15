@@ -10,7 +10,14 @@ import {SkipLinkComponent} from './components/skip-link/skip-link.component';
 @NgModule({
   declarations: [VersionComponent, LoaderComponent, SkipLinkComponent],
   imports: [CommonModule, MaterialModule, PipesModule, DirectivesModule],
-  exports: [CommonModule, MaterialModule, PipesModule, DirectivesModule, VersionComponent, LoaderComponent, SkipLinkComponent]
+  exports: [
+    CommonModule,
+    MaterialModule,
+    PipesModule,
+    DirectivesModule,
+    VersionComponent,
+    LoaderComponent,
+    SkipLinkComponent,
+  ],
 })
-export class SharedModule {
-}
+export class SharedModule {}
