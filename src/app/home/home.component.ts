@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { tap } from 'rxjs/operators';
-import { ApiService } from '@app/core/api/api.service';
-import { Logger } from '@app/core/logger/logger.service';
+import {Component, OnInit} from '@angular/core';
+import {tap} from 'rxjs/operators';
+import {ApiService} from '@app/core/api/api.service';
+import {Logger} from '@app/core/logger/logger.service';
 
 @Component({
   selector: 'app-home',
@@ -33,11 +33,10 @@ import { Logger } from '@app/core/logger/logger.service';
       Main content
     </div>
   `,
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(public api: ApiService) {
-  }
+  constructor(public api: ApiService) {}
 
   ngOnInit(): void {}
 

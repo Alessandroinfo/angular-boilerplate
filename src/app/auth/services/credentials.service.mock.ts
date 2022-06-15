@@ -1,4 +1,4 @@
-import {Credentials} from './credentials.service';
+import {Credentials} from '@app/auth/services/credentials.service';
 
 export class MockCredentialsService {
   credentials: Credentials | null = {

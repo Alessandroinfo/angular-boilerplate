@@ -68,6 +68,7 @@ module.exports = (isProd) => ({
     flexGrow: ['children', 'DEFAULT ', 'responsive'],
     lineHeight: ['children', 'DEFAULT ', 'responsive'],
     backgroundColor: ['children', 'DEFAULT ', 'children-hover', 'hover', 'focus', 'responsive'],
+    textColor: ['children', 'DEFAULT ', 'children-hover', 'hover', 'focus', 'responsive'],
     justifyContent: ['children', 'DEFAULT ', 'responsive'],
     alignItems: ['children', 'DEFAULT ', 'responsive']
   },
@@ -75,5 +76,4 @@ module.exports = (isProd) => ({
     // https://github.com/benface/tailwindcss-children
     require('tailwindcss-children')
   ]
-
 });
