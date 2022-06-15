@@ -8,15 +8,19 @@ import {AuthenticationService, CredentialsService} from '@app/auth';
   template: `
     <div class="flex w-full bg-primary mb-2 children:p-2 children:text-white">
       <div class="flex">AngularBoilerplate</div>
-      <div class="text-secondary font-bold underline ml-auto">{{username}}</div>
-      <div class="cursor-pointer" (click)="logout()">Logout</div>
+      <div class="text-secondary font-bold underline ml-auto">
+        {{ username }}
+      </div>
+      <div
+        class="cursor-pointer"
+        (click)="logout()">
+        Logout
+      </div>
     </div>
-
   `,
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService,

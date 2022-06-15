@@ -30,9 +30,6 @@
  * If you want to process logs through other outputs than console, you can add LogOutput functions to Logger.outputs.
  */
 
-import {environment} from '@env/environment';
-import {enableProdMode} from '@angular/core';
-
 /**
  * The possible log levels.
  * LogLevel.Off is never emitted and only used with Logger.level property to disable logs.

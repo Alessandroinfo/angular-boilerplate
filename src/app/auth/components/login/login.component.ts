@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { finalize } from 'rxjs/operators';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {finalize} from 'rxjs/operators';
 
-import { environment } from '@env/environment';
-import { AuthenticationService } from '@app/auth/services/authentication.service';
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { Logger } from '@app/core/logger/logger.service';
-import { LoadingState } from '@app/shared/models/loading-app';
+import {environment} from '@env/environment';
+import {AuthenticationService} from '@app/auth/services/authentication.service';
+import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
+import {Logger} from '@app/core/logger/logger.service';
+import {LoadingState} from '@app/shared/models/loading-app';
 
 const log = new Logger('Login');
 
@@ -17,17 +17,16 @@ const log = new Logger('Login');
   template: `
     <app-loader [state]="loadingState"></app-loader>
 
-    <div class="flex flex-col bg-gray-100 items-center justify-center w-screen h-screen">
-
+    <div
+      class="flex flex-col bg-gray-100 items-center justify-center w-screen h-screen">
       <div class="w-1/2">
         <mat-card>
           <form
             (ngSubmit)="login()"
             [formGroup]="loginForm"
             novalidate>
-
             <div
-              [hidden]="!error || isLoading"
+              [hidden]="!error || loadingState.isLoading"
               translate>
               Username or password incorrect.
             </div>
@@ -47,9 +46,9 @@ const log = new Logger('Login');
                   required />
                 <mat-error
                   *ngIf="
-                loginForm.controls['username'].invalid &&
-                loginForm.controls['username'].touched
-              ">
+                    loginForm.controls['username'].invalid &&
+                    loginForm.controls['username'].touched
+                  ">
                   <span translate>Username is required</span>
                 </mat-error>
               </mat-form-field>
@@ -63,9 +62,9 @@ const log = new Logger('Login');
                   required />
                 <mat-error
                   *ngIf="
-                loginForm.controls['password'].invalid &&
-                loginForm.controls['password'].touched
-              ">
+                    loginForm.controls['password'].invalid &&
+                    loginForm.controls['password'].touched
+                  ">
                   <span translate>Password is required</span>
                 </mat-error>
               </mat-form-field>
@@ -81,26 +80,23 @@ const log = new Logger('Login');
                 mat-raised-button
                 color="primary"
                 type="submit"
-                [disabled]="loginForm.invalid || isLoading">
+                [disabled]="loginForm.invalid || loadingState.isLoading">
                 <span translate>Login</span>
               </button>
             </div>
-
           </form>
         </mat-card>
-
       </div>
-
     </div>
   `,
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
   loadingState: LoadingState = {
     isLoading: false,
     centerLoading: false,
     blockOverlay: false,
-    topLoading: false
+    topLoading: false,
   };
   version: string | null = environment.appVersion;
   error: string | undefined;
@@ -121,7 +117,7 @@ export class LoginComponent implements OnInit {
     this.loadingState = {
       isLoading: true,
       centerLoading: true,
-      blockOverlay: true
+      blockOverlay: true,
     };
 
     const login$ = this.authenticationService.login(this.loginForm.value);
@@ -133,7 +129,7 @@ export class LoginComponent implements OnInit {
             isLoading: false,
             centerLoading: false,
             blockOverlay: false,
-            topLoading: false
+            topLoading: false,
           };
         }),
         untilDestroyed(this)

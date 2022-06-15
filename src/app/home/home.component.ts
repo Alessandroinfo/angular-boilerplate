@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {tap} from 'rxjs/operators';
 import {ApiService} from '@app/core/api/api.service';
-import {Logger} from '@app/core/logger/logger.service';
 
 @Component({
   selector: 'app-home',
