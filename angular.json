@@ -13,7 +13,6 @@
           "inlineTemplate": true
         },
         "@schematics/angular:directive": {
-          "inlineTemplate": true,
           "export": true
         }
       },
@@ -209,7 +208,9 @@
           "options": {
             "outputPath": "dist/server",
             "main": "src/main.server.ts",
-            "tsConfig": "tsconfig.server.json"
+            "tsConfig": "tsconfig.server.json",
+            "sourceMap": true,
+            "optimization": false
           },
           "configurations": {
             "production": {
@@ -229,11 +230,10 @@
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.demo.ts"
                 }
-              ],
-              "optimization": false,
-              "sourceMap": true
+              ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "app-shell": {
           "builder": "@angular-devkit/build-angular:app-shell",
