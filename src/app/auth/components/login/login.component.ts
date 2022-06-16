@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
 import {finalize} from 'rxjs/operators';
 
 import {environment} from '@env/environment';
@@ -100,12 +100,12 @@ export class LoginComponent implements OnInit {
   };
   version: string | null = environment.appVersion;
   error: string | undefined;
-  loginForm!: FormGroup;
+  loginForm!: UntypedFormGroup;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private authenticationService: AuthenticationService
   ) {
     this.createForm();
