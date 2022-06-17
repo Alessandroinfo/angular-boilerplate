@@ -68,13 +68,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ],
               "serviceWorker": true,
@@ -116,9 +116,12 @@
                   "with": "src/environments/environment.test.ts"
                 }
               ],
+              "buildOptimizer": false,
               "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
               "sourceMap": true,
-              "buildOptimizer": false
+              "namedChunks": true
             },
             "demo": {
               "fileReplacements": [
@@ -147,7 +150,8 @@
             "demo": {
               "browserTarget": "angular-boilerplate:build:demo"
             }
-          }
+          },
+          "defaultConfiguration": "test"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
