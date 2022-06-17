@@ -8,8 +8,8 @@ import {
 } from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
-import {GlobalDataService} from './global-data.service';
-import {GenericFacilityService} from './generic-facility.service';
+import {GlobalDataService} from '../global-data/global-data.service';
+import {GenericFacilityService} from '../generic-facility/generic-facility.service';
 
 @Injectable({
   providedIn: 'root',
@@ -21,8 +21,10 @@ export class LoaderInterceptorService implements HttpInterceptor {
   ) {}
 
   intercept(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     request: HttpRequest<any>,
     next: HttpHandler
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ): Observable<HttpEvent<any>> {
     // CHECK IF EXIST NO BLOCK OVERLAY HEADER
     const blockoverlay = this.gldSvc.loadingHeaders.blockOverlay;
@@ -106,6 +108,7 @@ export class LoaderInterceptorService implements HttpInterceptor {
 
     // RETURN THE SAME REQUEST CALLED AND MANAGE THE OFF OF LOADING
     return next.handle(request).pipe(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       tap((event: HttpEvent<any>) => {
         if (event instanceof HttpResponse) {
           // do stuff with response if you want

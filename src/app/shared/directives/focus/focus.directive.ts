@@ -1,11 +1,4 @@
-import {
-  Directive,
-  ElementRef,
-  Input,
-  OnChanges,
-  OnDestroy,
-  Optional,
-} from '@angular/core';
+import {Directive, ElementRef, Input, OnChanges} from '@angular/core';
 
 @Directive({
   selector: '[appFocus]',
@@ -32,7 +25,7 @@ export class FocusDirective implements OnChanges {
       // to avoid causing changes on parent components (e.g., the
       // TextInput component) that have already been checked on this
       // change detection cycle.
-      const checkFocusTimeoutHandle = setTimeout(focus, this.focusDelay) as any;
+      setTimeout(focus, this.focusDelay);
     }
   }
 }

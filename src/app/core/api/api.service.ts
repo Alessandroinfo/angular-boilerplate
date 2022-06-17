@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {GlobalDataService} from './global-data.service';
+import {GlobalDataService} from '../global-data/global-data.service';
 import {delay} from 'rxjs/operators';
 
 @Injectable({
@@ -21,20 +21,22 @@ export class ApiService {
     ),
   };
 
-  // THIS CONTAIN BOTH LOADING TYPE
+  // This contain both loading type
   // Use this if you don't have other headers
   loaderOptions = {top: this.top, center: this.center};
 
-  // TODO MANAGE ERRORS OF HTTP
+  // TODO: Manage errors of http
   constructor(private http: HttpClient, private gldSvc: GlobalDataService) {}
 
+  // Use this site for every http response
+  // https://mock.codes/
   getInfo() {
     return this.http
-      .get('https://jsonplaceholder.typicode.com/posts', {
-        ...this.loaderOptions.center,
+      .get('https://mock.codes/400', {
+        ...this.loaderOptions.top,
         observe: 'response',
       })
-      .pipe(delay(10000));
+      .pipe(delay(5000));
   }
 
   // This show how to add custom headers

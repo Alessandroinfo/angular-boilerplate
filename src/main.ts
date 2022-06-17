@@ -7,6 +7,7 @@ import {hmrBootstrap} from './hmr';
 if (environment.production) {
   enableProdMode();
 }
+
 // Without HMR
 // platformBrowserDynamic().bootstrapModule(AppModule)
 //   .catch(err => console.error(err));
@@ -21,7 +22,7 @@ if (environment.hmr) {
     // Remove this if you want to preserve log
     console.clear();
 
-    // Old way
+    // Bootstrap with HMR
     module['hot'].accept();
     hmrBootstrap(module, bootstrap);
 
@@ -37,7 +38,19 @@ if (environment.hmr) {
     console.log('Are you using the --hmr flag for ng serve?');
   }
 } else {
-  document.addEventListener('DOMContentLoaded', () => {
-    bootstrap().catch((err) => console.error(err));
-  });
+  if (!environment.cordova) {
+    // Content loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      bootstrap().catch((err) => console.error(err));
+    });
+  } else {
+    // Content loaded for deviceready Cordova API
+    document.addEventListener(
+      'deviceready',
+      () => {
+        bootstrap().catch((err) => console.error(err));
+      },
+      false
+    );
+  }
 }

@@ -24,7 +24,8 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/",
+            "indexTransform": "./index-html-transform.ts",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -39,8 +40,13 @@
             "stylePreprocessorOptions": {
               "includePaths": []
             },
-            "styles": ["src/styles.scss", "src/assets/design-system/main.scss"],
-            "scripts": [],
+            "styles": [
+              "src/styles.scss",
+              "src/assets/design-system/main.scss"
+            ],
+            "scripts": [
+              "src/global.js"
+            ],
             "customWebpackConfig": {
               "path": "webpack.config.js"
             }
@@ -56,7 +62,35 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "ngsw-config.json"
+            },
+            "cordova-production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.cordova.production.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -102,8 +136,7 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "angular-boilerplate:build",
-            "hmrWarning": false
+            "browserTarget": "angular-boilerplate:build"
           },
           "configurations": {
             "production": {
@@ -138,8 +171,13 @@
             "stylePreprocessorOptions": {
               "includePaths": []
             },
-            "styles": ["src/styles.scss", "src/assets/design-system/main.scss"],
-            "scripts": [],
+            "styles": [
+              "src/styles.scss",
+              "src/assets/design-system/main.scss"
+            ],
+            "scripts": [
+              "src/global.js"
+            ],
             "customWebpackConfig": {
               "path": "webpack.config.js"
             }
@@ -148,7 +186,10 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         },
         "e2e": {
@@ -166,7 +207,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/",
+            "outputPath": "dist/server",
             "main": "src/main.server.ts",
             "tsConfig": "tsconfig.server.json"
           },
