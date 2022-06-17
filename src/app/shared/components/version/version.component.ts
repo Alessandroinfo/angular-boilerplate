@@ -1,12 +1,11 @@
 import {Component} from '@angular/core';
-import {environment} from '../../../../environments/environment';
+import {environment} from '@env/environment';
 
 @Component({
   selector: 'app-version',
   template: `
     <div
-      class="px-2 bg-gray-200 absolute right-0 bottom-0 bold font-thin text-xs"
-    >
+      class="select-none bg-gray-200 bold bottom-0 fixed font-thin px-2 right-0 text-xs">
       {{ appVersion }}
     </div>
   `,

@@ -1,0 +1,3 @@
+oneline: true
+ignore-bin-package: true
+ignore-patterns: ['src']

@@ -3,20 +3,29 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
-import {environment} from '../environments/environment';
+import {environment} from '@env/environment';
 import {CoreModule} from './core/core.module';
 import {SharedModule} from './shared/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {RouterModule} from '@angular/router';
+import {HomeModule} from '@app/home/home.module';
+import {ShellModule} from '@app/shell/shell.module';
+import {AuthModule} from '@app/auth';
 
 // App divided into:
 // Core module: only singleton one instantiated services
 // Shared module: component, pipe, directive, other common module for UI
+// App-shell contain only first painted static html component
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     CoreModule,
+    RouterModule,
     SharedModule,
+    ShellModule,
+    HomeModule,
+    AuthModule,
     BrowserAnimationsModule,
     BrowserModule.withServerTransition({appId: 'serverApp'}),
     ServiceWorkerModule.register('ngsw-worker.js', {

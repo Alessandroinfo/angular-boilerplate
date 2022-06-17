@@ -1,12 +1,12 @@
 export interface LoadingState {
   isLoading: boolean;
-  blockOverlay: boolean;
-  centerLoading: boolean;
-  topLoading: boolean;
+  blockOverlay?: boolean;
+  centerLoading?: boolean;
+  topLoading?: boolean;
 }
 
 export interface LoadingHeaders {
-  BLOCKOVERLAY: string;
-  CENTERLOADER: string;
-  TOPLOADER: string;
+  blockOverlay: string;
+  centerLoader: string;
+  topLoader: string;
 }

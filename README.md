@@ -30,6 +30,40 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 https://dev.to/seankerwin/angular-8-tailwind-css-guide-3m45
 
-## TODO - Roadmap
-1. Securing firestore rules https://stackoverflow.com/questions/47997260/how-to-source-control-firestore-database-security-rules-and-update-them-automati
-2. Custom console message
+## App-Shell
+For app shell customizations edit src/app/app-shell component
+
+## Skip link
+For Skip link customizations edit src/app/skiplink component
+
+## Cordova
+Remember that Material Icons names should be replace with codepoint because WebView don't support ligatures https://github.com/google/material-design-icons/issues/813
+
+## Normalization CSS
+The normalize is that of TailwindCSS
+
+## DOC THIS
+Remember to add executable permissions for husky and other scripts with chmod +x PATH_TO_HUSKY_FILE
+git hooks scripts
+if from windows remember to
+Save your current files in Git, so that none of your work is lost.
+$ git add . -u
+$ git commit -m "Saving files before refreshing line endings"
+Add all your changed files back and normalize the line endings.
+$ git add --renormalize .
+Show the rewritten, normalized files.
+$ git status
+Commit the changes to your repository.
+$ git commit -m "Normalize all the line endings"
+
+Note: https://tddpirate.zak.co.il/2018/09/06/do-material-design-icons-fail-to-show-in-your-cordova-vue-vuetify-android-application/
+npm i -D ngx-spec@^2.0.0 for missing specs
+HOW TO REMOVE
+TAILWIND
+MATERIAL
+OR YOUR DS
+remember to add shared module when you need
+untildestroy
+https://github.com/ngx-rocket/starter-kit/tree/main/docs
+
+at the script do chmod +x

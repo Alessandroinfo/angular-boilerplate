@@ -1,10 +1,22 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# compiled output
+# Compiled output
 /dist
 /tmp
 /out-tsc
 rejectedCSS.json
+
+# Auto generated files
+/src/assets/icons/*
+/cordova
+/cordova/*
+
+# Firebase
+.firebase
+.firebase/*
+
+#esLint
+.eslintcache
 
 # Only exists if Bazel was run
 /bazel-out
@@ -50,6 +62,3 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Firebase
-.firebase
-.firebase/*

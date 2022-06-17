@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Uncomment this and comment npm scripts if you want use lint-staged
+# npx lint-staged
+npm run lint && npm run format-code && ./scripts/enforce_branch_name.sh
