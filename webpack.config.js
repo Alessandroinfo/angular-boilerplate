@@ -1,12 +1,9 @@
 const webpack = require('webpack');
-const pkg = require('./package.json');
 
-module.exports = (config, options, targetOptions) => {
-  config.plugins.push(
+module.exports = {
+  plugins: [
     new webpack.DefinePlugin({
-      APP_VERSION: JSON.stringify(pkg.version),
+      'TEST_WEBPACK': JSON.stringify('OK'),
     })
-  );
-
-  return config;
+  ]
 };

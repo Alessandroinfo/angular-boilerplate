@@ -23,19 +23,18 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "indexTransform": "./index-html-transform.ts",
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
             "assets": [
               "src/assets",
               "src/robots.txt",
               "src/manifest.webmanifest",
               "src/preloaded.js"
             ],
+            "inlineStyleLanguage": "scss",
             "stylePreprocessorOptions": {
               "includePaths": []
             },
@@ -133,7 +132,8 @@
               "optimization": false,
               "sourceMap": true
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",

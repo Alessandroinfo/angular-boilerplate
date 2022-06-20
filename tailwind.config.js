@@ -1,3 +1,4 @@
+/** @type {import("tailwindcss").Config} */
 //Customize Tailwind
 
 // Note:
@@ -10,29 +11,22 @@
 // Choice they wisely on https://material.io/resources/color
 // Check if it's good the important true to override Material styles
 
-module.exports = (isProd) => ({
+module.exports = {
   important: true,
-  prefix: '',
-  purge: {
-    enabled: isProd,
-    content: [
-      '**/*.html',
-      '**/*.ts'
-    ],
-    keyframes: true,
-    fontFace: true,
-    rejected: true
-  },
+  prefix: "",
+  content: [
+    "./src/**/*.{html,ts}"
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       zIndex: {
-        '-1': '-1',
-        '0': 0,
-        '10': 10,
-        '20': 20,
-        '30': 30,
-        '40': 40,
+        "-1": "-1",
+        "0": 0,
+        "10": 10,
+        "20": 20,
+        "30": 30,
+        "40": 40,
         '50': 50,
         '60': 60,
         '70': 70,
@@ -59,21 +53,21 @@ module.exports = (isProd) => ({
     preflight: true
   },
   variants: {
-    display: ['children', 'DEFAULT', 'responsive'],
-    zIndex: ['children', 'DEFAULT ', 'responsive'],
-    padding: ['children', 'DEFAULT ', 'responsive'],
-    margin: ['children', 'DEFAULT ', 'responsive'],
-    height: ['children', 'DEFAULT ', 'responsive'],
-    width: ['children', 'DEFAULT ', 'responsive'],
-    flexGrow: ['children', 'DEFAULT ', 'responsive'],
-    lineHeight: ['children', 'DEFAULT ', 'responsive'],
-    backgroundColor: ['children', 'DEFAULT ', 'children-hover', 'hover', 'focus', 'responsive'],
-    textColor: ['children', 'DEFAULT ', 'children-hover', 'hover', 'focus', 'responsive'],
-    justifyContent: ['children', 'DEFAULT ', 'responsive'],
-    alignItems: ['children', 'DEFAULT ', 'responsive']
+    display: ["DEFAULT", "responsive"],
+    zIndex: ["DEFAULT", "responsive"],
+    padding: ["DEFAULT", "responsive"],
+    margin: ["DEFAULT", "responsive"],
+    height: ["DEFAULT", "responsive"],
+    width: ["DEFAULT", "responsive"],
+    flexGrow: ["DEFAULT", "responsive"],
+    lineHeight: ["DEFAULT", "responsive"],
+    backgroundColor: ["DEFAULT", "children-hover", "hover", "focus", "responsive"],
+    textColor: ["DEFAULT", "children-hover", "hover", "focus", "responsive"],
+    justifyContent: ["DEFAULT", "responsive"],
+    alignItems: ["DEFAULT", "responsive"]
   },
   plugins: [
-    // https://github.com/benface/tailwindcss-children
-    require('tailwindcss-children')
+    // https://github.com/SamGoody/tailwind-children
+    require("tailwind-children")
   ]
-});
+};

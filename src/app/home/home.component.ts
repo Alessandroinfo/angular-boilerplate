@@ -1,9 +1,11 @@
-import {Component, OnInit} from '@angular/core';
-import {tap} from 'rxjs/operators';
-import {ApiService} from '@app/core/api/api.service';
+import { Component, OnInit } from "@angular/core";
+import { tap } from "rxjs/operators";
+import { ApiService } from "@app/core/api/api.service";
+
+declare const TEST_WEBPACK: string;
 
 @Component({
-  selector: 'app-home',
+  selector: "app-home",
   template: `
     <button
       mat-raised-button
@@ -28,18 +30,23 @@ import {ApiService} from '@app/core/api/api.service';
 
     <div
       id="main-content"
-      class="w-128 h-128 flex bg-gray-300">
+      class="w-128 h-128 flex bg-gray-300 child:text-yellow">
       Main content
+
+      <div>CHILD</div>
+
     </div>
   `,
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  test_webpack: string = "";
   constructor(public api: ApiService) {}
 
   ngOnInit(): void {}
 
   callApi() {
+    this.test_webpack = TEST_WEBPACK;
     this.api
       .getInfo()
       .pipe(
