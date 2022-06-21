@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { tap } from 'rxjs/operators';
-import { ApiService } from '@app/core/api/api.service';
-import { Logger } from '@app/core/logger/logger.service';
+import {Component, OnInit} from '@angular/core';
+import {tap} from 'rxjs/operators';
+import {ApiService} from '@app/core/api/api.service';
+import {Logger} from '@app/core/logger/logger.service';
 
 const log = new Logger('App');
 declare const TEST_WEBPACK: string;
@@ -39,7 +39,8 @@ declare const TEST_WEBPACK: string;
         [appOutline]="{
           style: 'dashed',
           color: '#ff00006b',
-          size: '1px'}">
+          size: '1px'
+        }">
         CHILD
       </div>
       <div
@@ -47,11 +48,14 @@ declare const TEST_WEBPACK: string;
           border: {
             style: 'solid',
             color: 'blue',
-            size: '2px'},
+            size: '2px'
+          },
           outline: {
             style: 'dashed',
             color: 'red',
-            size: '2px'}}">
+            size: '2px'
+          }
+        }">
         CHILD
       </div>
     </div>

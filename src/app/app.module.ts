@@ -11,9 +11,9 @@ import {RouterModule} from '@angular/router';
 import {HomeModule} from '@app/home/home.module';
 import {ShellModule} from '@app/shell/shell.module';
 import {AuthModule} from '@app/auth';
-import { Keyboard } from '@awesome-cordova-plugins/keyboard/ngx';
-import { StatusBar } from '@awesome-cordova-plugins/status-bar/ngx';
-import { SplashScreen } from '@awesome-cordova-plugins/splash-screen/ngx';
+import {Keyboard} from '@awesome-cordova-plugins/keyboard/ngx';
+import {StatusBar} from '@awesome-cordova-plugins/status-bar/ngx';
+import {SplashScreen} from '@awesome-cordova-plugins/splash-screen/ngx';
 
 // App divided into:
 // Core module: only singleton one instantiated services
@@ -40,7 +40,7 @@ import { SplashScreen } from '@awesome-cordova-plugins/splash-screen/ngx';
     // Cordova plugins
     Keyboard,
     StatusBar,
-    SplashScreen
+    SplashScreen,
   ],
   bootstrap: [AppComponent],
 })

@@ -1,15 +1,15 @@
-import { Component, Inject, LOCALE_ID, NgZone, OnInit } from '@angular/core';
-import { tap } from 'rxjs/operators';
-import { environment } from '@env/environment';
-import { Event, NavigationEnd, NavigationStart, Router } from '@angular/router';
-import { LoadingState } from '@app/shared/models/loading-app';
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { GenericFacilityService } from '@app/core/generic-facility/generic-facility.service';
-import { GlobalDataService } from '@app/core/global-data/global-data.service';
-import { Logger } from '@app/core/logger/logger.service';
-import { StatusBar } from '@awesome-cordova-plugins/status-bar/ngx';
-import { SplashScreen } from '@awesome-cordova-plugins/splash-screen/ngx';
-import { Keyboard } from '@awesome-cordova-plugins/keyboard/ngx';
+import {Component, Inject, LOCALE_ID, NgZone, OnInit} from '@angular/core';
+import {tap} from 'rxjs/operators';
+import {environment} from '@env/environment';
+import {Event, NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {LoadingState} from '@app/shared/models/loading-app';
+import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
+import {GenericFacilityService} from '@app/core/generic-facility/generic-facility.service';
+import {GlobalDataService} from '@app/core/global-data/global-data.service';
+import {Logger} from '@app/core/logger/logger.service';
+import {StatusBar} from '@awesome-cordova-plugins/status-bar/ngx';
+import {SplashScreen} from '@awesome-cordova-plugins/splash-screen/ngx';
+import {Keyboard} from '@awesome-cordova-plugins/keyboard/ngx';
 
 const log = new Logger('App');
 
@@ -84,13 +84,13 @@ export class AppComponent implements OnInit {
           this.loadingState = {
             ...this.loadingState,
             isLoading: true,
-            topLoading: true
+            topLoading: true,
           };
         } else if (event instanceof NavigationEnd) {
           this.loadingState = {
             ...this.loadingState,
             isLoading: false,
-            topLoading: false
+            topLoading: false,
           };
         }
       },

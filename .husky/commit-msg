@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # $1 is a parameter that contain git data
-./scripts/enforce_commit_message.sh $1
+./scripts/enforce-commit-message.sh $1
