@@ -4,7 +4,7 @@ import {ApiService} from '@app/core/api/api.service';
 import {Logger} from '@app/core/logger/logger.service';
 
 const log = new Logger('App');
-declare const TEST_WEBPACK: string;
+declare const APP_VERSION: string;
 
 @Component({
   selector: 'app-home',
@@ -63,13 +63,13 @@ declare const TEST_WEBPACK: string;
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  test_webpack = '';
+  app_version = '';
   constructor(public api: ApiService) {}
 
   ngOnInit(): void {}
 
   callApi() {
-    this.test_webpack = TEST_WEBPACK;
+    this.app_version = APP_VERSION;
     this.api
       .getInfo()
       .pipe(
