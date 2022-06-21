@@ -33,7 +33,8 @@ declare const TEST_WEBPACK: string;
       class="w-128 h-128 flex bg-gray-300 child:text-yellow">
       Main content
 
-      <div>CHILD</div>
+      <div [appOutline]>CHILD</div>
+      <div [appBoxLine]>CHILD</div>
 
     </div>
   `,

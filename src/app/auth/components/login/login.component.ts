@@ -1,19 +1,19 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
-import {UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
-import {finalize} from 'rxjs/operators';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
+import { finalize } from "rxjs/operators";
 
-import {environment} from '@env/environment';
-import {AuthenticationService} from '@app/auth/services/authentication.service';
-import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {Logger} from '@app/core/logger/logger.service';
-import {LoadingState} from '@app/shared/models/loading-app';
+import { environment } from "@env/environment";
+import { AuthenticationService } from "@app/auth/services/authentication.service";
+import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
+import { Logger } from "@app/core/logger/logger.service";
+import { LoadingState } from "@app/shared/models/loading-app";
 
-const log = new Logger('Login');
+const log = new Logger("Login");
 
 @UntilDestroy()
 @Component({
-  selector: 'app-login',
+  selector: "app-login",
   template: `
     <app-loader [state]="loadingState"></app-loader>
 
@@ -121,32 +121,30 @@ export class LoginComponent implements OnInit {
     };
 
     const login$ = this.authenticationService.login(this.loginForm.value);
-    login$
-      .pipe(
-        finalize(() => {
-          this.loginForm.markAsPristine();
-          this.loadingState = {
-            isLoading: false,
-            centerLoading: false,
-            blockOverlay: false,
-            topLoading: false,
-          };
-        }),
-        untilDestroyed(this)
-      )
-      .subscribe(
-        (credentials) => {
-          log.debug(`${credentials.username} successfully logged in`);
-          this.router.navigate(
-            [this.route.snapshot.queryParams.redirect || '/'],
-            {replaceUrl: true}
-          );
-        },
-        (error) => {
-          log.debug(`Login error: ${error}`);
-          this.error = error;
-        }
-      );
+    login$.pipe(
+      finalize(() => {
+        this.loginForm.markAsPristine();
+        this.loadingState = {
+          isLoading: false,
+          centerLoading: false,
+          blockOverlay: false,
+          topLoading: false
+        };
+      }),
+      untilDestroyed(this)
+    ).subscribe({
+      next: (credentials) => {
+        log.debug(`${credentials.username} successfully logged in`);
+        this.router.navigate(
+          [this.route.snapshot.queryParams["redirect"] || "/"],
+          { replaceUrl: true }
+        );
+      },
+      error: (error) => {
+        log.debug(`Login error: ${error}`);
+        this.error = error;
+      }
+    });
   }
 
   private createForm() {

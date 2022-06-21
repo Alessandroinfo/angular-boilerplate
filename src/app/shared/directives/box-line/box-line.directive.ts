@@ -22,15 +22,15 @@ export class BoxLineDirective implements OnInit {
 
   ngOnInit() {
     this.el.nativeElement.style.outline = [
-      this.appBoxLine.outline.size,
-      this.appBoxLine.outline.style,
-      this.appBoxLine.outline.color,
+      this.appBoxLine.outline?.size,
+      this.appBoxLine.outline?.style,
+      this.appBoxLine.outline?.color,
     ].join(' ');
 
     this.el.nativeElement.style.border = [
-      this.appBoxLine.border.size,
-      this.appBoxLine.border.style,
-      this.appBoxLine.border.color,
+      this.appBoxLine.border?.size,
+      this.appBoxLine.border?.style,
+      this.appBoxLine.border?.color,
     ].join(' ');
   }
 }

@@ -12,16 +12,16 @@ export class GenericFacilityService {
   // ------------------------------------------------------------ ATTRIBUTES ------------------------------------------------------------ //
 
   // SUBJECT FOR KNOW IF THERE IS AN ERROR ON THE APP
-  private errorAngular$: BehaviorSubject<AngularError> =
-    new BehaviorSubject<AngularError>(null);
+  private errorAngular$: BehaviorSubject<AngularError | null> =
+    new BehaviorSubject<AngularError | null>(null);
 
   // THIS OBS IS FOR LOADER STATUS
   private loadingState$: BehaviorSubject<LoadingState> =
     new BehaviorSubject<LoadingState>(this.gldSvc.loadingDefaultOffState);
 
   // ACTIVE LANGUAGE OF THE APP
-  private languageActive$: BehaviorSubject<LanguageItem> =
-    new BehaviorSubject<LanguageItem>(null);
+  private languageActive$: BehaviorSubject<LanguageItem | null> =
+    new BehaviorSubject<LanguageItem | null>(null);
 
   // private languageActive$: BehaviorSubject<LanguageItem> = new BehaviorSubject<LanguageItem>(this.gldSvc.getLanguagesDefault());
 
@@ -53,7 +53,7 @@ export class GenericFacilityService {
   }
 
   // ERROR MANAGE
-  getErrorAngular(): Observable<AngularError> {
+  getErrorAngular(): Observable<AngularError | null> {
     return this.errorAngular$.asObservable();
   }
 
@@ -62,7 +62,7 @@ export class GenericFacilityService {
   }
 
   // LANGUAGE ACTIVE
-  getLanguageActive(): Observable<LanguageItem> {
+  getLanguageActive(): Observable<LanguageItem | null> {
     return this.languageActive$.asObservable();
   }
 
