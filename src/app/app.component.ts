@@ -10,7 +10,7 @@ import {Logger} from '@app/core/logger/logger.service';
 import {StatusBar} from '@awesome-cordova-plugins/status-bar/ngx';
 import {SplashScreen} from '@awesome-cordova-plugins/splash-screen/ngx';
 import {Keyboard} from '@awesome-cordova-plugins/keyboard/ngx';
-import { DOCUMENT } from '@angular/common';
+import {DOCUMENT} from '@angular/common';
 
 const log = new Logger('App');
 
