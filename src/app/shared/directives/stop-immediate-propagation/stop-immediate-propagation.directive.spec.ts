@@ -1,5 +1,5 @@
 import {StopImmediatePropagationDirective} from './stop-immediate-propagation.directive';
-import { jest, expect} from '@jest/globals';
+import {jest, expect} from '@jest/globals';
 
 describe('StopImmediatePropagationDirective', () => {
   it('should create an instance', () => {

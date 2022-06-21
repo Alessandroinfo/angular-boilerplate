@@ -1,7 +1,10 @@
 import {TestBed, inject} from '@angular/core/testing';
 
-import {CredentialsService, Credentials} from '@app/auth/services/credentials.service';
-import { jest, expect} from '@jest/globals';
+import {
+  CredentialsService,
+  Credentials,
+} from '@app/auth/services/credentials.service';
+import {jest, expect} from '@jest/globals';
 
 const credentialsKey = 'credentials';
 

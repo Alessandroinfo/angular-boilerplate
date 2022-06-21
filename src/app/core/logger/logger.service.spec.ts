@@ -1,5 +1,5 @@
 import {Logger, LogLevel, LogOutput} from './logger.service';
-import { jest, expect} from '@jest/globals';
+import {jest, expect} from '@jest/globals';
 const logMethods = ['log', 'info', 'warn', 'error'];
 
 describe('Logger', () => {
@@ -9,7 +9,7 @@ describe('Logger', () => {
 
   beforeAll(() => {
     savedConsole = [];
-    logMethods.forEach((m) => {
+    logMethods.forEach((m: any) => {
       savedConsole[m] = console[m];
       console[m] = () => {};
     });

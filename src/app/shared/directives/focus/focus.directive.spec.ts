@@ -1,6 +1,6 @@
 import {FocusDirective} from './focus.directive';
 import {ElementRef} from '@angular/core';
-import { jest, expect} from '@jest/globals';
+import {jest, expect} from '@jest/globals';
 
 describe('FocusDirective', () => {
   it('should create an instance', () => {
