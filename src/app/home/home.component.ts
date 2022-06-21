@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { tap } from "rxjs/operators";
-import { ApiService } from "@app/core/api/api.service";
+import { Component, OnInit } from '@angular/core';
+import { tap } from 'rxjs/operators';
+import { ApiService } from '@app/core/api/api.service';
 
 declare const TEST_WEBPACK: string;
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: `
     <button
       mat-raised-button
@@ -57,7 +57,7 @@ declare const TEST_WEBPACK: string;
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  test_webpack: string = "";
+  test_webpack = '';
   constructor(public api: ApiService) {}
 
   ngOnInit(): void {}

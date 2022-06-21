@@ -14,7 +14,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./skip-link.component.scss'],
 })
 export class SkipLinkComponent implements OnInit {
-  skipLinkPath: string = '';
+  skipLinkPath = '';
   @Input() mainContentID = 'main-content';
 
   constructor(private router: Router) {}

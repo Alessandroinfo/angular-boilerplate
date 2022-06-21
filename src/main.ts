@@ -4,10 +4,10 @@
  * For app-specific initialization, use `app/app.component.ts`.
  */
 
-import { enableProdMode } from "@angular/core";
-import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
-import { AppModule } from "@app/app.module";
-import { environment } from "@env/environment";
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from '@app/app.module';
+import { environment } from '@env/environment';
 
 if (environment.production) {
   enableProdMode();
@@ -21,13 +21,13 @@ const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
 
 if (!environment.cordova) {
   // Content loaded
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener('DOMContentLoaded', () => {
     bootstrap().catch((err) => console.error(err));
   });
 } else {
   // Content loaded for deviceready Cordova API
   document.addEventListener(
-    "deviceready",
+    'deviceready',
     () => {
       bootstrap().catch((err) => console.error(err));
     },

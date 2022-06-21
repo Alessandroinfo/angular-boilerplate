@@ -6,7 +6,7 @@
  * To optimize your production builds, you should only import the components used in your app.
  */
 
-import { NgModule, Provider } from "@angular/core";
+import { NgModule, Provider } from '@angular/core';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
