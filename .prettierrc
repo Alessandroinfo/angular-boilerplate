@@ -2,7 +2,7 @@
   "singleQuote": true,
   "bracketSpacing": false,
   "bracketSameLine": true,
-  "singleAttributePerLine": true,
+  "singleAttributePerLine": false,
   "htmlWhitespaceSensitivity": "ignore",
   "overrides": [
     {

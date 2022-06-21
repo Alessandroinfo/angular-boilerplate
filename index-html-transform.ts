@@ -2,8 +2,8 @@ import {TargetOptions} from '@angular-builders/custom-webpack';
 import * as cheerio from 'cheerio';
 
 export default (targetOptions: TargetOptions, indexHtml: string) => {
-  console.log('sono qua');
-  if (targetOptions.configuration.includes('cordova-production')) {
+  console.log('SONO QUA');
+  if (targetOptions && targetOptions.configuration.includes('cordova-production')) {
     const $ = cheerio.load(indexHtml);
     // Put type="text/javascript" for Cordova MIME error
 

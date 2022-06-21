@@ -5,9 +5,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
   selector: 'app-loader',
   template: `
     <!--  appStopPropagation is for prevent click under overlay  -->
-    <ng-container
-      *ngIf="state.isLoading"
-      appStopPropagation>
+    <ng-container *ngIf="state.isLoading" appStopPropagation>
       <!-- Progress bar -->
       <mat-progress-bar
         *ngIf="state.topLoading"

@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const version = require('../../package.json').version;
+const version = require('./package.json').version;
 
 module.exports = {
   plugins: [

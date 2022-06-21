@@ -21,13 +21,8 @@ const log = new Logger('Login');
       class="flex flex-col bg-gray-100 items-center justify-center w-screen h-screen">
       <div class="w-1/2">
         <mat-card>
-          <form
-            (ngSubmit)="login()"
-            [formGroup]="loginForm"
-            novalidate>
-            <div
-              [hidden]="!error || loadingState.isLoading"
-              translate>
+          <form (ngSubmit)="login()" [formGroup]="loginForm" novalidate>
+            <div [hidden]="!error || loadingState.isLoading" translate>
               Username or password incorrect.
             </div>
 

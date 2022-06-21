@@ -9,24 +9,11 @@ declare const APP_VERSION: string;
 @Component({
   selector: 'app-home',
   template: `
-    <button
-      mat-raised-button
-      routerLink="/home"
-      color="primary">
-      HOME
-    </button>
+    <button mat-raised-button routerLink="/home" color="primary">HOME</button>
 
-    <button
-      mat-raised-button
-      routerLink="/about"
-      color="primary">
-      ABOUT
-    </button>
+    <button mat-raised-button routerLink="/about" color="primary">ABOUT</button>
 
-    <button
-      mat-raised-button
-      (click)="callApi()"
-      color="primary">
+    <button mat-raised-button (click)="callApi()" color="primary">
       Call API
     </button>
 
