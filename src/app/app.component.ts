@@ -10,6 +10,7 @@ import {Logger} from '@app/core/logger/logger.service';
 import {StatusBar} from '@awesome-cordova-plugins/status-bar/ngx';
 import {SplashScreen} from '@awesome-cordova-plugins/splash-screen/ngx';
 import {Keyboard} from '@awesome-cordova-plugins/keyboard/ngx';
+import { DOCUMENT } from '@angular/common';
 
 const log = new Logger('App');
 
@@ -45,7 +46,8 @@ export class AppComponent implements OnInit {
     private zone: NgZone,
     private keyboard: Keyboard,
     private statusBar: StatusBar,
-    private splashScreen: SplashScreen
+    private splashScreen: SplashScreen,
+    @Inject(DOCUMENT) private document: Document
   ) {
     // TODO: Remove this, only to know what language is
     if (!environment.production) {
@@ -98,7 +100,7 @@ export class AppComponent implements OnInit {
 
     // Cordova platform and plugins initialization
     if (!environment.cordova) {
-      document.addEventListener(
+      this.document.addEventListener(
         'deviceready',
         () => {
           this.zone.run(() => this.onCordovaReady());

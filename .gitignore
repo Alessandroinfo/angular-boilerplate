@@ -2,6 +2,7 @@
 
 # Compiled output
 /dist
+/dist-compressed
 /tmp
 /out-tsc
 rejectedCSS.json
