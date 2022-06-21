@@ -33,8 +33,24 @@ declare const TEST_WEBPACK: string;
       class="w-128 h-128 flex bg-gray-300 child:text-yellow">
       Main content
 
-      <div [appOutline]>CHILD</div>
-      <div [appBoxLine]>CHILD</div>
+      <div [appOutline]="{
+    style: 'dashed',
+    color: '#ff00006b',
+    size: '1px',
+  }">CHILD
+      </div>
+      <div [appBoxLine]="{
+    border: {
+      style: 'solid',
+      color: 'blue',
+      size: '2px',
+    },
+    outline: {
+      style: 'dashed',
+      color: 'red',
+      size: '2px',
+    },
+  }">CHILD</div>
 
     </div>
   `,
