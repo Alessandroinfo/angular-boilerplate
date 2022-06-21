@@ -3,10 +3,10 @@ import * as cheerio from 'cheerio';
 
 export default (targetOptions: TargetOptions, indexHtml: string) => {
   console.log('SONO QUA');
-  if (targetOptions && targetOptions.configuration.includes('cordova-production')) {
+  if (targetOptions && targetOptions.configuration?.includes('cordova-production')) {
     const $ = cheerio.load(indexHtml);
-    // Put type="text/javascript" for Cordova MIME error
 
+    // Put type="text/javascript" for Cordova MIME error
     // Put Cordova script
     $('body').prepend(`<script type="text/javascript" src="cordova.js"></script>`);
     console.error($.html());
