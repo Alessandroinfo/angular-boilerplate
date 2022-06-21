@@ -41,7 +41,8 @@ module.exports = {
       },
       spacing: {
         '96': '24rem',
-        '128': '32rem'
+        '128': '32rem',
+        '144': '36rem',
       },
       transitionDelay: {
         '0': '0ms',
@@ -61,12 +62,15 @@ module.exports = {
     width: ["DEFAULT", "responsive"],
     flexGrow: ["DEFAULT", "responsive"],
     lineHeight: ["DEFAULT", "responsive"],
-    backgroundColor: ["DEFAULT", "children-hover", "hover", "focus", "responsive"],
-    textColor: ["DEFAULT", "children-hover", "hover", "focus", "responsive"],
+    backgroundColor: ["DEFAULT", "hover", "focus", "responsive"],
+    textColor: ["DEFAULT", "hover", "focus", "responsive"],
     justifyContent: ["DEFAULT", "responsive"],
     alignItems: ["DEFAULT", "responsive"]
   },
   plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/line-clamp'),
     // https://github.com/SamGoody/tailwind-children
     require("tailwind-children")
   ]

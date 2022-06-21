@@ -5,7 +5,7 @@
     "url": "https://github.com/Alessandroinfo/angular-boilerplate",
     "type": "git"
   },
-  "license": "MIT license",
+  "license": "UNLICENSED",
   "scripts": {
     "generate-asset": "pwa-asset-generator src/assets/imgs/logo.svg src/assets/icons/generated -t png -f true -i src/index.html -m src/manifest.webmanifest --path-override assets/icons/generated --opaque false -p 0 --mstile",
     "start": "ng serve -c test --hmr --o --port 3001",
@@ -66,6 +66,8 @@
     "@awesome-cordova-plugins/keyboard": "^5.30.0",
     "@awesome-cordova-plugins/splash-screen": "^5.30.0",
     "@awesome-cordova-plugins/status-bar": "^5.30.0",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.2",
     "@types/jasmine": "~4.0.0",
     "@types/jest": "^28.1.2",
     "@types/node": "^18.0.0",

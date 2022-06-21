@@ -20,6 +20,6 @@ export class SkipLinkComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.skipLinkPath = `${this.router.url}#${this.mainContentID}`;//todo
+    this.skipLinkPath = `${this.router.url}#${this.mainContentID}`;
   }
 }

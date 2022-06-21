@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
     private zone: NgZone,
     private keyboard: Keyboard,
     private statusBar: StatusBar,
-    private splashScreen: SplashScreen,
+    private splashScreen: SplashScreen
   ) {
     // TODO: Remove this, only to know what language is
     if (!environment.production) {
@@ -84,26 +84,28 @@ export class AppComponent implements OnInit {
           this.loadingState = {
             ...this.loadingState,
             isLoading: true,
-            topLoading: true,
+            topLoading: true
           };
         } else if (event instanceof NavigationEnd) {
           this.loadingState = {
             ...this.loadingState,
             isLoading: false,
-            topLoading: false,
+            topLoading: false
           };
         }
-      }
+      },
     });
 
     // Cordova platform and plugins initialization
-    document.addEventListener(
-      'deviceready',
-      () => {
-        this.zone.run(() => this.onCordovaReady());
-      },
-      false
-    );
+    if (!environment.cordova) {
+      document.addEventListener(
+        'deviceready',
+        () => {
+          this.zone.run(() => this.onCordovaReady());
+        },
+        false
+      );
+    }
   }
 
   // Content loaded for deviceready Cordova API
