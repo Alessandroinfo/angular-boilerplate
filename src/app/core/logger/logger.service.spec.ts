@@ -1,5 +1,5 @@
 import {Logger, LogLevel, LogOutput} from './logger.service';
-
+import { jest, expect} from '@jest/globals';
 const logMethods = ['log', 'info', 'warn', 'error'];
 
 describe('Logger', () => {

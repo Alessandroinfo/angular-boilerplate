@@ -1,12 +1,10 @@
-import {Type} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {
-  HttpClientTestingModule,
-  HttpTestingController,
-} from '@angular/common/http/testing';
-import {HTTP_INTERCEPTORS, HttpClient} from '@angular/common/http';
+import { Type } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
+import { jest, expect} from '@jest/globals';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 
-import {ErrorHandlerInterceptor} from './error-handler.interceptor';
+import { ErrorHandlerInterceptor } from './error-handler.interceptor';
 
 describe('ErrorHandlerInterceptor', () => {
   let errorHandlerInterceptor: ErrorHandlerInterceptor;
@@ -47,19 +45,19 @@ describe('ErrorHandlerInterceptor', () => {
     jest.spyOn(ErrorHandlerInterceptor.prototype as any, 'errorHandler');
 
     // Act
-    http.get('/toto').subscribe(
-      () => fail('should error'),
-      () => {
+    http.get('/toto').subscribe({
+      next: () => fail('should error'),
+      error: () => {
         // Assert
         expect(
           (ErrorHandlerInterceptor.prototype as any).errorHandler
         ).toHaveBeenCalled();
       }
-    );
+    });
 
     httpMock.expectOne({}).flush(null, {
       status: 404,
-      statusText: 'error',
+      statusText: 'error'
     });
   });
 });

@@ -1,5 +1,5 @@
 import {TestBed} from '@angular/core/testing';
-
+import { jest, expect} from '@jest/globals';
 import {GlobalDataService} from './global-data.service';
 
 describe('GlobalDataService', () => {
