@@ -214,9 +214,7 @@
           "options": {
             "outputPath": "dist/server",
             "main": "src/main.server.ts",
-            "tsConfig": "tsconfig.server.json",
-            "sourceMap": true,
-            "optimization": false
+            "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
             "production": {
@@ -239,13 +237,11 @@
               ]
             }
           },
-          "defaultConfiguration": ""
+          "defaultConfiguration": "production"
         },
         "app-shell": {
           "builder": "@angular-devkit/build-angular:app-shell",
           "options": {
-            "browserTarget": "angular-boilerplate:build",
-            "serverTarget": "angular-boilerplate:server",
             "route": "shell"
           },
           "configurations": {
