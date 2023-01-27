@@ -11,6 +11,7 @@ rejectedCSS.json
 /src/assets/icons/*
 /cordova
 /cordova/*
+hosting.*
 
 # Firebase
 .firebase
