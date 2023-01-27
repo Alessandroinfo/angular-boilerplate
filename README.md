@@ -1,4 +1,4 @@
-# Angular Boilerplate
+# Angular-Boilerplate
 
 The GOAL of this project is to have all the tools ready to use to develop a complete app from every point of view.
 

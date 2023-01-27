@@ -29,7 +29,7 @@ const log = new Logger('Login');
             <br />
 
             <div class="flex flex-col">
-              <h1 class="self-center mb-5">AngularBoilerplate</h1>
+              <h1 class="self-center mb-5">Angular-Boilerplate</h1>
 
               <mat-form-field [hideRequiredMarker]="true">
                 <input
