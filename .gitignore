@@ -15,7 +15,9 @@ hosting.*
 
 # Firebase
 .firebase
+.firebase/
 .firebase/*
+.firebase/**
 
 #esLint
 .eslintcache
