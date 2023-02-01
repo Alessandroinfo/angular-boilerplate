@@ -68,3 +68,6 @@ https://github.com/ngx-rocket/starter-kit/tree/main/docs
 
 at the script do chmod +x
 compressed only if uploaded different firebase upload gzipped
+
+Loader its in index html static for waiting the app its bootstrapped
+
