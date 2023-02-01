@@ -71,3 +71,6 @@ compressed only if uploaded different firebase upload gzipped
 
 Loader its in index html static for waiting the app its bootstrapped
 
+how to use shell only on some module
+how to use loading api on some api or module
+

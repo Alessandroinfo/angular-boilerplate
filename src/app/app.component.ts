@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Setup logger
+    // Setup logger only not production
     if (environment.production) {
       Logger.enableProductionMode();
     }
