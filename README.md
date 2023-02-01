@@ -63,7 +63,10 @@ TAILWIND
 MATERIAL
 OR YOUR DS
 remember to add shared module when you need
+
+https://github.com/ngneat/until-destroy
 untildestroy
+
 https://github.com/ngx-rocket/starter-kit/tree/main/docs
 
 at the script do chmod +x
@@ -73,4 +76,6 @@ Loader its in index html static for waiting the app its bootstrapped
 
 how to use shell only on some module
 how to use loading api on some api or module
+whic module is lazy
+
 

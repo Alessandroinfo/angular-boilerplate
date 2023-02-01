@@ -4,16 +4,10 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@app/*": [
-        "src/app/*"
-      ],
-      "@shared": ["src/app/shared"],
-      "@env/*": [
-        "src/environments/*"
-      ],
-      "*": [
-        "node_modules/*"
-      ]
+      "@app/*": ["src/app/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@env/*": ["src/environments/*"],
+      "*": ["node_modules/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -31,13 +25,8 @@
     "target": "es2020",
     "moduleResolution": "node",
     "importHelpers": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2020", "dom"]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
