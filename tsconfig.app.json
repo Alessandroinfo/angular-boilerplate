@@ -2,15 +2,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": [
-      "reflect-metadata",
-      "jest",
-      "node"
-    ]
+    "types": ["reflect-metadata", "jest", "node"]
   },
-  "angularCompilerOptions": {
-    "enableIvy": true
-  },
+  "angularCompilerOptions": {},
   "files": ["src/main.ts", "src/polyfills.ts"],
   "include": ["src/**/*.d.ts"]
 }
