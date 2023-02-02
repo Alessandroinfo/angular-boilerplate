@@ -39,13 +39,8 @@
             "stylePreprocessorOptions": {
               "includePaths": []
             },
-            "styles": [
-              "src/styles.scss",
-              "src/assets/design-system/main.scss"
-            ],
-            "scripts": [
-              "src/global.js"
-            ],
+            "styles": ["src/styles.scss", "src/assets/design-system/main.scss"],
+            "scripts": ["src/global.js"],
             "customWebpackConfig": {
               "path": "webpack.config.js"
             }
@@ -175,13 +170,8 @@
             "stylePreprocessorOptions": {
               "includePaths": []
             },
-            "styles": [
-              "src/styles.scss",
-              "src/assets/design-system/main.scss"
-            ],
-            "scripts": [
-              "src/global.js"
-            ],
+            "styles": ["src/styles.scss", "src/assets/design-system/main.scss"],
+            "scripts": ["src/global.js"],
             "customWebpackConfig": {
               "path": "webpack.config.js"
             }
@@ -190,10 +180,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         },
         "e2e": {
@@ -253,7 +240,8 @@
               "browserTarget": "angular-boilerplate:build:demo",
               "serverTarget": "angular-boilerplate:server:demo"
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "cypress-run": {
           "builder": "@cypress/schematic:cypress",

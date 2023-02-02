@@ -78,4 +78,7 @@ how to use shell only on some module
 how to use loading api on some api or module
 whic module is lazy
 
+ng local
+https://github.com/angular/angular-cli/issues/5955#issuecomment-320273493
+
 
