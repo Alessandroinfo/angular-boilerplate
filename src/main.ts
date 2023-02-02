@@ -6,31 +6,28 @@
 
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {AppModule} from '@app/app.module';
 import {environment} from '@env/environment';
+import {AppModule} from '../src/app/app.module';
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
-  .catch((err) => console.error(err));
+function bootstrap() {
+  platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    .catch((err) => console.error(err));
+}
 
-const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
-
-if (!environment.cordova) {
-  // Content loaded
-  document.addEventListener('DOMContentLoaded', () => {
-    bootstrap().catch((err) => console.error(err));
-  });
-} else {
+if (environment.cordova) {
   // Content loaded for deviceready Cordova API
-  document.addEventListener(
-    'deviceready',
-    () => {
-      bootstrap().catch((err) => console.error(err));
-    },
-    false
-  );
+  document.addEventListener('deviceready', bootstrap, false);
+} else {
+  // Default
+  if (document.readyState === 'complete') {
+    bootstrap();
+  } else {
+    // Content loaded
+    document.addEventListener('DOMContentLoaded', bootstrap);
+  }
 }
