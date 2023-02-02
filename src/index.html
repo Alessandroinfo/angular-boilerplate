@@ -4,37 +4,6 @@
     <!--  TODO: must edit all descriptions, numbers, colors, titles, urls, analytics  -->
     <meta charset="utf-8" />
 
-    <!--
-      Loader style
-    -->
-    <style>
-      .loader-background {
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        right: 0;
-        z-index: 50;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        background-color: rgb(246, 246, 246);
-      }
-      .loader-background .loader {
-        -webkit-animation: rotation 1s infinite linear;
-        animation: rotation 1s infinite linear;
-      }
-      @-webkit-keyframes rotation {
-        from {
-          -webkit-transform: rotate(0deg);
-        }
-        to {
-          -webkit-transform: rotate(359deg);
-        }
-      }
-    </style>
-
     <!-- GOOGLE ANALYTICS
     Global site tag (gtag.js) - Google Analytics
     <script async src="https://www.googletagmanager.com/gtag/js?XXXXXXXXX"></script>
@@ -305,10 +274,44 @@
     <!-- Angular App tag -->
     <app-root>
       <!--
+        Loader style
+      -->
+      <style>
+        #loader-container-before-bootstrap {
+          position: absolute;
+          overflow: hidden;
+          top: 0;
+          right: 0;
+          z-index: 50;
+          width: 100%;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          background-color: rgb(246, 246, 246);
+        }
+
+        #loader-container-before-bootstrap .loader {
+          -webkit-animation: rotation 1s infinite linear;
+          animation: rotation 1s infinite linear;
+        }
+
+        @-webkit-keyframes rotation {
+          from {
+            -webkit-transform: rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(359deg);
+          }
+        }
+      </style>
+
+      <!--
         Static loader
         Will be removed after the Angular bootstrap
+        If there is another pre-rendering generator this will be ignored
       -->
-      <div class="loader-background">
+      <div id="loader-container-before-bootstrap">
         <svg
           class="loader"
           height="38"
@@ -332,8 +335,9 @@
     </noscript>
 
     <!--
-    Preloaded js
-    Uncomment this if you need to preload some resources
-    <link rel="preload" href="preloaded.js" as="script">
-  --></body>
+      Preloaded js
+      Uncomment this if you need to preload some resources
+      <link rel="preload" href="preloaded.js" as="script">
+    -->
+  </body>
 </html>
