@@ -9,6 +9,7 @@
   "private": false,
   "scripts": {
     "ng-local": "ng",
+
     "start": "ng serve -c test --hmr --o --port 3001",
     "start-dist": "cd dist && http-server -c-1 -o .",
     "build": "ng build -c production",
@@ -20,6 +21,8 @@
     "firebase-login": "firebase login",
     "firebase-init": "firebase init",
     "firebase-deploy": "firebase deploy",
+
+
     "deploy-app": "npm run generate-asset && npm run format-index && npm run build && npm run firebase-deploy",
     "deploy-app-shell:demo": "npm run build:app-shell:demo && npm run firebase-deploy",
     "deploy-app-shell:production": "npm run build:app-shell:production && npm run firebase-deploy",
@@ -117,19 +120,5 @@
     "ts-node": "~10.8.1",
     "typescript": "~4.7.4",
     "webpack": "^5.73.0"
-  },
-  "lint-staged": {
-    "!(package)*.json": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "!package.json": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "!(package.json)": [
-      "eslint --fix",
-      "prettier --write"
-    ]
   }
 }
