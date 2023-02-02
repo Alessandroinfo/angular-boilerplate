@@ -6,6 +6,7 @@
     "type": "git"
   },
   "license": "UNLICENSED",
+  "private": false,
   "scripts": {
     "ng-local": "ng",
     "start": "ng serve -c test --hmr --o --port 3001",
@@ -41,7 +42,6 @@
     "cypress:run": "cypress run",
     "prepare": "husky install"
   },
-  "private": false,
   "dependencies": {
     "@angular/animations": "^14.0.2",
     "@angular/cdk": "^14.0.2",
@@ -117,5 +117,19 @@
     "ts-node": "~10.8.1",
     "typescript": "~4.7.4",
     "webpack": "^5.73.0"
+  },
+  "lint-staged": {
+    "!(package)*.json": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "!package.json": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "!(package.json)": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
