@@ -3,6 +3,7 @@ import {Component} from '@angular/core';
 @Component({
   selector: 'app-app-shell',
   template: `
+    <div style="color:black;font-size: 4em">CIAO</div>
     <div class="shell">
       <svg
         class="loader"
@@ -23,7 +24,7 @@ import {Component} from '@angular/core';
     </div>
   `,
   styleUrls: ['./app-shell.component.scss'],
-})
+  })
 export class AppShellComponent {
   constructor() {}
 }

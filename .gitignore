@@ -3,6 +3,8 @@
 # Compiled output
 /dist
 /dist-compressed
+/server
+/server/*
 /tmp
 /out-tsc
 rejectedCSS.json
