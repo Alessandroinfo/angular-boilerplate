@@ -1,5 +1,9 @@
+<div align="center">
+<img align="center" src="src/assets/imgs/logo.svg" width="64" alt="Logo">
+</div>
+
 # Angular-Boilerplate
-<img src="src/assets/imgs/logo.svg" width="64" align="left"> All in one Angular boilerplate.
+#### All in one Angular boilerplate.
 
 ### Awards
 - 100 / 100 Lighthouse
