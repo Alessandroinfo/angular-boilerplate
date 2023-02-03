@@ -83,8 +83,12 @@ Finish release
 
 `git flow release finish 1.0.0`
 
+`git push` to update remote
+
 ---
+
 ### Hotfixes
+
 Start new hotfix from _master_
 
 `git flow hotfix start 1.0.1`
@@ -93,6 +97,10 @@ Finish hotfix and merged to _master_
 
 `git flow hotfix finish 1.0.1`
 
+`git push` to update remote
+
 ---
+
+### Versioning
 
 User [semver](https://semver.org/) for versioning your app
