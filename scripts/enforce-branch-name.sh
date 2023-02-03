@@ -13,6 +13,7 @@ if [[ ! $LOCAL_BRANCH =~ $VALID_BRANCH_REGEX ]]
 then
     echo "[enforce-branch-name] There is something wrong with your branch name. Branch names must adhere to this regex: $VALID_BRANCH_REGEX."
     echo "[enforce-branch-name] Your commit will be rejected. You should rename your branch to a valid name and try again."
+    echo "[enforce-branch-name] Follow Git flow on README.md."
     exit 1
 fi
 

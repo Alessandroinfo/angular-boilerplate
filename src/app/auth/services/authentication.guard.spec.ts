@@ -1,9 +1,10 @@
 import {TestBed} from '@angular/core/testing';
-import {Router, ActivatedRouteSnapshot} from '@angular/router';
+import {ActivatedRouteSnapshot, Router} from '@angular/router';
 
-import {CredentialsService} from './credentials.service';
+import {CredentialsService} from '@app/auth/services/credentials.service';
 import {MockCredentialsService} from './credentials.service.mock';
-import {AuthenticationGuard} from './authentication.guard';
+import {AuthenticationGuard} from '@app/auth/services/authentication.guard';
+import {expect, jest} from '@jest/globals';
 
 describe('AuthenticationGuard', () => {
   let authenticationGuard: AuthenticationGuard;

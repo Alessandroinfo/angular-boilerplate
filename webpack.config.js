@@ -1,8 +1,10 @@
-const {patchPostCSS} = require('@ngneat/tailwind');
+const {DefinePlugin} = require('webpack');
+const version = require('./package.json').version;
 
-module.exports = (config) => {
-  const isProd = config.mode === 'production';
-  const tailwindConfig = require('./tailwind.config.js')(isProd);
-  patchPostCSS(config, tailwindConfig, true);
-  return config;
+module.exports = {
+  plugins: [
+    new DefinePlugin({
+      APP_VERSION: JSON.stringify(version),
+    }),
+  ],
 };

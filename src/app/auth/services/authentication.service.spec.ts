@@ -1,4 +1,5 @@
 import {TestBed, fakeAsync, tick} from '@angular/core/testing';
+import {jest, expect} from '@jest/globals';
 
 import {AuthenticationService} from './authentication.service';
 import {CredentialsService, Credentials} from './credentials.service';

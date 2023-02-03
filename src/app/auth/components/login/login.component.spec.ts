@@ -6,6 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LoginComponent} from './login.component';
 import {SharedModule} from '@app/shared/shared.module';
 import {MaterialModule} from '@app/shared/modules/material.module';
+import {jest, expect} from '@jest/globals';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;

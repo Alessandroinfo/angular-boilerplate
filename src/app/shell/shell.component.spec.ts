@@ -1,5 +1,6 @@
 import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
 import {RouterTestingModule} from '@angular/router/testing';
+import {jest, expect} from '@jest/globals';
 
 import {AuthenticationService, CredentialsService} from '@app/auth';
 import {MockAuthenticationService} from '@app/auth/services/authentication.service.mock';

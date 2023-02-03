@@ -56,7 +56,7 @@ export class FileSizePipe implements PipeTransform {
   private readonly units: unit[] = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
 
   transform(
-    bytes: number = 0,
+    bytes = 0,
     precision: number | unitPrecisionMap = defaultPrecisionMap
   ): string {
     if (isNaN(parseFloat(String(bytes))) || !isFinite(bytes)) {

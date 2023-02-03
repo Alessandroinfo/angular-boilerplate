@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# Uncomment this and comment npm scripts if you want use lint-staged
-# npx lint-staged
-npm run lint && npm run format-code && ./scripts/enforce_branch_name.sh
+# Lint-staged is used for linting and prettify the code before commit
+# You can instead use this [npm run lint && npm run format-code]
+# Enforce branch name is used for specific release flow
+npx lint-staged && ./scripts/enforce-branch-name.sh

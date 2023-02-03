@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
 import {finalize} from 'rxjs/operators';
 
 import {environment} from '@env/environment';
@@ -21,20 +21,15 @@ const log = new Logger('Login');
       class="flex flex-col bg-gray-100 items-center justify-center w-screen h-screen">
       <div class="w-1/2">
         <mat-card>
-          <form
-            (ngSubmit)="login()"
-            [formGroup]="loginForm"
-            novalidate>
-            <div
-              [hidden]="!error || loadingState.isLoading"
-              translate>
+          <form (ngSubmit)="login()" [formGroup]="loginForm" novalidate>
+            <div [hidden]="!error || loadingState.isLoading" translate>
               Username or password incorrect.
             </div>
 
             <br />
 
             <div class="flex flex-col">
-              <h1 class="self-center mb-5">AngularBoilerplate</h1>
+              <h1 class="self-center mb-5">Angular-Boilerplate</h1>
 
               <mat-form-field [hideRequiredMarker]="true">
                 <input
@@ -100,12 +95,12 @@ export class LoginComponent implements OnInit {
   };
   version: string | null = environment.appVersion;
   error: string | undefined;
-  loginForm!: FormGroup;
+  loginForm!: UntypedFormGroup;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private authenticationService: AuthenticationService
   ) {
     this.createForm();
@@ -134,19 +129,19 @@ export class LoginComponent implements OnInit {
         }),
         untilDestroyed(this)
       )
-      .subscribe(
-        (credentials) => {
+      .subscribe({
+        next: (credentials) => {
           log.debug(`${credentials.username} successfully logged in`);
           this.router.navigate(
-            [this.route.snapshot.queryParams.redirect || '/'],
+            [this.route.snapshot.queryParams['redirect'] || '/'],
             {replaceUrl: true}
           );
         },
-        (error) => {
+        error: (error) => {
           log.debug(`Login error: ${error}`);
           this.error = error;
-        }
-      );
+        },
+      });
   }
 
   private createForm() {

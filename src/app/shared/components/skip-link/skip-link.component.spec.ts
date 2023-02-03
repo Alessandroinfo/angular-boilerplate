@@ -1,5 +1,5 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-
+import {jest, expect} from '@jest/globals';
 import {SkipLinkComponent} from './skip-link.component';
 
 describe('SkipLinkComponent', () => {

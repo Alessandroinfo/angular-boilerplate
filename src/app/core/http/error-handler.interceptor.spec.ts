@@ -1,5 +1,6 @@
 import {Type} from '@angular/core';
 import {TestBed} from '@angular/core/testing';
+import {jest, expect} from '@jest/globals';
 import {
   HttpClientTestingModule,
   HttpTestingController,
@@ -47,15 +48,15 @@ describe('ErrorHandlerInterceptor', () => {
     jest.spyOn(ErrorHandlerInterceptor.prototype as any, 'errorHandler');
 
     // Act
-    http.get('/toto').subscribe(
-      () => fail('should error'),
-      () => {
+    http.get('/toto').subscribe({
+      next: () => fail('should error'),
+      error: () => {
         // Assert
         expect(
           (ErrorHandlerInterceptor.prototype as any).errorHandler
         ).toHaveBeenCalled();
-      }
-    );
+      },
+    });
 
     httpMock.expectOne({}).flush(null, {
       status: 404,

@@ -18,11 +18,10 @@ const routes: Routes = [
 @NgModule({
   // use useHash: true for routes issue (Cordova too)
   imports: [
-    RouterModule.forRoot(routes, {
-      relativeLinkResolution: 'legacy',
-      useHash: true,
+  RouterModule.forRoot(routes, {
+    useHash: true,
     }),
   ],
   exports: [RouterModule],
-})
+  })
 export class AppRoutingModule {}

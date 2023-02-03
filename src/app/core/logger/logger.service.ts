@@ -81,7 +81,7 @@ export class Logger {
   constructor(private source?: string) {}
 
   /**
-   * Logs messages or objects  with the debug level.
+   * Logs messages or objects with the debug level.
    * Works the same as console.log().
    */
   debug(...objects: any[]) {
@@ -89,7 +89,7 @@ export class Logger {
   }
 
   /**
-   * Logs messages or objects  with the info level.
+   * Logs messages or objects with the info level.
    * Works the same as console.log().
    */
   info(...objects: any[]) {
@@ -97,7 +97,7 @@ export class Logger {
   }
 
   /**
-   * Logs messages or objects  with the warning level.
+   * Logs messages or objects with the warning level.
    * Works the same as console.log().
    */
   warn(...objects: any[]) {
@@ -105,7 +105,7 @@ export class Logger {
   }
 
   /**
-   * Logs messages or objects  with the error level.
+   * Logs messages or objects with the error level.
    * Works the same as console.log().
    */
   error(...objects: any[]) {
