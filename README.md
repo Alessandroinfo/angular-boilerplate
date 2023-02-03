@@ -3,6 +3,7 @@
 
 ### Awards
 - 100 / 100 Lighthouse
+
 ![img.png](src/assets/imgs/README/lighthouse-100.png)
 
 ### Integrations 
