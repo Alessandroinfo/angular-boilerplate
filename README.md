@@ -94,3 +94,5 @@ Finish hotfix and merged to _master_
 `git flow hotfix finish 1.0.1`
 
 ---
+
+User [semver](https://semver.org/) for versioning your app
