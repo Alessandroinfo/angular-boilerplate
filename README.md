@@ -4,9 +4,6 @@
 
 # Angular-Boilerplate
 #### All in one Angular boilerplate.
----
-
-
 
 
 ### Awards
