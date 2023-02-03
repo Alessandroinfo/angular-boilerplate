@@ -1,10 +1,3 @@
-# Angular-Boilerplate
-
-The GOAL of this project is to have all the tools ready to use to develop a complete app from every point of view.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -92,5 +85,3 @@ https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Gi
 https://stackoverflow.com/questions/33510566/gitflow-properly-testing-release-branches-master
 
 After merge the feature/feature-name-branch remember to update package.json version and commit
-
-brew install git-flow
