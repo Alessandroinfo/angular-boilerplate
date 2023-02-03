@@ -57,7 +57,7 @@ Follow [Git branching model](https://nvie.com/posts/a-successful-git-branching-m
 - `hotfix` created from _master_ for merging to _master_
 
 
-#### Install [Git-flow](https://github.com/nvie/gitflow/wiki/Installation)
+#### Install [Git-flow](https://github.com/petervanderdoes/gitflow-avh/wiki/Installation)
 
 #### Init Git flow
 
