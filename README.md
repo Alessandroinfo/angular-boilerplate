@@ -1,5 +1,5 @@
-<p align="left">
-<img src="src/assets/imgs/logo.svg" width="64" alt="Logo">
+<p align="center">
+<img src="src/assets/imgs/logo.svg" width="64" alt="Logo" />
 </p>
 
 # Angular-Boilerplate
@@ -50,8 +50,9 @@ Follow [Git branching model](https://nvie.com/posts/a-successful-git-branching-m
 - `develop` for test (next release)
 
 
-- `release` created from `develop` for merging to `master`
-- `hotfix` created from `master` for merging to `master`
+- `release` created from _develop_ for merging to _master_
+- `hotfix` created from _master_ for merging to _master_
+
 
 #### Install [Git-flow](https://github.com/nvie/gitflow/wiki/Installation)
 
@@ -61,24 +62,35 @@ Follow [Git branching model](https://nvie.com/posts/a-successful-git-branching-m
 
 ---
 
-#### Start new feature
+### Development
+ Start new feature
 
 `git flow feature start feature-name`
 
-#### Finish feature development
+ Finish feature development
 
-`git flow finish feature feature-name`
+`git flow feature finish feature-name`
 
 `git push` to update remote
 
 ---
 
-#### Start new release for production
+Start new release from _develop_ for merge changes to _master_
 
 `git flow release start 1.0.0`
 
-#### Finish release
+Finish release
 
-`git flow finish release 1.0.0`
+`git flow release finish 1.0.0`
+
+---
+### Hotfixes
+Start new hotfix from _master_
+
+`git flow hotfix start 1.0.1`
+
+Finish hotfix and merged to _master_
+
+`git flow hotfix finish 1.0.1`
 
 ---
