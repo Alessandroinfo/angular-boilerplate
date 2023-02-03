@@ -5,7 +5,7 @@ import {delay} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
-})
+  })
 export class ApiService {
   // THIS CREATE HEADER FOR CENTER AND TOP CONST THAT HAVE EACH STRING FOR SET LOADING
   center = {
@@ -32,11 +32,11 @@ export class ApiService {
   // https://mock.codes/
   getInfo() {
     return this.http
-      .get('https://mock.codes/400', {
+      .get('https://mock.codes/200', {
         ...this.loaderOptions.top,
         observe: 'response',
       })
-      .pipe(delay(5000));
+      .pipe(delay(10000));
   }
 
   // This show how to add custom headers
