@@ -1,9 +1,8 @@
-<p align="left">
+<p align="center">
 <img src="src/assets/imgs/logo.svg" width="64" alt="Logo">
-</p>
 
 # Angular-Boilerplate
-
+</p>
 
 ### Awards
 - 100 / 100 Lighthouse
