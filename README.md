@@ -1,9 +1,8 @@
-<div align="center">
-<img align="center" src="src/assets/imgs/logo.svg" width="64" alt="Logo">
-</div>
+<p align="left">
+<img src="src/assets/imgs/logo.svg" width="64" alt="Logo">
+</p>
 
 # Angular-Boilerplate
-#### All in one Angular boilerplate.
 
 
 ### Awards
