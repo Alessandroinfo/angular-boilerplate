@@ -39,7 +39,7 @@ Git flow
 Follow [Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
 
 `master` is for production
-`develop` for test
+`develop` for test (next release)
 
 `release` created from `develop` for merging to `master`
 `hotfix` created from `master` for merging to `master`
