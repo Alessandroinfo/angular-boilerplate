@@ -23,6 +23,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "deleteOutputPath": true,
             "outputPath": "dist/browser",
             "indexTransform": "./index-html-transform.js",
             "index": "src/index.html",
@@ -199,6 +200,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
+            "deleteOutputPath": true,
             "outputPath": "dist/server",
             "main": "src/main.server.ts",
             "tsConfig": "tsconfig.server.json"
