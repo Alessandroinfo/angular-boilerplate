@@ -34,13 +34,13 @@
 - Cypress & e2e testing
 - Local HTTP server ready
 
-Start
----
+## Start
+
 `npm i`
 `npm i`
 
-Git flow
----
+## Git flow
+
 Follow [Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
 
 - `master` is for production
