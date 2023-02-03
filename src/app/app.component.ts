@@ -33,7 +33,7 @@ const log = new Logger('App');
     <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.scss'],
-})
+  })
 export class AppComponent implements OnInit {
   // For loading status default false all
   loadingState: LoadingState = this.gcdSvc.loadingDefaultOffState;
@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
     private splashScreen: SplashScreen,
     @Inject(DOCUMENT) private document: Document
   ) {
-    // TODO: Remove this, only to know what language is
+    // TODO: Remove this, it's only to know what language is
     if (!environment.production) {
       console.log(this.localeId);
     }

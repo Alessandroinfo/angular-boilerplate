@@ -2,7 +2,6 @@ module.exports = (targetOptions, indexHtml) => {
   let newIndexHtml = indexHtml;
 
   // Cordova index management
-  // TODO: Check if this it's correct when enabled
   if (
     targetOptions &&
     targetOptions.configuration?.includes('cordova-production')
