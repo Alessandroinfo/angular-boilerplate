@@ -2,6 +2,8 @@
 <img align="center" src="src/assets/imgs/logo.svg" width="64" alt="Logo">
 </div>
 
+---
+
 # Angular-Boilerplate
 #### All in one Angular boilerplate.
 
