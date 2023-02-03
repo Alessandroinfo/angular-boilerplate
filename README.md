@@ -1,4 +1,4 @@
-<div style="display:flex; text-align: center">
+<div style="text-align: center">
 <img src="src/assets/imgs/logo.svg" width="64" alt="Logo" />
 <div style="font-size: 2.5em; font-weight: bold">Angular-Boilerplate</div>
 </div>
