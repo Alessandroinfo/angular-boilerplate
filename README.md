@@ -84,3 +84,8 @@ https://github.com/angular/angular-cli/issues/5955#issuecomment-320273493
 
 vendorchunk
 https://stackoverflow.com/questions/52179853/angular-should-i-use-the-vendorchunk-in-production
+
+
+release test
+https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Gitflow-release-branch-process-start-finish
+https://stackoverflow.com/questions/33510566/gitflow-properly-testing-release-branches-master
