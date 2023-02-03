@@ -2,6 +2,7 @@
 
 # Compiled output
 /dist
+/dist/*
 /dist-compressed
 /server
 /server/*

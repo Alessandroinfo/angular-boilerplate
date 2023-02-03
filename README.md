@@ -82,3 +82,5 @@ ng local
 https://github.com/angular/angular-cli/issues/5955#issuecomment-320273493
 
 
+vendorchunk
+https://stackoverflow.com/questions/52179853/angular-should-i-use-the-vendorchunk-in-production

@@ -7,8 +7,7 @@
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {environment} from '@env/environment';
-// Don't short this import, because app-shell build didn't understand the shorted version
-import {AppModule} from '../src/app/app.module';
+import {AppModule} from '@app/app.module';
 
 if (environment.production) {
   enableProdMode();
@@ -20,7 +19,9 @@ function bootstrap() {
     .catch((err) => console.error(err));
 }
 
+// Different bootstraps
 if (environment.cordova) {
+  // TODO:critical Check if cordova app boot correctly
   // Content loaded for deviceready Cordova API
   document.addEventListener('deviceready', bootstrap, false);
 } else {
