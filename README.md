@@ -34,16 +34,46 @@
 - Cypress & e2e testing
 - Local HTTP server ready
 
+Start
+---
+`npm i`
+`npm i`
+
 Git flow
 ---
 Follow [Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
 
-`master` is for production
-`develop` for test (next release)
+- `master` is for production
+- `develop` for test (next release)
 
-`release` created from `develop` for merging to `master`
-`hotfix` created from `master` for merging to `master`
 
-Install [Git-flow](https://github.com/nvie/gitflow/wiki/Installation)
+- `release` created from `develop` for merging to `master`
+- `hotfix` created from `master` for merging to `master`
 
-## Creating new feature
+#### Install [Git-flow](https://github.com/nvie/gitflow/wiki/Installation)
+
+#### Init Git flow
+
+`git flow init` or use the default git config with `git config --local include.path ../.gitconfig`
+
+---
+
+#### Start new feature
+
+`git flow feature start feature-name`
+
+#### Finish feature development
+
+`git flow finish feature feature-name`
+
+---
+
+#### Start new release for production
+
+`git flow release start 1.0.0`
+
+#### Finish release
+
+`git flow finish release 1.0.0`
+
+---
