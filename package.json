@@ -12,7 +12,7 @@
     "start": "ng serve -c test --hmr --o --port 3001",
     "start-dist": "cd dist && http-server -c-1 -o .",
     "build": "ng build -c production",
-    "build:app-shell:demo": "npm run format-index && ng run angular-boilerplate:app-shell:demo",
+    "build:app-shell:demo": "ng run angular-boilerplate:app-shell:demo",
     "build-start-open:app-shell:demo": "npm run build:app-shell:demo && npm run start-dist",
     "build:app-shell:production": "ng run angular-boilerplate:app-shell:production",
     "bundle-analyze": "ng build -c production --source-map=true && source-map-explorer dist/*.js",
