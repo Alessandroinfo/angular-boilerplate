@@ -1,5 +1,5 @@
 # Angular-Boilerplate
-<img src="src/assets/imgs/logo.svg" width="64" alt="All in one Angular boilerplate.">
+<img src="src/assets/imgs/logo.svg" width="64" align="left"> All in one Angular boilerplate.
 
 ### Awards
 - 100 / 100 Lighthouse
@@ -20,7 +20,7 @@
 - Skip link
 - Custom webpack
 - App-shell
-- Loader CSS (Before boot for FCP)
+- Loader CSS (Before the boot for FCP)
 - Login authentication
 - Bundle compression
 - Firebase deploy
