@@ -34,6 +34,9 @@
 - Cypress & e2e testing
 - Local HTTP server ready
 
+
+
+
 ## Start
 
 `npm i`
@@ -65,6 +68,8 @@ Follow [Git branching model](https://nvie.com/posts/a-successful-git-branching-m
 #### Finish feature development
 
 `git flow finish feature feature-name`
+
+`git push` to update remote
 
 ---
 
