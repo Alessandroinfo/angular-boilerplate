@@ -15,7 +15,7 @@ export interface LoginContext {
  */
 @Injectable({
   providedIn: 'root',
-})
+  })
 export class AuthenticationService {
   constructor(private credentialsService: CredentialsService) {}
 

@@ -10,7 +10,7 @@ import {environment} from '@env/environment';
     </div>
   `,
   styleUrls: ['./version.component.scss'],
-})
+  })
 export class VersionComponent {
   appVersion = environment.appVersion;
 }

@@ -24,7 +24,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
     </ng-container>
   `,
   styleUrls: ['./loader.component.scss'],
-})
+  })
 export class LoaderComponent {
   // Check if is in loading or not
   // Also contain the configuration for the

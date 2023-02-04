@@ -3,7 +3,7 @@ import {BoxLineModel} from '@app/shared/models/box-line';
 
 @Directive({
   selector: '[appBoxLine]',
-})
+  })
 export class BoxLineDirective implements OnInit {
   @Input() appBoxLine: BoxLineModel = {
     border: {

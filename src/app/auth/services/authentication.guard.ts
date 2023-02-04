@@ -13,7 +13,7 @@ const log = new Logger('AuthenticationGuard');
 
 @Injectable({
   providedIn: 'root',
-})
+  })
 export class AuthenticationGuard implements CanActivate {
   constructor(
     private router: Router,

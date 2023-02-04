@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
     <router-outlet></router-outlet>
   `,
   styleUrls: ['./shell.component.scss'],
-})
+  })
 export class ShellComponent {
   constructor() {}
 }

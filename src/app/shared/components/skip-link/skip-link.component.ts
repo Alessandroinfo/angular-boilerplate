@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
     </a>
   `,
   styleUrls: ['./skip-link.component.scss'],
-})
+  })
 export class SkipLinkComponent implements OnInit {
   skipLinkPath = '';
   @Input() mainContentID = 'main-content';

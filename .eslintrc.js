@@ -51,15 +51,6 @@ module.exports = {
           'error',
           {allow: ['constructors', 'methods']},
         ],
-        '@typescript-eslint/no-unused-vars': [
-          'error',
-          {
-            vars: 'all',
-            args: 'after-used',
-            caughtErrors: 'none',
-            ignoreRestSiblings: true,
-          },
-        ],
         'no-empty-function': ['error', {allow: ['constructors', 'methods']}],
         indent: ['error', 2],
         'linebreak-style': ['error', 'unix'],

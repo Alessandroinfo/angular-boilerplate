@@ -13,7 +13,7 @@ import {GenericFacilityService} from '../generic-facility/generic-facility.servi
 
 @Injectable({
   providedIn: 'root',
-})
+  })
 export class LoaderInterceptorService implements HttpInterceptor {
   constructor(
     private gcfSvc: GenericFacilityService,

@@ -9,5 +9,5 @@ import {SharedModule} from '@app/shared/shared.module';
   declarations: [HomeComponent],
   imports: [CommonModule, SharedModule, HomeRoutingModule],
   exports: [HomeComponent],
-})
+  })
 export class HomeModule {}

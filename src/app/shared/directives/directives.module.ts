@@ -8,18 +8,18 @@ import {FocusDirective} from './focus/focus.directive';
 
 @NgModule({
   declarations: [
-    BoxLineDirective,
-    OutlineDirective,
-    StopPropagationDirective,
-    PreventDefaultDirective,
-    StopImmediatePropagationDirective,
-    FocusDirective,
+  BoxLineDirective,
+  OutlineDirective,
+  StopPropagationDirective,
+  PreventDefaultDirective,
+  StopImmediatePropagationDirective,
+  FocusDirective,
   ],
   exports: [
-    BoxLineDirective,
-    OutlineDirective,
-    StopPropagationDirective,
-    FocusDirective,
+  BoxLineDirective,
+  OutlineDirective,
+  StopPropagationDirective,
+  FocusDirective,
   ],
-})
+  })
 export class DirectivesModule {}
