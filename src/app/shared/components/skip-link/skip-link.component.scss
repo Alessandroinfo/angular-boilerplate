@@ -1,8 +1,8 @@
 .skip-link {
-  @apply absolute h-0 w-0 -left-128 top-0 -z-1 overflow-hidden;
+  @apply absolute -left-128 top-0 -z-1 h-0 w-0 overflow-hidden;
 
   &:focus,
   &:active {
-    @apply z-100 w-auto left-0 h-auto overflow-auto bg-black text-white p-2;
+    @apply left-0 z-100 h-auto w-auto overflow-auto bg-black p-2 text-white;
   }
 }

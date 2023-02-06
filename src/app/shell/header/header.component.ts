@@ -6,9 +6,9 @@ import {AuthenticationService, CredentialsService} from '@app/auth';
 @Component({
   selector: 'app-header',
   template: `
-    <div class="flex w-full bg-primary mb-2 children:p-2 children:text-white">
+    <div class="mb-2 flex w-full bg-primary children:p-2 children:text-white">
       <div class="flex">Angular-Boilerplate</div>
-      <div class="text-secondary font-bold underline ml-auto">
+      <div class="ml-auto font-bold text-secondary underline">
         {{ username }}
       </div>
       <div class="cursor-pointer" (click)="logout()">Logout</div>

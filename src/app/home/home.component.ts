@@ -48,7 +48,7 @@ declare const APP_VERSION: string;
 
     <div
       id="main-content"
-      class="w-128 h-128 flex bg-gray-300 child:text-white">
+      class="flex h-128 w-128 bg-gray-300 child:text-white">
       Main content
 
       <div

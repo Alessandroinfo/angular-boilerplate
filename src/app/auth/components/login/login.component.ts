@@ -18,7 +18,7 @@ const log = new Logger('Login');
     <app-loader [state]="loadingState"></app-loader>
 
     <div
-      class="flex flex-col bg-gray-100 items-center justify-center w-screen h-screen">
+      class="flex h-screen w-screen flex-col items-center justify-center bg-gray-100">
       <div class="w-1/2">
         <mat-card>
           <form (ngSubmit)="login()" [formGroup]="loginForm" novalidate>
@@ -29,7 +29,7 @@ const log = new Logger('Login');
             <br />
 
             <div class="flex flex-col">
-              <h1 class="self-center mb-5">Angular-Boilerplate</h1>
+              <h1 class="mb-5 self-center">Angular-Boilerplate</h1>
 
               <mat-form-field [hideRequiredMarker]="true">
                 <input

@@ -1,0 +1,16 @@
+{
+  "singleQuote": true,
+  "bracketSpacing": false,
+  "bracketSameLine": true,
+  "singleAttributePerLine": false,
+  "htmlWhitespaceSensitivity": "ignore",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}
