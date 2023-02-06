@@ -17,6 +17,7 @@
 - Git-flow management
 - Eslint
 - Prettier
+  - TailwindCSS class ordering
 
 ### Abilities
 - PWA
