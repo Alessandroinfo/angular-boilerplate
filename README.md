@@ -106,3 +106,4 @@ Finish hotfix and merged to _master_
 ### Versioning
 
 User [semver](https://semver.org/) for versioning your app
+
