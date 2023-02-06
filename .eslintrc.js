@@ -52,7 +52,11 @@ module.exports = {
           {allow: ['constructors', 'methods']},
         ],
         'no-empty-function': ['error', {allow: ['constructors', 'methods']}],
-        indent: ['error', 2],
+        indent: [
+          'error',
+          2,
+          {SwitchCase: 1, ignoredNodes: ['PropertyDefinition']},
+        ],
         'linebreak-style': ['error', 'unix'],
         quotes: ['error', 'single'],
         semi: ['error', 'always'],
