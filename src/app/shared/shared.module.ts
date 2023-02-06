@@ -11,13 +11,13 @@ import {SkipLinkComponent} from './components/skip-link/skip-link.component';
   declarations: [VersionComponent, LoaderComponent, SkipLinkComponent],
   imports: [CommonModule, MaterialModule, PipesModule, DirectivesModule],
   exports: [
-  CommonModule,
-  MaterialModule,
-  PipesModule,
-  DirectivesModule,
-  VersionComponent,
-  LoaderComponent,
-  SkipLinkComponent,
+    CommonModule,
+    MaterialModule,
+    PipesModule,
+    DirectivesModule,
+    VersionComponent,
+    LoaderComponent,
+    SkipLinkComponent,
   ],
-  })
+})
 export class SharedModule {}

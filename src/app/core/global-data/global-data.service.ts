@@ -4,7 +4,7 @@ import {LanguageItem, LanguagesList} from '@app/shared/models/language-app';
 
 @Injectable({
   providedIn: 'root',
-  })
+})
 export class GlobalDataService {
   // CODE FOR LANGUAGE LIST
   // WITH DEFAULT CONF IS THIS THE LANG

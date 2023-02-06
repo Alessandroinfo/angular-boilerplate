@@ -13,7 +13,7 @@ const routes: Routes = [{path: 'shell', component: AppShellComponent}];
   bootstrap: [AppComponent],
   declarations: [AppShellComponent],
   exports: [AppShellComponent],
-  })
+})
 export class AppServerModule {
   // The important part to avoid route ** bug and not show shell compo:
   constructor(private router: Router) {

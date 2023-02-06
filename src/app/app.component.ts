@@ -33,7 +33,7 @@ const log = new Logger('App');
     <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.scss'],
-  })
+})
 export class AppComponent implements OnInit {
   // For loading status default false all
   loadingState: LoadingState = this.gcdSvc.loadingDefaultOffState;

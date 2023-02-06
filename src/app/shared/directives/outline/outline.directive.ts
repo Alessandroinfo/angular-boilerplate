@@ -3,7 +3,7 @@ import {OlModel} from '@app/shared/models/outline';
 
 @Directive({
   selector: '[appOutline]',
-  })
+})
 export class OutlineDirective implements OnInit {
   @Input() appOutline: OlModel = {
     style: 'dashed',

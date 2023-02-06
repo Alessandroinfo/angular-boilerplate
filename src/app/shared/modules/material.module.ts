@@ -44,7 +44,7 @@ const PROVIDERS: Provider[] = [];
   imports: [...MODULES],
   exports: [...MODULES],
   providers: [...PROVIDERS],
-  })
+})
 export class MaterialModule {
   constructor() {}
 }

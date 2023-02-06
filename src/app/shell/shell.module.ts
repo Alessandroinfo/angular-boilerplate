@@ -8,5 +8,5 @@ import {HeaderComponent} from './header/header.component';
 @NgModule({
   imports: [CommonModule, AuthModule, RouterModule],
   declarations: [HeaderComponent, ShellComponent],
-  })
+})
 export class ShellModule {}

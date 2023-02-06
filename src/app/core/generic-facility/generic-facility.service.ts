@@ -7,7 +7,7 @@ import {LoadingState} from '@app/shared/models/loading-app';
 
 @Injectable({
   providedIn: 'root',
-  })
+})
 export class GenericFacilityService {
   // ------------------------------------------------------------ ATTRIBUTES ------------------------------------------------------------ //
 

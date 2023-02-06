@@ -18,7 +18,7 @@ const log = new Logger('ErrorHandlerInterceptor');
  */
 @Injectable({
   providedIn: 'root',
-  })
+})
 export class ErrorHandlerInterceptor implements HttpInterceptor {
   intercept(
     request: HttpRequest<any>,

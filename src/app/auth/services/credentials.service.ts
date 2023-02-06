@@ -14,7 +14,7 @@ const credentialsKey = 'credentials';
  */
 @Injectable({
   providedIn: 'root',
-  })
+})
 export class CredentialsService {
   private _credentials: Credentials | null = null;
 

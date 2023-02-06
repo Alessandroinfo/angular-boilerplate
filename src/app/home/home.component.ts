@@ -77,7 +77,7 @@ declare const APP_VERSION: string;
     </div>
   `,
   styleUrls: ['./home.component.scss'],
-  })
+})
 export class HomeComponent implements OnInit {
   app_version = '';
   constructor(public api: ApiService) {}

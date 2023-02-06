@@ -27,7 +27,7 @@ import {ThemePalette} from '@angular/material/core';
     </ng-container>
   `,
   styleUrls: ['./loader.component.scss'],
-  })
+})
 export class LoaderComponent {
   color: ThemePalette = 'accent';
 

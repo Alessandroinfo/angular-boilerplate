@@ -14,7 +14,7 @@ import {environment} from '@env/environment';
  */
 @Injectable({
   providedIn: 'root',
-  })
+})
 export class ApiPrefixInterceptor implements HttpInterceptor {
   intercept(
     request: HttpRequest<any>,

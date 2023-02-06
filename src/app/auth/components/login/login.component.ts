@@ -85,7 +85,7 @@ const log = new Logger('Login');
     </div>
   `,
   styleUrls: ['./login.component.scss'],
-  })
+})
 export class LoginComponent implements OnInit {
   loadingState: LoadingState = {
     isLoading: false,

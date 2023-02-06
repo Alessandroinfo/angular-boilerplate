@@ -23,25 +23,25 @@ import {SplashScreen} from '@awesome-cordova-plugins/splash-screen/ngx';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-  CoreModule,
-  RouterModule,
-  SharedModule,
-  ShellModule,
-  HomeModule,
-  AuthModule,
-  BrowserAnimationsModule,
-  BrowserModule.withServerTransition({appId: 'serverApp'}),
-  ServiceWorkerModule.register('ngsw-worker.js', {
-    enabled: environment.production,
+    CoreModule,
+    RouterModule,
+    SharedModule,
+    ShellModule,
+    HomeModule,
+    AuthModule,
+    BrowserAnimationsModule,
+    BrowserModule.withServerTransition({appId: 'serverApp'}),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
     }),
-  AppRoutingModule, // must be imported as the last module as it contains the fallback route.
+    AppRoutingModule, // must be imported as the last module as it contains the fallback route.
   ],
   providers: [
-// Cordova plugins
-  Keyboard,
-  StatusBar,
-  SplashScreen,
+    // Cordova plugins
+    Keyboard,
+    StatusBar,
+    SplashScreen,
   ],
   bootstrap: [AppComponent],
-  })
+})
 export class AppModule {}
