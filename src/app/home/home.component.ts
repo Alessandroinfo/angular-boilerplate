@@ -15,7 +15,7 @@ declare const APP_VERSION: string;
       <div class="example-label">Basic</div>
       <div class="example-button-row">
         <button mat-button>Basic</button>
-        <button mat-button color="primary">Primary</button>
+        <button mat-button mat-c color="primary">Primary</button>
         <button mat-button color="accent">Accent</button>
         <button mat-button color="warn">Warn</button>
         <button mat-button disabled>Disabled</button>

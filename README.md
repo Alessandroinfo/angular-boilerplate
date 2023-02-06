@@ -10,8 +10,6 @@
 
 ![img.png](src/assets/imgs/README/lighthouse-100.png)
 
-### Details 
-
 ### Integrations 
 - TailwindCSS & Material cooperation
 - Cordova ready
