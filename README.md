@@ -48,88 +48,88 @@ Launch local server with `test` configuration and open the app on browser
 
 ### Project structure
 ```
-dist/
-.husky/
-scripts/
-src/
-├── app/
-│ │... other modules
-│ ├── auth/
-│ │ ├── auth-routing.module.ts
-│ │ ├── auth.module.ts
-│ │ ├── components/
-│ │ ├── index.ts
-│ │ └── services
-│ ├── core/
-│ │ ├── api/
-│ │ ├── core.module.ts
-│ │ ├── generic-facility
-│ │ ├── global-data/
-│ │ ├── http/
-│ │ ├── loader-interceptor/
-│ │ └── logger/
-│ ├── shared/
-│ │ ├── components/
-│ │ │ ├── app-shell/
-│ │ │ ├── loader/
-│ │ │ ├── skip-link/
-│ │ │ └── version/
-│ │ ├── directives/
-│ │ ├── models/
-│ │ ├── modules/
-│ │ └── pipes/
-│ ├── shell/
-│ ├── home/
-│ ├── about/
-│ ├── app-routing.module.ts
-│ ├── app.component.ts
-│ ├── app.module.ts
-│ ├── app.server.module.ts
-├── assets/
-│ ├── design-system/
-│ │ ├── abstract/
-│ │ ├── base/
-│ │ ├── components/
-│ │ ├── layout/
-│ │ ├── pages/
-│ │ ├── themes/
-│ │ ├── vendors/
-│ │ └── main.scss
-│ ├── fonts/
-│ ├── icons/
-│ └── imgs/
-├── environments/
-├── global.js
-├── index.html
-├── main.server.ts
-├── main.ts
-├── manifest.webmanifest
-├── polyfills.ts
-├── preloaded.js
-├── robots.txt
-├── styles.scss
-├── test.ts
-└── typings.d.ts
-cypress/
-cypress.config.ts
-docs/
-README.md
-firebase.json
-firestore.indexes.json
-firestore.rules
-git-flow-plus.config
-index-html-transform.js
-karma.conf.js
-ngsw-config.json
-package-lock.json
-package.json
-angular.json
-tailwind.config.js
-tsconfig.app.json
-tsconfig.json
-tsconfig.server.json
-tsconfig.spec.json
-webpack.config.js
+dist/                        .
+.husky/                      .
+scripts/                     .
+src/                         .
+├── app/                     .
+│ │... other modules         .
+│ ├── auth/                  .
+│ │ ├── auth-routing.module.ts.
+│ │ ├── auth.module.ts       .
+│ │ ├── components/          .
+│ │ ├── index.ts             .
+│ │ └── services             .
+│ ├── core/                  .
+│ │ ├── api/                 .
+│ │ ├── core.module.ts       .
+│ │ ├── generic-facility     .
+│ │ ├── global-data/         .
+│ │ ├── http/                .
+│ │ ├── loader-interceptor/  .
+│ │ └── logger/              .
+│ ├── shared/                .
+│ │ ├── components/          .
+│ │ │ ├── app-shell/         .
+│ │ │ ├── loader/            .
+│ │ │ ├── skip-link/         .
+│ │ │ └── version/           .
+│ │ ├── directives/          .
+│ │ ├── models/              .
+│ │ ├── modules/             .
+│ │ └── pipes/               .
+│ ├── shell/                 .
+│ ├── home/                  .
+│ ├── about/                 .
+│ ├── app-routing.module.ts  .
+│ ├── app.component.ts       .
+│ ├── app.module.ts          .
+│ └── app.server.module.ts   .
+├── assets/                  .
+│ ├── design-system/         .
+│ │ ├── abstract/            .
+│ │ ├── base/                .
+│ │ ├── components/          .
+│ │ ├── layout/              .
+│ │ ├── pages/               .
+│ │ ├── themes/              .
+│ │ ├── vendors/             .
+│ │ └── main.scss            .
+│ ├── fonts/                 .
+│ ├── icons/                 .
+│ └── imgs/                  .
+├── environments/            .
+├── global.js                .
+├── index.html               .
+├── main.server.ts           .
+├── main.ts                  .
+├── manifest.webmanifest     .
+├── polyfills.ts             .
+├── preloaded.js             .
+├── robots.txt               .
+├── styles.scss              .
+├── test.ts                  .
+└── typings.d.ts             .
+cypress/                     .
+cypress.config.ts            .
+docs/                        .
+README.md                    .
+firebase.json                .
+firestore.indexes.json       .
+firestore.rules              .
+git-flow-plus.config         .
+index-html-transform.js      .
+karma.conf.js                .
+ngsw-config.json             .
+package-lock.json            .
+package.json                 .
+angular.json                 .
+tailwind.config.js           .
+tsconfig.app.json            .
+tsconfig.json                .
+tsconfig.server.json         .
+tsconfig.spec.json           .
+webpack.config.js            .
 ```
 
 ## Coding guides
