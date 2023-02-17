@@ -10,8 +10,6 @@
 
 ![img.png](src/assets/imgs/README/lighthouse-100.png)
 
-### Details 
-
 ### Integrations 
 - TailwindCSS & Material cooperation
 - Cordova ready
@@ -19,6 +17,7 @@
 - Git-flow management
 - Eslint
 - Prettier
+  - TailwindCSS class ordering
 
 ### Abilities
 - PWA
@@ -36,74 +35,73 @@
 - Cypress & e2e testing
 - Local HTTP server ready
 
+## Getting started
 
+---
 
-
-## Start
-
-Open the app with:
+### Run app
+Install dependencies:
 - `npm i`
-- `npm run start`
 
-## Git flow
+Launch local server with `test` configuration and open the app on browser
+- `npm start`
 
-Follow [Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+### Project structure
+```
+dist/                            .
+.husky/                          .
+scripts/                         .
+src/                             .
+├── app/                         .
+│ │... other modules             .
+│ ├── auth/                      .
+│ ├── core/                      .      .
+│ ├── shared/                    .        .
+│ ├── shell/                     .
+│ ├── home/                      .
+│ ├── about/                     .
+│ ├── app-routing.module.ts      .
+│ ├── app.component.ts           .
+│ ├── app.module.ts              .
+│ └── app.server.module.ts       .
+├── assets/                      .
+│ ├── design-system/             .
+│ ├── fonts/                     .
+│ ├── icons/                     .
+│ └── imgs/                      .
+├── environments/                .
+├── global.js                    .
+├── index.html                   .
+├── main.server.ts               .
+├── main.ts                      .
+├── manifest.webmanifest         .
+├── polyfills.ts                 .
+├── preloaded.js                 .
+├── robots.txt                   .
+├── styles.scss                  .
+├── test.ts                      .
+└── typings.d.ts                 .
+cypress/                         .
+cypress.config.ts                .
+docs/                            .
+README.md                        .
+firebase.json                    .
+firestore.indexes.json           .
+firestore.rules                  .
+git-flow-plus.config             .
+index-html-transform.js          .
+karma.conf.js                    .
+ngsw-config.json                 .
+package-lock.json                .
+package.json                     .
+angular.json                     .
+tailwind.config.js               .
+tsconfig.app.json                .
+tsconfig.json                    .
+tsconfig.server.json             .
+tsconfig.spec.json               .
+webpack.config.js                .
+```
 
-- `master` is for production
-- `develop` for test (next release)
-
-
-- `release` created from _develop_ for merging to _master_
-- `hotfix` created from _master_ for merging to _master_
-
-
-#### Install [Git-flow](https://github.com/petervanderdoes/gitflow-avh/wiki/Installation)
-
-#### Init Git flow
-
-`git flow init` or use the default git config with `git config --local include.path ../.gitconfig`
-
----
-
-### Development
- Start new feature
-
-`git flow feature start feature-name`
-
- Finish feature development
-
-`git flow feature finish feature-name`
-
-`git push` to update remote
-
----
-
-Start new release from _develop_ for merge changes to _master_
-
-`git flow release start 1.0.0`
-
-Finish release
-
-`git flow release finish 1.0.0`
-
-`git push` to update remote
-
----
-
-### Hotfixes
-
-Start new hotfix from _master_
-
-`git flow hotfix start 1.0.1`
-
-Finish hotfix and merged to _master_
-
-`git flow hotfix finish 1.0.1`
-
-`git push` to update remote
-
----
-
-### Versioning
-
-User [semver](https://semver.org/) for versioning your app
+## Coding guides
+- [Git Flow](docs/git-flow.md)

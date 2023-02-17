@@ -5,7 +5,7 @@ import {delay} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
-  })
+})
 export class ApiService {
   // THIS CREATE HEADER FOR CENTER AND TOP CONST THAT HAVE EACH STRING FOR SET LOADING
   center = {

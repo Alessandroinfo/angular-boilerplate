@@ -26,14 +26,14 @@ const log = new Logger('App');
       class="fixed top-0 right-0 left-0"
       [state]="loadingState"></app-loader>
 
-    <!-- App version at the bottom right -->
+    <!-- App version -->
     <app-version></app-version>
 
     <!-- Base router outlet -->
     <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.scss'],
-  })
+})
 export class AppComponent implements OnInit {
   // For loading status default false all
   loadingState: LoadingState = this.gcdSvc.loadingDefaultOffState;
