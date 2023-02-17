@@ -100,6 +100,15 @@ tsconfig.json                    Root TypeScript configuration file
 tsconfig.server.json             TypeScript configuration file for the server
 tsconfig.spec.json               TypeScript configuration file for tests
 webpack.config.js                Webpack configuration file
+.browserslistrc:                 Contains a list of browser versions to support.
+.depcheckrc:                     Configuration file for the DepCheck tool, which checks dependencies.
+.editorconfig:                   Configuration file that defines coding styles for different editors and IDEs.
+.eslintignore:                   Specifies files and directories to be excluded from ESLint linting.
+.eslintrc.js:                    Configuration file for the ESLint tool, which checks for code quality and consistency.
+.firebaserc:                     Configuration file for Firebase projects.
+.lintstagedrc:                   Configuration file for the lint-staged tool, which allows linting only staged files.
+.prettierignore:                 Specifies files and directories to be excluded from Prettier code formatting.
+.prettierrc:                     Configuration file for the Prettier code formatter, which helps enforce consistent code style.
 ```
 
 ## Main Tasks
@@ -154,6 +163,7 @@ The default serve environment is `test`.
 
 
 ## Coding guides
+- [Angular Basics](docs/angular.md)
 - [Git Flow](docs/git-flow.md)
 
 ## Libraries
