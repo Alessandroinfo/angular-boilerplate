@@ -17,7 +17,7 @@
 - Git-flow management
 - Eslint
 - Prettier
-  - TailwindCSS class ordering
+- Prettier plugin TailwindCSS
 
 ### Abilities
 - PWA
@@ -103,5 +103,31 @@ tsconfig.spec.json               .
 webpack.config.js                .
 ```
 
+## Main Tasks
+
+---
+Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
+
+| Tasks                         | Description                                                                     |
+|-------------------------------|---------------------------------------------------------------------------------|
+| npm start                     | Run development server on `http://localhost:4200/`                              |
+| npm run build [-- --env=prod] | Lint code and build app for production in `dist/` folder                        |
+| npm test                      | Run unit tests via [Karma](https://karma-runner.github.io) in watch mode        |
+| npm run test:ci               | Lint code and run unit tests once for continuous integration                    |
+| npm run e2e                   | Run e2e tests using [Protractor](http://www.protractortest.org)                 |
+| npm run lint                  | Lint code                                                                       |
+| npm run translations:extract  | Extract strings from code and templates to `src/app/translations/template.json` |
+| npm run docs                  | Display project documentation                                                   |
+
+When building the application, you can specify the target environment using the additional flag `--env <name>` (do not
+forget to prepend `--` to pass arguments to npm scripts).
+
+The default build environment is `prod`.
+
+
 ## Coding guides
 - [Git Flow](docs/git-flow.md)
+
+## Libraries
+- [Husky](docs/husky.md)
+- [Scripts](docs/scripts.md)
