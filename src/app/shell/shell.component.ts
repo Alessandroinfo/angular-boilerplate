@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, HostBinding} from '@angular/core';
 
 @Component({
-  selector: 'PPP-shell',
+  selector: 'app-shell',
   template: `
     <app-header></app-header>
     <router-outlet></router-outlet>
@@ -10,4 +10,6 @@ import {Component} from '@angular/core';
 })
 export class ShellComponent {
   constructor() {}
+
+  @HostBinding('class') class = 'css-debug';
 }

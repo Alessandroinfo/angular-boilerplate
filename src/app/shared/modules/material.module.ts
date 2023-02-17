@@ -10,31 +10,15 @@ import {NgModule, Provider} from '@angular/core';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
-import {MatNativeDateModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatInputModule} from '@angular/material/input';
 
 const MODULES = [
   MatProgressBarModule,
   MatProgressSpinnerModule,
   MatButtonModule,
-  MatBadgeModule,
-  MatIconModule,
-  MatDividerModule,
   MatCardModule,
   MatFormFieldModule,
-  MatSlideToggleModule,
-  MatInputModule,
-  MatDividerModule,
-  MatDatepickerModule,
-  MatCardModule,
-  MatNativeDateModule,
 ];
 
 const PROVIDERS: Provider[] = [];
