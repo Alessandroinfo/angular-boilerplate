@@ -37,7 +37,6 @@
 
 ## Getting started
 
----
 
 ### Run app
 Install dependencies:
@@ -48,64 +47,63 @@ Launch local server with `test` configuration and open the app on browser
 
 ### Project structure
 ```
-dist/                            .
-.husky/                          .
-scripts/                         .
-src/                             .
-├── app/                         .
-│ │... other modules             .
-│ ├── auth/                      .
-│ ├── core/                      .      .
-│ ├── shared/                    .        .
-│ ├── shell/                     .
-│ ├── home/                      .
-│ ├── about/                     .
-│ ├── app-routing.module.ts      .
-│ ├── app.component.ts           .
-│ ├── app.module.ts              .
-│ └── app.server.module.ts       .
-├── assets/                      .
-│ ├── design-system/             .
-│ ├── fonts/                     .
-│ ├── icons/                     .
-│ └── imgs/                      .
-├── environments/                .
-├── global.js                    .
-├── index.html                   .
-├── main.server.ts               .
-├── main.ts                      .
-├── manifest.webmanifest         .
-├── polyfills.ts                 .
-├── preloaded.js                 .
-├── robots.txt                   .
-├── styles.scss                  .
-├── test.ts                      .
-└── typings.d.ts                 .
-cypress/                         .
-cypress.config.ts                .
-docs/                            .
-README.md                        .
-firebase.json                    .
-firestore.indexes.json           .
-firestore.rules                  .
-git-flow-plus.config             .
-index-html-transform.js          .
-karma.conf.js                    .
-ngsw-config.json                 .
-package-lock.json                .
-package.json                     .
-angular.json                     .
-tailwind.config.js               .
-tsconfig.app.json                .
-tsconfig.json                    .
-tsconfig.server.json             .
-tsconfig.spec.json               .
-webpack.config.js                .
+dist/                            Compiled production code
+.husky/                          Git hooks directory
+scripts/                         Various scripts for development and build processes
+src/                             Source code directory
+├── app/                         Application code directory
+│ │... other modules             Other application modules
+│ ├── auth/                      Authentication module
+│ ├── core/                      Core module
+│ ├── shared/                    Shared module
+│ ├── shell/                     Shell module
+│ ├── home/                      Home module
+│ ├── about/                     About module
+│ ├── app-routing.module.ts      Application routing module
+│ ├── app.component.ts           Application root component
+│ ├── app.module.ts              Application root module
+│ └── app.server.module.ts       Application server module
+├── assets/                      Static asset directory
+│ ├── design-system/             Design system assets
+│ ├── fonts/                     Font assets
+│ ├── icons/                     Icon assets
+│ └── imgs/                      Image assets
+├── environments/                Environment configuration directory
+├── global.js                    Global script file
+├── index.html                   Application root HTML file
+├── main.server.ts               Server-side entry file
+├── main.ts                      Client-side entry file
+├── manifest.webmanifest         Web app manifest file
+├── polyfills.ts                 Polyfills script file
+├── preloaded.js                 Preload script file
+├── robots.txt                   Robots exclusion standard file
+├── styles.scss                  Global styles file
+├── test.ts                      Test script file
+└── typings.d.ts                 TypeScript typings file
+cypress/                         End-to-end testing directory
+cypress.config.ts                Cypress configuration file
+docs/                            Documentation directory
+README.md                        Project README file
+firebase.json                    Firebase configuration file
+firestore.indexes.json           Firestore indexes file
+firestore.rules                  Firestore security rules file
+git-flow-plus.config             Git-flow configuration file
+index-html-transform.js          HTML transformation script file
+karma.conf.js                    Karma configuration file
+ngsw-config.json                 Angular service worker configuration file
+package-lock.json                Dependency lockfile
+package.json                     Project dependency and scripts file
+angular.json                     Angular CLI configuration file
+tailwind.config.js               Tailwind CSS configuration file
+tsconfig.app.json                TypeScript configuration file for the app
+tsconfig.json                    Root TypeScript configuration file
+tsconfig.server.json             TypeScript configuration file for the server
+tsconfig.spec.json               TypeScript configuration file for tests
+webpack.config.js                Webpack configuration file
 ```
 
 ## Main Tasks
 
----
 Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 
 | Tasks                           | Description                                                                       |
