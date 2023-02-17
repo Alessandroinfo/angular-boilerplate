@@ -35,7 +35,11 @@ declare const APP_VERSION: string;
       <br />
       <br />
       <h1>Lazy loaded module</h1>
-      <button mat-raised-button class="text-white" color="primary">
+      <button
+        mat-raised-button
+        class="text-white"
+        color="primary"
+        routerLink="/about">
         About
       </button>
     </div>
