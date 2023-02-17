@@ -13,7 +13,7 @@
 ### Integrations 
 - TailwindCSS & Material cooperation
 - Cordova ready
-- Husky git management
+- Husky git hooks management
 - Git-flow management
 - Eslint
 - Prettier
@@ -21,7 +21,7 @@
 
 ### Abilities
 - PWA
-- Icons generator from svg
+- Icons generator from SVG
 - Skip link
 - Custom webpack
 - App-shell
