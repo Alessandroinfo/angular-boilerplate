@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Allow commit messages that start with a uppercase letter
-# or cqn be a version like 1.0.0
+# or can be a version like 1.0.0
 # Change the REGEX_TO_MATCH how you want
 INPUT_FILE=$1
 COMMIT_MSG=`head -n1 $INPUT_FILE`
