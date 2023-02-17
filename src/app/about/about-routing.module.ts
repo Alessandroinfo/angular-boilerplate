@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {AboutComponent} from './about.component';
+import {AboutComponent} from './components/about.component';
 
 const routes: Routes = [
   // Module is lazy loaded, see app-routing.module.ts

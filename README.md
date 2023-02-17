@@ -22,7 +22,7 @@
 ### Abilities
 - PWA
 - Icons generator from SVG
-- Skip link
+- [Skip link](docs/skip-link)
 - Custom webpack
 - App-shell
 - Loader CSS (Before the boot for FCP)
@@ -36,7 +36,6 @@
 - Local HTTP server ready
 
 ## Getting started
-
 
 ### Run app
 Install dependencies:
@@ -160,6 +159,11 @@ You can find the environment inside `angular.json` in `.projects.angular-boilerp
 
 The default build environment is `production`.
 The default serve environment is `test`.
+
+## Shared
+### Pipes
+### Directives
+### Modules
 
 
 ## Coding guides
