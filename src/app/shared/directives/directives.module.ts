@@ -5,6 +5,7 @@ import {StopPropagationDirective} from './stop-propagation/stop-propagation.dire
 import {PreventDefaultDirective} from './prevent-default/prevent-default.directive';
 import {StopImmediatePropagationDirective} from './stop-immediate-propagation/stop-immediate-propagation.directive';
 import {FocusDirective} from './focus/focus.directive';
+import {CSSDebugDirective} from '@shared/directives/css-debug/css-debug.directive';
 
 @NgModule({
   declarations: [
@@ -14,12 +15,14 @@ import {FocusDirective} from './focus/focus.directive';
     PreventDefaultDirective,
     StopImmediatePropagationDirective,
     FocusDirective,
+    CSSDebugDirective,
   ],
   exports: [
     BoxLineDirective,
     OutlineDirective,
     StopPropagationDirective,
     FocusDirective,
+    CSSDebugDirective,
   ],
 })
 export class DirectivesModule {}

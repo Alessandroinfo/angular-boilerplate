@@ -1,0 +1,9 @@
+// Debug
+
+/**
+ * Use this this show a red outline box of each visibile dom element
+ */
+.css-debug,
+.css-debug * {
+  outline: 1px solid red !important;
+}
