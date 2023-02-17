@@ -54,11 +54,11 @@ src/                             Source code directory
 ├── app/                         Application code directory
 │ │... other modules             Other application modules
 │ ├── auth/                      Authentication module
-│ ├── core/                      Core module
-│ ├── shared/                    Shared module
-│ ├── shell/                     Shell module
-│ ├── home/                      Home module
-│ ├── about/                     About module
+│ ├── core/                      Core module (common services)
+│ ├── shared/                    Shared module (common modules, components, directives, pipes)
+│ ├── shell/                     Shell module (contain the managment for the component shell)
+│ ├── home/                      Home module (module eager loader)
+│ ├── about/                     About module  (module lazy loaded)
 │ ├── app-routing.module.ts      Application routing module
 │ ├── app.component.ts           Application root component
 │ ├── app.module.ts              Application root module
