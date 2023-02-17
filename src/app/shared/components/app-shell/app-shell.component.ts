@@ -21,7 +21,7 @@ import {Component} from '@angular/core';
     </svg>
   `,
   styleUrls: ['./app-shell.component.scss'],
-  })
+})
 export class AppShellComponent {
   constructor() {}
 }
