@@ -4,6 +4,11 @@
 
 # Angular-Boilerplate
 
+Angular project with all the latest web best practices and libraries
+
+- [Demo live](https://angular-boilerplate-e42af.web.app/)
+- See the [Roadmap](https://trello.com/b/lGXOxoR7/angular-boilerplate)
+
 
 ### Awards
 - 100 / 100 Lighthouse
@@ -150,15 +155,18 @@ Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 | cypress:run                     | Run Cypress tests in headless mode                                                 |
 | prepare                         | Install Husky Git hooks                                                            |
 
-When building or serve the application, you can specify the target environment using the additional flag `-c <environmentName>`
-Build: `ng build -c production`
-Serve: `ng serve -c test`
+When building or serve the application, you can specify the target environment using the additional flag `-c <environmentName>`.
 
-You can find the environment inside `angular.json` in `.projects.angular-boilerplate.architect.[build | serve].configurations`
+- Build: `ng build -c production`
+
+- Serve: `ng serve -c test`
+
+You can find the environment inside `angular.json` in `.projects.angular-boilerplate.architect.[build | serve].configurations`.
 
 
-The default build environment is `production`.
-The default serve environment is `test`.
+- The default build environment is `production`.
+
+- The default serve environment is `test`.
 
 ## Shared
 ### Pipes
