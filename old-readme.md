@@ -36,7 +36,7 @@ Loader its in index html static for waiting the app its bootstrapped
 
 how to use shell only on some module
 how to use loading api on some api or module
-whic module is lazy
+
 
 ng local
 https://github.com/angular/angular-cli/issues/5955#issuecomment-320273493
@@ -45,10 +45,3 @@ https://github.com/angular/angular-cli/issues/5955#issuecomment-320273493
 vendorchunk
 https://stackoverflow.com/questions/52179853/angular-should-i-use-the-vendorchunk-in-production
 
-
-Gitflow
-Master - Release - Test (Develop)
-https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Gitflow-release-branch-process-start-finish
-https://stackoverflow.com/questions/33510566/gitflow-properly-testing-release-branches-master
-
-After merge the feature/feature-name-branch remember to update package.json version and commit
