@@ -27,7 +27,7 @@ Angular project with all the latest web best practices and libraries
 ### Abilities
 - PWA
 - Icons generator from SVG
-- [Skip link](docs/skip-link)
+- [Skip link](docs/skip-link.md)
 - Custom webpack
 - App-shell
 - Loader CSS (Before the boot for FCP)
