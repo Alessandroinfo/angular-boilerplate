@@ -47,7 +47,7 @@ const log = new Logger('App');
       provide: CSS_DEBUG,
       useFactory: () => {
         // Set here true if you want wireframe CSS on the app
-        const cssDebug = true;
+        const cssDebug = false;
 
         log.info('CSS Debugging its enabled in the providers on app.module.ts');
         return cssDebug;
