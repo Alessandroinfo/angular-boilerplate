@@ -50,23 +50,10 @@ export class AppComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document
   ) {
     // TODO: Remove this, it's only to know what language is
-    if (!environment.production) {
-      console.log(this.localeId);
-    }
+    log.info(this.localeId);
   }
 
   ngOnInit(): void {
-    // Setup logger only not production
-    if (environment.production) {
-      Logger.enableProductionMode();
-    }
-
-    // If you want disable log depending
-    // on the environment configuration
-    if (!environment.logConsole) {
-      Logger.disableLog();
-    }
-
     // Pipe for get loadingState
     this.gcfSvc
       .getLoadingState()
@@ -79,7 +66,7 @@ export class AppComponent implements OnInit {
       .subscribe();
 
     // Check when navigation Start and End
-    // To show the loading based on the configuration
+    // To show the loading based on the configuration.
     this.router.events.subscribe({
       next: (event: Event): void => {
         if (event instanceof NavigationStart) {
