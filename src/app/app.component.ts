@@ -1,4 +1,11 @@
-import {Component, Inject, LOCALE_ID, NgZone, OnInit} from '@angular/core';
+import {
+  Component,
+  HostBinding,
+  Inject,
+  LOCALE_ID,
+  NgZone,
+  OnInit,
+} from '@angular/core';
 import {tap} from 'rxjs/operators';
 import {environment} from '@env/environment';
 import {Event, NavigationEnd, NavigationStart, Router} from '@angular/router';
@@ -11,6 +18,7 @@ import {StatusBar} from '@awesome-cordova-plugins/status-bar/ngx';
 import {SplashScreen} from '@awesome-cordova-plugins/splash-screen/ngx';
 import {Keyboard} from '@awesome-cordova-plugins/keyboard/ngx';
 import {DOCUMENT} from '@angular/common';
+import {CSS_DEBUG} from '@app/core/tokens';
 
 const log = new Logger('App');
 
@@ -38,6 +46,12 @@ export class AppComponent implements OnInit {
   // For loading status default false all
   loadingState: LoadingState = this.gcdSvc.loadingDefaultOffState;
 
+  // Set the CSS Debug wireframe
+  @HostBinding('class.css-debug')
+  get isCssDebugEnabled(): boolean {
+    return this.cssDebug;
+  }
+
   constructor(
     @Inject(LOCALE_ID) protected localeId: string,
     private gcfSvc: GenericFacilityService,
@@ -47,7 +61,8 @@ export class AppComponent implements OnInit {
     private keyboard: Keyboard,
     private statusBar: StatusBar,
     private splashScreen: SplashScreen,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(CSS_DEBUG) private cssDebug: boolean
   ) {
     // TODO: Remove this, it's only to know what language is
     log.info(this.localeId);
@@ -66,7 +81,7 @@ export class AppComponent implements OnInit {
       .subscribe();
 
     // Check when navigation Start and End
-    // To show the loading based on the configuration.
+    // To show the loading based on the configuration
     this.router.events.subscribe({
       next: (event: Event): void => {
         if (event instanceof NavigationStart) {
