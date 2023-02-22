@@ -12,6 +12,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatInputModule} from '@angular/material/input';
 
 const MODULES = [
   MatProgressBarModule,
@@ -19,6 +21,8 @@ const MODULES = [
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule,
+  MatSlideToggleModule,
+  MatInputModule,
 ];
 
 const PROVIDERS: Provider[] = [];

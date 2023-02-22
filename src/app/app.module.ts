@@ -5,7 +5,7 @@ import {AppComponent} from './app.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '@env/environment';
 import {CoreModule} from './core/core.module';
-import {SharedModule} from './shared/shared.module';
+import {SharedModule} from '@shared/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
 import {HomeModule} from '@app/home/home.module';
@@ -14,6 +14,7 @@ import {AuthModule} from '@app/auth';
 import {Keyboard} from '@awesome-cordova-plugins/keyboard/ngx';
 import {StatusBar} from '@awesome-cordova-plugins/status-bar/ngx';
 import {SplashScreen} from '@awesome-cordova-plugins/splash-screen/ngx';
+import {CSS_DEBUG} from '@app/core/tokens';
 
 // App divided into:
 // Core module: only singleton one instantiated services
@@ -37,6 +38,12 @@ import {SplashScreen} from '@awesome-cordova-plugins/splash-screen/ngx';
     AppRoutingModule, // must be imported as the last module as it contains the fallback route.
   ],
   providers: [
+    // Enable or disable here
+    // CSS Debug wireframe
+    {
+      provide: CSS_DEBUG,
+      useValue: false,
+    },
     // Cordova plugins
     Keyboard,
     StatusBar,

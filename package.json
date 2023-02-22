@@ -1,6 +1,6 @@
 {
   "name": "angular-boilerplate",
-  "version": "3.1.5",
+  "version": "3.1.6",
   "repository": {
     "url": "https://github.com/Alessandroinfo/angular-boilerplate",
     "type": "git"
@@ -74,7 +74,7 @@
     "@awesome-cordova-plugins/keyboard": "^5.43.0",
     "@awesome-cordova-plugins/splash-screen": "^5.43.0",
     "@awesome-cordova-plugins/status-bar": "^5.43.0",
-    "@cypress/schematic": "^2.0.0",
+    "@cypress/schematic": "^2.5.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
@@ -84,7 +84,7 @@
     "@typescript-eslint/eslint-plugin": "5.29.0",
     "@typescript-eslint/parser": "5.29.0",
     "autoprefixer": "^10.4.7",
-    "cypress": "latest",
+    "cypress": "^12.6.0",
     "depcheck": "^1.4.3",
     "eslint": "^8.33.0",
     "eslint-plugin-import": "2.26.0",

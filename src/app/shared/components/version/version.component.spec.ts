@@ -1,5 +1,5 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {jest, expect} from '@jest/globals';
+import {expect} from '@jest/globals';
 import {VersionComponent} from './version.component';
 
 describe('VersionComponent', () => {

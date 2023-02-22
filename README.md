@@ -4,6 +4,11 @@
 
 # Angular-Boilerplate
 
+Angular project with all the latest web best practices and libraries.
+
+- [Demo live](https://angular-boilerplate-e42af.web.app/)
+- See the [Roadmap](https://trello.com/b/lGXOxoR7/angular-boilerplate)
+
 
 ### Awards
 - 100 / 100 Lighthouse
@@ -22,7 +27,7 @@
 ### Abilities
 - PWA
 - Icons generator from SVG
-- [Skip link](docs/skip-link)
+- [Skip link](docs/skip-link.md)
 - Custom webpack
 - App-shell
 - Loader CSS (Before the boot for FCP)
@@ -114,56 +119,94 @@ webpack.config.js                Webpack configuration file
 
 Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 
-| Tasks                           | Description                                                                        |
-|---------------------------------|------------------------------------------------------------------------------------|
-| ng-local                        | Use this as npm run ng-local <angularCommandHere> to use local Angular CLI version |
-| start                           | Start the development server on `http://localhost:3001/` and open browser          |
-| start-dist                      | Serve the local dist/ build on `http://localhost:8080/`                            |
-| build                           | Build the production version of the app                                            |
-| build:app-shell:demo            | Build a demo app shell                                                             |
-| build-start-open:app-shell:demo | Build a demo app shell and serve the production build on `http://localhost:8080/`  |
-| build:app-shell:production      | Build a production app shell                                                       |
-| bundle-analyze                  | Build the app and analyze the bundle size                                          |
-| compress-dist                   | Compress the dist/ build with gzip                                                 |
-| generate-asset                  | Generate PWA assets for the app                                                    |
-| firebase-login                  | Log in to Firebase                                                                 |
-| firebase-init                   | Initialize Firebase for the project                                                |
-| firebase-deploy                 | Deploy the app to Firebase                                                         |
-| deploy-app                      | Generate PWA assets, format the index, build the production version, and deploy    |
-| deploy-app-shell:demo           | Build and deploy a demo app shell                                                  |
-| deploy-app-shell:production     | Build and deploy a production app shell                                            |
-| cordova-init                    | Create a Cordova project                                                           |
-| cordova-add:osx                 | Add the OSX platform to the Cordova project                                        |
-| cordova-add:windows             | Add the Windows platform to the Cordova project                                    |
-| cordova-build-production        | Build the production version of the app for Cordova                                |
-| cordova-build-platforms         | Build the app for all Cordova platforms                                            |
-| cordova-run                     | Run the app on a device or emulator with Cordova                                   |
-| format-code                     | Format the code using Prettier                                                     |
-| format-index                    | Format the index.html file using Prettier                                          |
-| npm-check-update                | Check for updates to the project's dependencies                                    |
-| npm-check-unused-pckg           | Check for unused packages in the project                                           |
-| lint                            | Lint the code using ESLint                                                         |
-| test                            | Run unit tests via Karma                                                           |
-| e2e                             | Run e2e tests using Protractor                                                     |
-| cypress:install                 | Install Cypress for end-to-end testing                                             |
-| cypress:open                    | Open the Cypress test runner                                                       |
-| cypress:run                     | Run Cypress tests in headless mode                                                 |
-| prepare                         | Install Husky Git hooks                                                            |
+| Tasks                           | Description                                                                                                                                                                |
+|---------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ng-local                        | Use this as npm run ng-local <angularCommandHere> to use local Angular CLI version. See [this](https://github.com/angular/angular-cli/issues/5955#issuecomment-320273493). |
+| start                           | Start the development server on `http://localhost:3001/` and open browser                                                                                                  |
+| start-dist                      | Serve the local dist/ build on `http://localhost:8080/`                                                                                                                    |
+| build                           | Build the production version of the app                                                                                                                                    |
+| build:app-shell:demo            | Build a demo app shell                                                                                                                                                     |
+| build-start-open:app-shell:demo | Build a demo app shell and serve the production build on `http://localhost:8080/`                                                                                          |
+| build:app-shell:production      | Build a production app shell                                                                                                                                               |
+| bundle-analyze                  | Build the app and analyze the bundle size                                                                                                                                  |
+| compress-dist                   | Compress the `dist/` build with gzip                                                                                                                                       |
+| generate-asset                  | Generate PWA assets for the app                                                                                                                                            |
+| firebase-login                  | Log in to Firebase                                                                                                                                                         |
+| firebase-init                   | Initialize Firebase for the project                                                                                                                                        |
+| firebase-deploy                 | Deploy the app to Firebase                                                                                                                                                 |
+| deploy-app                      | Generate PWA assets, format the index, build the production version, and deploy                                                                                            |
+| deploy-app-shell:demo           | Build and deploy a demo app shell                                                                                                                                          |
+| deploy-app-shell:production     | Build and deploy a production app shell                                                                                                                                    |
+| cordova-init                    | Create a Cordova project                                                                                                                                                   |
+| cordova-add:osx                 | Add the OSX platform to the Cordova project                                                                                                                                |
+| cordova-add:windows             | Add the Windows platform to the Cordova project                                                                                                                            |
+| cordova-build-production        | Build the production version of the app for Cordova                                                                                                                        |
+| cordova-build-platforms         | Build the app for all Cordova platforms                                                                                                                                    |
+| cordova-run                     | Run the app on a device or emulator with Cordova                                                                                                                           |
+| format-code                     | Format the code using Prettier                                                                                                                                             |
+| format-index                    | Format the index.html file using Prettier                                                                                                                                  |
+| npm-check-update                | Check for updates to the project's dependencies                                                                                                                            |
+| npm-check-unused-pckg           | Check for unused packages in the project                                                                                                                                   |
+| lint                            | Lint the code using ESLint                                                                                                                                                 |
+| test                            | Run unit tests via Karma                                                                                                                                                   |
+| e2e                             | Run e2e tests using Protractor                                                                                                                                             |
+| cypress:install                 | Install Cypress for end-to-end testing                                                                                                                                     |
+| cypress:open                    | Open the Cypress test runner                                                                                                                                               |
+| cypress:run                     | Run Cypress tests in headless mode                                                                                                                                         |
+| prepare                         | Install Husky Git hooks                                                                                                                                                    |
 
-When building or serve the application, you can specify the target environment using the additional flag `-c <environmentName>`
-Build: `ng build -c production`
-Serve: `ng serve -c test`
+When building or serve the application, you can specify the target environment using the additional flag `-c <environmentName>`.
 
-You can find the environment inside `angular.json` in `.projects.angular-boilerplate.architect.[build | serve].configurations`
+- Build: `ng build -c production`
+
+- Serve: `ng serve -c test`
+
+You can find the environment inside `angular.json` in `.projects.angular-boilerplate.architect.[build | serve].configurations`.
 
 
-The default build environment is `production`.
-The default serve environment is `test`.
+- The default build environment is `production`.
 
-## Shared
-### Pipes
-### Directives
-### Modules
+- The default serve environment is `test`.
+
+[//]: # (TODO)
+## Environments
+
+Environment-specific configuration:
+```
+├── environment.cordova.production.ts     environment for Cordova mobile app.
+├── environment.demo.ts                   environment with same data as prod but it's not live.
+├── environment.production.ts             environment for production use.
+├── environment.test.ts                   environment for developer testing.
+└── environment.ts                        default environment
+```
+
+Each file contains an object defining environment variables:
+```
+export const environment = {
+  // Defines the environment name, which can be customized for different environments
+  env: '',
+  
+  // Specifies whether the app is in production mode
+  production: false,
+  
+  // Specifies whether the app is running on Cordova
+  cordova: false,
+  
+  // Specifies whether Hot Module Replacement (HMR) is enabled
+  hmr: false,
+  
+  // Specifies whether console logging is enabled
+  logConsole: true,
+  
+  // Specifies the current version of the app, retrieved from the package.json file.
+  // Note that the @typescript-eslint/no-var-requires directive is used to ignore the error
+  // that TypeScript produces when require() is used.
+  appVersion: require('../../package.json').version,
+  
+  // Specifies the URL of the server or API
+  serverUrl: '/api',
+};
+```
 
 
 ## Coding guides
@@ -171,5 +214,7 @@ The default serve environment is `test`.
 - [Git Flow](docs/git-flow.md)
 
 ## Libraries
+- [Firebase](docs/firebase.md)
 - [Husky](docs/husky.md)
-- [Scripts](docs/scripts.md)
+- [Shell scripts](docs/scripts.md)
+- [until-destroy](docs/until-destroy.md)
