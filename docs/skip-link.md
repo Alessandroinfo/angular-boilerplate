@@ -4,6 +4,8 @@ Put this `<app-skip-link></app-skip-link>` on the root of your template app.
 
 You need to set the id on the correct html element `id="main-content"`.
 
+After the app is loaded press `TAB`. The first indexed element is `<app-skip-link></app-skip-link>` and if you press `ENTER` the `main-content` will be focused.
+
 ### Description
 Skip link is a navigational aid that helps users to quickly skip over the repeated content and access the main content of the page. It's usually hidden from sight and only visible when a user interacts with it, for example, by pressing the 'tab' key. Once it's visible, users can follow the link to skip over the navigation menu, sidebar, and other repeated content and go straight to the main content of the page.
 
