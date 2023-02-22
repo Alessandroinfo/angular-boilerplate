@@ -27,3 +27,5 @@ https://stackoverflow.com/questions/52179853/angular-should-i-use-the-vendorchun
 ### Pipes
 ### Directives
 ### Modules
+
+logger on production doc
