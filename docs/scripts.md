@@ -8,9 +8,12 @@ Inside the directory `scripts` you can find:
 - `enforce-branch-name.sh` Based on current branch name it return error if the branch name don't follow the rules
 - `renormalize-line-endings.sh` It renormalize the line endings of the whole codebase after changing line endings in git
 - `update-app-version.sh` It update the app version based on branch name
-- `scripts-permissions.sh` To give the right permission for the directory of the repository
+- `scripts-permissions.sh` To give the executable permissions for husky and other scripts
 
 #### NOTE:
 _Every script prepend at the echo message the name of the file between square for make easily understand from where is the log._
 
 _eg.: `echo "[build-check] Your app build has one or more errors!"`_
+
+
+- Normalize line endings: If from windows remember to save your current files in Git, so that none of your work is lost.

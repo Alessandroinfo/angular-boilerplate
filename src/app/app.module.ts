@@ -15,14 +15,11 @@ import {Keyboard} from '@awesome-cordova-plugins/keyboard/ngx';
 import {StatusBar} from '@awesome-cordova-plugins/status-bar/ngx';
 import {SplashScreen} from '@awesome-cordova-plugins/splash-screen/ngx';
 import {CSS_DEBUG} from '@app/core/tokens';
-import {Logger} from '@app/core/logger/logger.service';
 
 // App divided into:
 // Core module: only singleton one instantiated services
 // Shared module: component, pipe, directive, other common module for UI
 // App-shell contain only first painted static html component
-
-const log = new Logger('App');
 
 @NgModule({
   declarations: [AppComponent],
@@ -45,14 +42,7 @@ const log = new Logger('App');
     // CSS Debug wireframe
     {
       provide: CSS_DEBUG,
-      useFactory: () => {
-        // Set here true if you want wireframe CSS on the app
-        const cssDebug = false;
-
-        log.info('CSS Debugging its enabled in the providers on app.module.ts');
-        return cssDebug;
-      },
-      multi: true,
+      useValue: false,
     },
     // Cordova plugins
     Keyboard,

@@ -170,42 +170,43 @@ You can find the environment inside `angular.json` in `.projects.angular-boilerp
 
 [//]: # (TODO)
 ## Environments
-├── environment.cordova.production.ts
-├── environment.demo.ts
-├── environment.production.ts
-├── environment.test.ts
-└── environment.ts
 
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build --production` replaces `environment.ts` with `environment.production.ts`.
-// The list of file replacements can be found in `angular.json`.
+Environment-specific configuration:
+```
+├── environment.cordova.production.ts     environment for Cordova mobile app.
+├── environment.demo.ts                   environment with same data as prod but it's not live.
+├── environment.production.ts             environment for production use.
+├── environment.test.ts                   environment for developer testing.
+└── environment.ts                        default environment
+```
 
+Each file contains an object defining environment variables:
+```
 export const environment = {
-env: '',
-production: false,
-cordova: false,
-hmr: false,
-logConsole: true,
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-appVersion: require('../../package.json').version,
-serverUrl: '/api',
+  // Defines the environment name, which can be customized for different environments
+  env: '',
+  
+  // Specifies whether the app is in production mode
+  production: false,
+  
+  // Specifies whether the app is running on Cordova
+  cordova: false,
+  
+  // Specifies whether Hot Module Replacement (HMR) is enabled
+  hmr: false,
+  
+  // Specifies whether console logging is enabled
+  logConsole: true,
+  
+  // Specifies the current version of the app, retrieved from the package.json file.
+  // Note that the @typescript-eslint/no-var-requires directive is used to ignore the error
+  // that TypeScript produces when require() is used.
+  appVersion: require('../../package.json').version,
+  
+  // Specifies the URL of the server or API
+  serverUrl: '/api',
 };
-
-/*
-* For easier debugging in development mode, you can import the following file
-* to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
-*
-* This import should be commented out in production mode because it will have a negative impact
-* on performance if an error is thrown.
-  */
-  // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
-
-
-[//]: # (TODO)
-## Shared
-### Pipes
-### Directives
-### Modules
+```
 
 
 ## Coding guides
@@ -216,3 +217,4 @@ serverUrl: '/api',
 - [Firebase](docs/firebase.md)
 - [Husky](docs/husky.md)
 - [Shell scripts](docs/scripts.md)
+- [until-destroy](docs/until-destroy.md)

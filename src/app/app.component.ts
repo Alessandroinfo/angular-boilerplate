@@ -5,6 +5,7 @@ import {
   LOCALE_ID,
   NgZone,
   OnInit,
+  Optional,
 } from '@angular/core';
 import {tap} from 'rxjs/operators';
 import {environment} from '@env/environment';
@@ -49,6 +50,9 @@ export class AppComponent implements OnInit {
   // Set the CSS Debug wireframe
   @HostBinding('class.css-debug')
   get isCssDebugEnabled(): boolean {
+    if (this.cssDebug) {
+      log.info('CSS Debugging its enabled in the providers on app.module.ts');
+    }
     return this.cssDebug;
   }
 
@@ -62,7 +66,7 @@ export class AppComponent implements OnInit {
     private statusBar: StatusBar,
     private splashScreen: SplashScreen,
     @Inject(DOCUMENT) private document: Document,
-    @Inject(CSS_DEBUG) private cssDebug: boolean
+    @Optional() @Inject(CSS_DEBUG) private cssDebug: boolean
   ) {
     // TODO: Remove this, it's only to know what language is
     log.info(this.localeId);
