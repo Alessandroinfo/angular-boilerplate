@@ -24,11 +24,7 @@ declare const APP_VERSION: string;
       <br />
       <h1>API</h1>
 
-      <button
-        mat-raised-button
-        class="text-white"
-        (click)="callApi()"
-        color="primary">
+      <button mat-raised-button (click)="callApi()" color="primary">
         Call API
       </button>
 
