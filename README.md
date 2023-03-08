@@ -85,7 +85,7 @@ src/                             Source code directory
 ├── test.ts                      Test script file
 └── typings.d.ts                 TypeScript typings file
 cypress/                         End-to-end testing directory
-cypress.config.ts                Cypress configuration file
+cypress.config.js                Cypress configuration file
 docs/                            Documentation directory
 README.md                        Project README file
 firebase.json                    Firebase configuration file
