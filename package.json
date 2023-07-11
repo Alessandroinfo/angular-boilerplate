@@ -7,6 +7,9 @@
   },
   "license": "MIT",
   "private": false,
+  "engines": {
+    "node": "14.x || 16.x"
+  },
   "scripts": {
     "ng-local": "ng",
     "start": "ng serve --o --port 3001",
@@ -61,8 +64,8 @@
     "zone.js": "~0.11.6"
   },
   "devDependencies": {
-    "@angular-builders/custom-webpack": "^15.0.0",
-    "@angular-devkit/build-angular": "^15.1.2",
+    "@angular-builders/custom-webpack": "~15.0.0",
+    "@angular-devkit/build-angular": "~15.1.2",
     "@angular-eslint/builder": "15.2.0",
     "@angular-eslint/eslint-plugin": "15.2.0",
     "@angular-eslint/eslint-plugin-template": "15.2.0",
@@ -117,6 +120,6 @@
     "ts-jest": "^28.0.5",
     "ts-node": "~10.8.1",
     "typescript": "~4.8.2",
-    "webpack": "^5.73.0"
+    "webpack": "~5.78.0"
   }
 }
