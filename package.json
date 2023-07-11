@@ -5,7 +5,7 @@
     "url": "https://github.com/Alessandroinfo/angular-boilerplate",
     "type": "git"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": false,
   "scripts": {
     "ng-local": "ng",
