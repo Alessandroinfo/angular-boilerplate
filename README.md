@@ -63,6 +63,11 @@ Launch local server with `test` configuration and open the app on browser
 
 - `npm start`
 
+`.npmrc` contain rules to restrict Node.js version.
+In the package.json the property `engines.node` set the version must used to install dependencies.
+
+> You need to run `npm run generate-asset` before run the application if you want the generated assets of each size.
+
 ### Project structure
 
 ```
