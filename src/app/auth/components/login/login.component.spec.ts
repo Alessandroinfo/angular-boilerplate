@@ -14,13 +14,7 @@ describe('LoginComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        BrowserAnimationsModule,
-        MaterialModule,
-        SharedModule,
-        RouterTestingModule,
-        ReactiveFormsModule,
-      ],
+      imports: [BrowserAnimationsModule, MaterialModule, SharedModule, RouterTestingModule, ReactiveFormsModule],
       declarations: [LoginComponent],
     }).compileComponents();
   }));

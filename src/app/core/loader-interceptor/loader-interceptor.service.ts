@@ -1,11 +1,5 @@
 import {Injectable} from '@angular/core';
-import {
-  HttpEvent,
-  HttpHandler,
-  HttpInterceptor,
-  HttpRequest,
-  HttpResponse,
-} from '@angular/common/http';
+import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 import {GlobalDataService} from '../global-data/global-data.service';
@@ -16,15 +10,9 @@ const log = new Logger('LoaderInterceptorService');
 
 @Injectable()
 export class LoaderInterceptorService implements HttpInterceptor {
-  constructor(
-    private gcfSvc: GenericFacilityService,
-    private gldSvc: GlobalDataService
-  ) {}
+  constructor(private gcfSvc: GenericFacilityService, private gldSvc: GlobalDataService) {}
 
-  intercept(
-    request: HttpRequest<unknown>,
-    next: HttpHandler
-  ): Observable<HttpEvent<unknown>> {
+  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     // CHECK IF EXIST NO BLOCK OVERLAY HEADER
     const blockoverlay = this.gldSvc.loadingHeaders.blockOverlay;
     const BLOCKOVERLAY_H = !!request.headers.get(blockoverlay);

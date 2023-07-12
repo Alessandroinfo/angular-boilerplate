@@ -37,12 +37,7 @@ describe('AuthenticationGuard', () => {
   });
 
   it('should return true if user is authenticated', () => {
-    expect(
-      authenticationGuard.canActivate(
-        new ActivatedRouteSnapshot(),
-        mockSnapshot
-      )
-    ).toBe(true);
+    expect(authenticationGuard.canActivate(new ActivatedRouteSnapshot(), mockSnapshot)).toBe(true);
   });
 
   it('should return false and redirect to login if user is not authenticated', () => {
@@ -50,10 +45,7 @@ describe('AuthenticationGuard', () => {
     credentialsService.credentials = null;
 
     // Act
-    const result = authenticationGuard.canActivate(
-      new ActivatedRouteSnapshot(),
-      mockSnapshot
-    );
+    const result = authenticationGuard.canActivate(new ActivatedRouteSnapshot(), mockSnapshot);
 
     // Assert
     expect(mockRouter.navigate).toHaveBeenCalledWith(['/login'], {

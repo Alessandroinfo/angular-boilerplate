@@ -24,20 +24,12 @@ declare const APP_VERSION: string;
       <br />
       <h1>API</h1>
 
-      <button mat-raised-button (click)="callApi()" color="primary">
-        Call API
-      </button>
+      <button mat-raised-button (click)="callApi()" color="primary">Call API</button>
 
       <br />
       <br />
       <h1>Lazy loaded module</h1>
-      <button
-        mat-raised-button
-        class="text-white"
-        color="primary"
-        routerLink="/about">
-        About
-      </button>
+      <button mat-raised-button class="text-white" color="primary" routerLink="/about">About</button>
     </div>
   `,
   styleUrls: ['./home.component.scss'],

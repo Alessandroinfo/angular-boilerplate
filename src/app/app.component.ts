@@ -1,12 +1,4 @@
-import {
-  Component,
-  HostBinding,
-  Inject,
-  LOCALE_ID,
-  NgZone,
-  OnInit,
-  Optional,
-} from '@angular/core';
+import {Component, HostBinding, Inject, LOCALE_ID, NgZone, OnInit, Optional} from '@angular/core';
 import {tap} from 'rxjs/operators';
 import {environment} from '@env/environment';
 import {Event, NavigationEnd, NavigationStart, Router} from '@angular/router';
@@ -31,9 +23,7 @@ const log = new Logger('App');
     <app-skip-link></app-skip-link>
 
     <!-- App API calls loader -->
-    <app-loader
-      class="fixed left-0 right-0 top-0"
-      [state]="loadingState"></app-loader>
+    <app-loader class="fixed left-0 right-0 top-0" [state]="loadingState"></app-loader>
 
     <!-- App version -->
     <app-version></app-version>

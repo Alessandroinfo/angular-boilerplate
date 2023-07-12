@@ -9,16 +9,10 @@ import {delay} from 'rxjs/operators';
 export class ApiService {
   // THIS CREATE HEADER FOR CENTER AND TOP CONST THAT HAVE EACH STRING FOR SET LOADING
   center = {
-    headers: new HttpHeaders().set(
-      this.gldSvc.loadingHeaders.centerLoader,
-      this.gldSvc.loadingHeaders.centerLoader
-    ),
+    headers: new HttpHeaders().set(this.gldSvc.loadingHeaders.centerLoader, this.gldSvc.loadingHeaders.centerLoader),
   };
   top = {
-    headers: new HttpHeaders().set(
-      this.gldSvc.loadingHeaders.topLoader,
-      this.gldSvc.loadingHeaders.topLoader
-    ),
+    headers: new HttpHeaders().set(this.gldSvc.loadingHeaders.topLoader, this.gldSvc.loadingHeaders.topLoader),
   };
 
   // This contain both loading type

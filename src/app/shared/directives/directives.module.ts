@@ -17,12 +17,6 @@ import {CSSDebugDirective} from '@shared/directives/css-debug/css-debug.directiv
     FocusDirective,
     CSSDebugDirective,
   ],
-  exports: [
-    BoxLineDirective,
-    OutlineDirective,
-    StopPropagationDirective,
-    FocusDirective,
-    CSSDebugDirective,
-  ],
+  exports: [BoxLineDirective, OutlineDirective, StopPropagationDirective, FocusDirective, CSSDebugDirective],
 })
 export class DirectivesModule {}
