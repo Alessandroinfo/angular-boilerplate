@@ -2,9 +2,12 @@
   "singleQuote": true,
   "bracketSpacing": false,
   "bracketSameLine": true,
+  "printWidth": 120,
   "singleAttributePerLine": false,
   "htmlWhitespaceSensitivity": "ignore",
-  "plugins": ["prettier-plugin-tailwindcss"],
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ],
   "overrides": [
     {
       "files": "*.scss",

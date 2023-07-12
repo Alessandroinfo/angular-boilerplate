@@ -6,11 +6,14 @@ export class MockCredentialsService {
     token: '123',
   };
 
+  remember = false;
+
   isAuthenticated(): boolean {
     return !!this.credentials;
   }
 
-  setCredentials(credentials?: Credentials, _remember?: boolean) {
+  setCredentials(credentials?: Credentials, remember?: boolean) {
     this.credentials = credentials || null;
+    this.remember = remember || false;
   }
 }

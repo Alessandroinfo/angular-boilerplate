@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 /**
  * Simple logger system with the possibility of registering custom outputs.
  *
@@ -32,7 +34,7 @@
 
 /**
  * The possible log levels.
- * LogLevel.Off is never emitted and only used with Logger.level property to disable logs.
+ * LogLevel.Off is any emitted and only used with Logger.level property to disable logs.
  */
 export enum LogLevel {
   Off = 0,
@@ -45,11 +47,7 @@ export enum LogLevel {
 /**
  * Log output handler function.
  */
-export type LogOutput = (
-  source: string | undefined,
-  level: LogLevel,
-  ...objects: any[]
-) => void;
+export type LogOutput = (source: string | undefined, level: LogLevel, ...objects: any[]) => void;
 
 export class Logger {
   /**
@@ -114,13 +112,9 @@ export class Logger {
 
   private log(func: (...args: any[]) => void, level: LogLevel, objects: any[]) {
     if (level <= Logger.level) {
-      const log = this.source
-        ? ['[' + this.source + ']'].concat(objects)
-        : objects;
+      const log = this.source ? ['[' + this.source + ']'].concat(objects) : objects;
       func.apply(console, log);
-      Logger.outputs.forEach((output) =>
-        output.apply(output, [this.source, level, ...objects])
-      );
+      Logger.outputs.forEach((output) => output.apply(output, [this.source, level, ...objects]));
     }
   }
 }

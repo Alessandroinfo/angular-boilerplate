@@ -9,7 +9,5 @@ import {SharedModule} from '@app/shared/shared.module';
   declarations: [AboutComponent],
 })
 export class AboutModule {
-  constructor() {
-    console.log();
-  }
+  constructor() {}
 }

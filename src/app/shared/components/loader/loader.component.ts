@@ -18,11 +18,7 @@ import {ThemePalette} from '@angular/material/core';
       <div
         *ngIf="state.blockOverlay"
         class="fixed bottom-0 left-0 right-0 top-0 z-100 m-auto flex items-center justify-center overflow-visible bg-black bg-opacity-75">
-        <mat-spinner
-          *ngIf="state.centerLoading"
-          [color]="color"
-          [strokeWidth]="3"
-          [diameter]="50"></mat-spinner>
+        <mat-spinner *ngIf="state.centerLoading" [color]="color" [strokeWidth]="3" [diameter]="50"></mat-spinner>
       </div>
     </ng-container>
   `,

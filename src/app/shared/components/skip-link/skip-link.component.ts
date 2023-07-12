@@ -4,9 +4,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-skip-link',
   template: `
-    <a class="skip-link" tabindex="0" [href]="skipLinkPath">
-      Skip to main content
-    </a>
+    <a class="skip-link" tabindex="0" [href]="skipLinkPath">Skip to main content</a>
   `,
   styleUrls: ['./skip-link.component.scss'],
 })

@@ -1,9 +1,6 @@
 import {TestBed} from '@angular/core/testing';
 
-import {
-  Credentials,
-  CredentialsService,
-} from '@app/auth/services/credentials.service';
+import {Credentials, CredentialsService} from '@app/auth/services/credentials.service';
 import {expect} from '@jest/globals';
 
 const credentialsKey = 'credentials';
@@ -32,9 +29,7 @@ describe('CredentialsService', () => {
 
       // Assert
       expect(credentialsService.isAuthenticated()).toBe(true);
-      expect((credentialsService.credentials as Credentials).username).toBe(
-        'me'
-      );
+      expect((credentialsService.credentials as Credentials).username).toBe('me');
     });
 
     it('should clean authentication', () => {
