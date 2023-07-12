@@ -76,10 +76,6 @@ If you get this error:
 
 Solve by doing this:
 
-- Open the .git\config
-- Remove from `[gitflow "xxx"]` till the other brackets.
-- Rerun `git flow init`
-
 - git add .
 - git commit -m "Saving edits"
 - git push
@@ -87,3 +83,8 @@ Solve by doing this:
 - git checkout master
 - git flow init
 
+or you can
+
+- Open the .git\config
+- Remove from `[gitflow "xxx"]` till the other brackets.
+- Rerun `git flow init`
