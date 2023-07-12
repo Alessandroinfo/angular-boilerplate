@@ -55,10 +55,7 @@ const defaultPrecisionMap: unitPrecisionMap = {
 export class FileSizePipe implements PipeTransform {
   private readonly units: unit[] = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
 
-  transform(
-    bytes = 0,
-    precision: number | unitPrecisionMap = defaultPrecisionMap
-  ): string {
+  transform(bytes = 0, precision: number | unitPrecisionMap = defaultPrecisionMap): string {
     if (isNaN(parseFloat(String(bytes))) || !isFinite(bytes)) {
       return '?';
     }

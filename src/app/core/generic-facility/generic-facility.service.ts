@@ -12,23 +12,19 @@ export class GenericFacilityService {
   // ------------------------------------------------------------ ATTRIBUTES ------------------------------------------------------------ //
 
   // SUBJECT FOR KNOW IF THERE IS AN ERROR ON THE APP
-  private errorAngular$: BehaviorSubject<AngularError | null> =
-    new BehaviorSubject<AngularError | null>(null);
+  private errorAngular$: BehaviorSubject<AngularError | null> = new BehaviorSubject<AngularError | null>(null);
 
   // THIS OBS IS FOR LOADER STATUS
-  private loadingState$: BehaviorSubject<LoadingState> =
-    new BehaviorSubject<LoadingState>(this.gldSvc.loadingDefaultOffState);
+  private loadingState$: BehaviorSubject<LoadingState> = new BehaviorSubject<LoadingState>(
+    this.gldSvc.loadingDefaultOffState
+  );
 
   // ACTIVE LANGUAGE OF THE APP
-  private languageActive$: BehaviorSubject<LanguageItem | null> =
-    new BehaviorSubject<LanguageItem | null>(null);
+  private languageActive$: BehaviorSubject<LanguageItem | null> = new BehaviorSubject<LanguageItem | null>(null);
 
   // private languageActive$: BehaviorSubject<LanguageItem> = new BehaviorSubject<LanguageItem>(this.gldSvc.getLanguagesDefault());
 
-  constructor(
-    private gldSvc: GlobalDataService,
-    @Inject(LOCALE_ID) protected localeId: string
-  ) {
+  constructor(private gldSvc: GlobalDataService, @Inject(LOCALE_ID) protected localeId: string) {
     // CHECK IF THERE IS A LOCALEID IN LOCALSTORAGE
     // Retrieve the object from storage
     // try {

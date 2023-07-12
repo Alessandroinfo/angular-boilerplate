@@ -17,14 +17,11 @@ const log = new Logger('Login');
   template: `
     <app-loader [state]="loadingState"></app-loader>
 
-    <div
-      class="flex h-screen w-screen flex-col items-center justify-center bg-gray-100">
+    <div class="flex h-screen w-screen flex-col items-center justify-center bg-gray-100">
       <div class="w-1/2">
         <mat-card>
           <form (ngSubmit)="login()" [formGroup]="loginForm" novalidate>
-            <div [hidden]="!error || loadingState.isLoading" translate>
-              Username or password incorrect.
-            </div>
+            <div [hidden]="!error || loadingState.isLoading" translate>Username or password incorrect.</div>
 
             <br />
 
@@ -39,11 +36,7 @@ const log = new Logger('Login');
                   autocomplete="username"
                   [placeholder]="'Username'"
                   required />
-                <mat-error
-                  *ngIf="
-                    loginForm.controls['username'].invalid &&
-                    loginForm.controls['username'].touched
-                  ">
+                <mat-error *ngIf="loginForm.controls['username'].invalid && loginForm.controls['username'].touched">
                   <span translate>Username is required</span>
                 </mat-error>
               </mat-form-field>
@@ -55,19 +48,11 @@ const log = new Logger('Login');
                   autocomplete="current-password"
                   [placeholder]="'Password'"
                   required />
-                <mat-error
-                  *ngIf="
-                    loginForm.controls['password'].invalid &&
-                    loginForm.controls['password'].touched
-                  ">
+                <mat-error *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
                   <span translate>Password is required</span>
                 </mat-error>
               </mat-form-field>
-              <mat-slide-toggle
-                class="mt-2"
-                color="primary"
-                formControlName="remember"
-                translate>
+              <mat-slide-toggle class="mt-2" color="primary" formControlName="remember" translate>
                 Remember me
               </mat-slide-toggle>
               <br />
@@ -132,10 +117,7 @@ export class LoginComponent implements OnInit {
       .subscribe({
         next: (credentials) => {
           log.debug(`${credentials.username} successfully logged in`);
-          this.router.navigate(
-            [this.route.snapshot.queryParams['redirect'] || '/'],
-            {replaceUrl: true}
-          );
+          this.router.navigate([this.route.snapshot.queryParams['redirect'] || '/'], {replaceUrl: true});
         },
         error: (error) => {
           log.debug(`Login error: ${error}`);

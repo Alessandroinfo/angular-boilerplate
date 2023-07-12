@@ -14,8 +14,7 @@
   font-display: $font-display;
   src: local("Roboto Thin"), local("Roboto-Thin"),
     url("/assets/fonts/roboto/roboto-v20-latin-100.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("/assets/fonts/roboto/roboto-v20-latin-100.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto/roboto-v20-latin-100.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* roboto-regular - latin */
@@ -26,8 +25,7 @@
   font-display: $font-display;
   src: local("Roboto"), local("Roboto-Regular"),
     url("/assets/fonts/roboto/roboto-v20-latin-regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("/assets/fonts/roboto/roboto-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto/roboto-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* roboto-500 - latin */
@@ -38,6 +36,5 @@
   font-display: $font-display;
   src: local("Roboto Medium"), local("Roboto-Medium"),
     url("/assets/fonts/roboto/roboto-v20-latin-500.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("/assets/fonts/roboto/roboto-v20-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto/roboto-v20-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }

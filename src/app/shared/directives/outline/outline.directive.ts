@@ -15,10 +15,6 @@ export class OutlineDirective implements OnInit {
 
   ngOnInit() {
     const el: HTMLElement = this.el.nativeElement;
-    el.style.outline = [
-      this.appOutline.size,
-      this.appOutline.style,
-      this.appOutline.color,
-    ].join(' ');
+    el.style.outline = [this.appOutline.size, this.appOutline.style, this.appOutline.color].join(' ');
   }
 }
