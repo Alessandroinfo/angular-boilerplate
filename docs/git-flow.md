@@ -18,6 +18,7 @@ Follow [Git branching model](https://nvie.com/posts/a-successful-git-branching-m
 
 You can also use the default git config with `git config --local include.path ../.gitconfig`
 
+> If you receive some error about a branch that doesn't exist, checkout or create it.
 ---
 
 ### Feature
