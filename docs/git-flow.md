@@ -67,12 +67,21 @@ Finish hotfix and merged to _master_
 
 User [semver](https://semver.org/) for versioning your app
 
-NOTE:
-If this error happen:
+---
+
+### Errors
+
+If you get this error:
 `Fatal: Not a gitflow-enabled repo yet. Please run 'git flow init' first`
 
 Solve by doing this:
 
 - Open the .git\config
-- Remove all the [gitflow * entries and save the file
+- Remove from `[gitflow "xxx"]` till the other brackets.
 - Rerun `git flow init`
+
+- git commit -m "Saving edits"
+- git checkout develop
+- git checkout master
+- git flow init
+
