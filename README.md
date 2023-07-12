@@ -40,6 +40,18 @@ Angular project with all the latest web best practices and libraries.
 - Cypress & e2e testing
 - Local HTTP server ready
 
+## Coding guides
+
+- [Angular Basics](docs/angular.md)
+- [Git Flow](docs/git-flow.md)
+
+## Libraries
+
+- [Firebase](docs/firebase.md)
+- [Husky](docs/husky.md)
+- [Shell scripts](docs/scripts.md)
+- [until-destroy](docs/until-destroy.md)
+
 ## Getting started
 
 ### Run app
@@ -231,14 +243,3 @@ export const environment = {
   serverUrl: '/api',
 };
 ```
-
-
-## Coding guides
-- [Angular Basics](docs/angular.md)
-- [Git Flow](docs/git-flow.md)
-
-## Libraries
-- [Firebase](docs/firebase.md)
-- [Husky](docs/husky.md)
-- [Shell scripts](docs/scripts.md)
-- [until-destroy](docs/until-destroy.md)

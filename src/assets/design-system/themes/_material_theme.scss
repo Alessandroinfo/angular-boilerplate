@@ -53,3 +53,6 @@ $theme: mat.define-light-theme(
 // @include mat.button-theme($my-theme);
 
 // Include the theme mixins for other components you use here.
+
+// TODO: The foreground color (like text color for the button with primary) it's black despite the configuration.
+//  See this to trying to solve https://github.com/angular/components/issues/6244.
