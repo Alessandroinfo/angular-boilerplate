@@ -10,10 +10,11 @@ import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 import {GlobalDataService} from '../global-data/global-data.service';
 import {GenericFacilityService} from '../generic-facility/generic-facility.service';
+import {Logger} from '@app/core/logger/logger.service';
 
-@Injectable({
-  providedIn: 'root',
-})
+const log = new Logger('LoaderInterceptorService');
+
+@Injectable()
 export class LoaderInterceptorService implements HttpInterceptor {
   constructor(
     private gcfSvc: GenericFacilityService,
@@ -21,11 +22,9 @@ export class LoaderInterceptorService implements HttpInterceptor {
   ) {}
 
   intercept(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    request: HttpRequest<any>,
+    request: HttpRequest<unknown>,
     next: HttpHandler
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ): Observable<HttpEvent<any>> {
+  ): Observable<HttpEvent<unknown>> {
     // CHECK IF EXIST NO BLOCK OVERLAY HEADER
     const blockoverlay = this.gldSvc.loadingHeaders.blockOverlay;
     const BLOCKOVERLAY_H = !!request.headers.get(blockoverlay);
@@ -120,11 +119,9 @@ export class LoaderInterceptorService implements HttpInterceptor {
       // IF THERE IS SOME ERRORS GO TO OFF LOADING AND RETURN ERRORS
       catchError((err) => {
         setTimeout(() => {
-          // if (!noLoading) {
           this.gcfSvc.setLoadingState(this.gldSvc.loadingDefaultOffState);
-          // }
         });
-        console.error('Error on interceptor handling request: ', err);
+        log.error('Error on interceptor handling request: ', err);
         return of(err);
       })
     );

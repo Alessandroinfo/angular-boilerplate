@@ -1,4 +1,3 @@
-import {Injectable} from '@angular/core';
 import {
   HttpEvent,
   HttpHandler,
@@ -6,28 +5,22 @@ import {
   HttpRequest,
 } from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {catchError, tap} from 'rxjs/operators';
-
-import {environment} from '@env/environment';
+import {catchError} from 'rxjs/operators';
 import {Logger} from '@app/core/logger/logger.service';
+import {Injectable} from '.pnpm/@angular+core@15.2.9_rxjs@7.5.5_zone.js@0.11.6/node_modules/@angular/core';
 
 const log = new Logger('ErrorHandlerInterceptor');
 
 /**
  * Adds a default error handler to all requests.
  */
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class ErrorHandlerInterceptor implements HttpInterceptor {
   intercept(
     request: HttpRequest<unknown>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
-      tap((val) => {
-        log.info('HttpEvent: ' + val);
-      }),
       catchError((error) => {
         return this.errorHandler(error);
       })
@@ -38,10 +31,8 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
   private errorHandler(
     response: HttpEvent<unknown>
   ): Observable<HttpEvent<unknown>> {
-    if (!environment.production) {
-      // Do something with the error
-      log.error('Request error', response);
-    }
+    log.error('Request error', response);
+
     throw response;
   }
 }
