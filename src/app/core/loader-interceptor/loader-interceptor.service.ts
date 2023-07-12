@@ -1,12 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
+import {Observable, throwError} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 import {GlobalDataService} from '../global-data/global-data.service';
 import {GenericFacilityService} from '../generic-facility/generic-facility.service';
-import {Logger} from '@app/core/logger/logger.service';
-
-const log = new Logger('LoaderInterceptorService');
 
 @Injectable()
 export class LoaderInterceptorService implements HttpInterceptor {
@@ -105,12 +102,12 @@ export class LoaderInterceptorService implements HttpInterceptor {
         }
       }),
       // IF THERE IS SOME ERRORS GO TO OFF LOADING AND RETURN ERRORS
-      catchError((err) => {
+      catchError((err: HttpEvent<unknown>) => {
         setTimeout(() => {
           this.gcfSvc.setLoadingState(this.gldSvc.loadingDefaultOffState);
         });
-        log.error('Error on interceptor handling request: ', err);
-        return of(err);
+
+        return throwError(() => err);
       })
     );
   }

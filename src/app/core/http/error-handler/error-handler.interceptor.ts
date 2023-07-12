@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {EMPTY, Observable} from 'rxjs';
 import {catchError} from 'rxjs/operators';
 import {Logger} from '@app/core/logger/logger.service';
 
@@ -21,8 +21,8 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
 
   // Customize the default error handler here if needed
   private errorHandler(response: HttpEvent<unknown>): Observable<HttpEvent<unknown>> {
-    log.error('Request error', response);
+    log.error('Error on interceptor handling request: ', response);
 
-    throw response;
+    return EMPTY;
   }
 }
