@@ -80,7 +80,9 @@ Solve by doing this:
 - Remove from `[gitflow "xxx"]` till the other brackets.
 - Rerun `git flow init`
 
+- git add .
 - git commit -m "Saving edits"
+- git push
 - git checkout develop
 - git checkout master
 - git flow init
