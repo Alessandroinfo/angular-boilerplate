@@ -10,16 +10,18 @@ Follow [Git branching model](https://nvie.com/posts/a-successful-git-branching-m
 - `release` created from _develop_ for merging to _master_
 - `hotfix` created from _master_ for merging to _master_
 
-
 #### Install [Git-flow](https://github.com/petervanderdoes/gitflow-avh/wiki/Installation)
 
 #### Init Git flow
 
-`git flow init` or use the default git config with `git config --local include.path ../.gitconfig`
+`git flow init` or `git flow init -f` to force the initialization.
+
+You can also use the default git config with `git config --local include.path ../.gitconfig`
 
 ---
 
 ### Feature
+
 Start new feature
 
 `git flow feature start feature-name`
