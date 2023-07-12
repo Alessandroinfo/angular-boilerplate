@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 /**
  * Simple logger system with the possibility of registering custom outputs.
  *
@@ -32,7 +34,7 @@
 
 /**
  * The possible log levels.
- * LogLevel.Off is never emitted and only used with Logger.level property to disable logs.
+ * LogLevel.Off is any emitted and only used with Logger.level property to disable logs.
  */
 export enum LogLevel {
   Off = 0,
