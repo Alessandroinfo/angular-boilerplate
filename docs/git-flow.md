@@ -81,7 +81,7 @@ Solve by doing this:
 - git push
 - git checkout develop
 - git checkout master
-- git flow init
+- git flow init -d
 
 or you can
 
