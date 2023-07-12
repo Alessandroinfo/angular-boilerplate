@@ -203,8 +203,8 @@ devDependencies:
     specifier: ^0.2.2
     version: 0.2.2(prettier@2.8.3)
   pwa-asset-generator:
-    specifier: ^6.1.0
-    version: 6.1.0
+    specifier: ^6.3.1
+    version: 6.3.1
   source-map-explorer:
     specifier: ^2.5.2
     version: 2.5.2
@@ -13104,8 +13104,8 @@ packages:
       yargs: 14.2.3
     dev: true
 
-  /pwa-asset-generator@6.1.0:
-    resolution: { integrity: sha512-mzYocnGiQ7xj2opnzMZsLi0a5Jykk5m3X5nFTu8z9RvHAOYZhe9O+L50klHyQW16KJnnlFFMfRqDiXI2l/uuxg== }
+  /pwa-asset-generator@6.3.1:
+    resolution: { integrity: sha512-iGbUvBH1T+yysr/31OsJyIbqrDUPOHZPOvCODgQmiBkbfALxF9Wqmzc9ddYYe0x07/qAurc54IAt4rDR+vaQDQ== }
     engines: { node: '>=10.12.0' }
     hasBin: true
     dependencies:
