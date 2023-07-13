@@ -11,25 +11,29 @@ Angular project with all the latest web best practices and libraries.
 
 
 ### Awards
-- 100 / 100 Lighthouse
+- 100 / 100 [Lighthouse](https://developer.chrome.com/docs/lighthouse/)
 
 ![img.png](src/assets/imgs/README/lighthouse-100.png)
 
 ### Integrations 
-- TailwindCSS & Material cooperation
-- Cordova ready
-- Husky git hooks management
+
+- [Tailwind CSS](https://tailwindcss.com/) & [Material cooperation](https://material.angular.io/)
+- [Cordova](https://cordova.apache.org/) ready
+- [Husky](https://typicode.github.io/husky/) git hooks management
 - Git-flow management
-- Eslint
-- Prettier
-- Prettier plugin TailwindCSS
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- Prettier plugin Tailwind CSS
+- [Firebase](https://firebase.google.com/)
+- [Cypress](https://www.cypress.io/) ready
 
 ### Abilities
-- PWA
+
+- [PWA](https://web.dev/progressive-web-apps/)
 - Icons generator from SVG
 - [Skip link](docs/skip-link.md)
 - Custom webpack
-- App-shell
+- [App-shell](https://developer.chrome.com/blog/app-shell/)
 - Loader CSS (Before the boot for FCP)
 - Login authentication
 - Bundle compression
@@ -37,7 +41,7 @@ Angular project with all the latest web best practices and libraries.
 - Check bundle size
 - Index transform
 - Log based on environment
-- Cypress & e2e testing
+- [Cypress](https://www.cypress.io/) & e2e testing
 - Local HTTP server ready
 
 ## Coding guides
@@ -78,7 +82,7 @@ Launch local server with `test` configuration and open the app on browser
 `.npmrc` contain rules to restrict Node.js version.
 In the package.json the property `engines.node` set the version must used to install dependencies.
 
-> You need to run `npm run generate-asset` before run the application if you want the generated assets of each size.
+> You need to run `npm run start-generated` if you want the app with generated assets of each size.
 
 ### Project structure
 
@@ -117,7 +121,7 @@ src/                             Source code directory
 ├── test.ts                      Test script file
 └── typings.d.ts                 TypeScript typings file
 cypress/                         End-to-end testing directory
-cypress.config.ts                Cypress configuration file
+cypress.config.js                Cypress configuration file
 docs/                            Documentation directory
 README.md                        Project README file
 firebase.json                    Firebase configuration file
@@ -157,6 +161,7 @@ Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 |---------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ng-local                        | Use this as npm run ng-local <angularCommandHere> to use local Angular CLI version. See [this](https://github.com/angular/angular-cli/issues/5955#issuecomment-320273493). |
 | start                           | Start the development server on `http://localhost:3001/` and open browser                                                                                                  |
+| start-generated                 | Generate assets and start the development server on `http://localhost:3001/` and open browser                                                                              |
 | start-dist                      | Serve the local dist/ build on `http://localhost:8080/`                                                                                                                    |
 | build                           | Build the production version of the app                                                                                                                                    |
 | build:app-shell:demo            | Build a demo app shell                                                                                                                                                     |
