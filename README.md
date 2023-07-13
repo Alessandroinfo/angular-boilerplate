@@ -82,7 +82,7 @@ Launch local server with `test` configuration and open the app on browser
 `.npmrc` contain rules to restrict Node.js version.
 In the package.json the property `engines.node` set the version must used to install dependencies.
 
-> You need to run `npm run generate-asset` before run the application if you want the generated assets of each size.
+> You need to run `npm run start-generated` if you want the app with generated assets of each size.
 
 ### Project structure
 
@@ -161,6 +161,7 @@ Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 |---------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ng-local                        | Use this as npm run ng-local <angularCommandHere> to use local Angular CLI version. See [this](https://github.com/angular/angular-cli/issues/5955#issuecomment-320273493). |
 | start                           | Start the development server on `http://localhost:3001/` and open browser                                                                                                  |
+| start-generated                 | Generate assets and start the development server on `http://localhost:3001/` and open browser                                                                              |
 | start-dist                      | Serve the local dist/ build on `http://localhost:8080/`                                                                                                                    |
 | build                           | Build the production version of the app                                                                                                                                    |
 | build:app-shell:demo            | Build a demo app shell                                                                                                                                                     |
