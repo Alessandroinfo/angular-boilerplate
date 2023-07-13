@@ -43,13 +43,33 @@ Angular project with all the latest web best practices and libraries.
 ## Getting started
 
 ### Run app
+
 Install dependencies:
+
 - `npm i`
 
+<blockquote>
+To ensure you use the same version of Node.js and npm you can use [nvm](https://github.com/nvm-sh/nvm).
+
+After installed nvm:
+
+- `nvm install`
+- `nvm use`
+
+This will install and use the version of node configured in `.nvmrc`.
+</blockquote>
+
 Launch local server with `test` configuration and open the app on browser
+
 - `npm start`
 
+`.npmrc` contain rules to restrict Node.js version.
+In the package.json the property `engines.node` set the version must used to install dependencies.
+
+> You need to run `npm run generate-asset` before run the application if you want the generated assets of each size.
+
 ### Project structure
+
 ```
 dist/                            Compiled production code
 .husky/                          Git hooks directory
