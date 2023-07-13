@@ -17,7 +17,7 @@ const log = new Logger('Login');
   template: `
     <!-- GitHub Badge -->
     <div
-      class="absolute right-0 mt-10 -mr-8 flex w-36 rotate-45 items-center justify-center bg-gray-50 opacity-90"
+      class="absolute right-0 -mr-8 mt-10 flex w-36 rotate-45 items-center justify-center bg-gray-50 opacity-90"
       [class.hidden]="hideGitHub"
       (click)="hideGitHub = !hideGitHub">
       <a

@@ -11,25 +11,28 @@ Angular project with all the latest web best practices and libraries.
 
 
 ### Awards
-- 100 / 100 Lighthouse
+- 100 / 100 [Lighthouse](https://developer.chrome.com/docs/lighthouse/)
 
 ![img.png](src/assets/imgs/README/lighthouse-100.png)
 
 ### Integrations 
-- TailwindCSS & Material cooperation
-- Cordova ready
-- Husky git hooks management
+
+- [Tailwind CSS](https://tailwindcss.com/) & [Material cooperation](https://material.angular.io/)
+- [Cordova](https://cordova.apache.org/) ready
+- [Husky](https://typicode.github.io/husky/) git hooks management
 - Git-flow management
-- Eslint
-- Prettier
-- Prettier plugin TailwindCSS
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- Prettier plugin Tailwind CSS
+- [Firebase](https://firebase.google.com/)
 
 ### Abilities
-- PWA
+
+- [PWA](https://web.dev/progressive-web-apps/)
 - Icons generator from SVG
 - [Skip link](docs/skip-link.md)
 - Custom webpack
-- App-shell
+- [App-shell](https://developer.chrome.com/blog/app-shell/)
 - Loader CSS (Before the boot for FCP)
 - Login authentication
 - Bundle compression
@@ -37,8 +40,20 @@ Angular project with all the latest web best practices and libraries.
 - Check bundle size
 - Index transform
 - Log based on environment
-- Cypress & e2e testing
+- [Cypress](https://www.cypress.io/) & e2e testing
 - Local HTTP server ready
+
+## Coding guides
+
+- [Angular Basics](docs/angular.md)
+- [Git Flow](docs/git-flow.md)
+
+## Libraries
+
+- [Firebase](docs/firebase.md)
+- [Husky](docs/husky.md)
+- [Shell scripts](docs/scripts.md)
+- [until-destroy](docs/until-destroy.md)
 
 ## Getting started
 
@@ -227,14 +242,3 @@ export const environment = {
   serverUrl: '/api',
 };
 ```
-
-
-## Coding guides
-- [Angular Basics](docs/angular.md)
-- [Git Flow](docs/git-flow.md)
-
-## Libraries
-- [Firebase](docs/firebase.md)
-- [Husky](docs/husky.md)
-- [Shell scripts](docs/scripts.md)
-- [until-destroy](docs/until-destroy.md)
