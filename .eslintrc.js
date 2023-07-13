@@ -15,12 +15,7 @@ module.exports = {
       files: ['*.ts'],
       excludedFiles: ['*.spec.ts', '*.d.ts'],
       parserOptions: {
-        project: [
-          'tsconfig.json',
-          'tsconfig.spec.json',
-          'tsconfig.server.json',
-          'e2e/tsconfig.json',
-        ],
+        project: ['tsconfig.json', 'tsconfig.spec.json', 'tsconfig.server.json', 'e2e/tsconfig.json'],
         createDefaultProgram: true,
       },
       extends: [
@@ -51,10 +46,7 @@ module.exports = {
         ],
         // Allow Angular Life Cycle empty methods and empty constructor
         '@angular-eslint/no-empty-lifecycle-method': 'off',
-        '@typescript-eslint/no-empty-function': [
-          'error',
-          {allow: ['constructors', 'methods']},
-        ],
+        '@typescript-eslint/no-empty-function': ['error', {allow: ['constructors', 'methods']}],
         'no-empty-function': ['error', {allow: ['constructors', 'methods']}],
         indent: 'off',
         'linebreak-style': ['error', 'unix'],
