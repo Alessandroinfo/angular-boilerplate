@@ -8,6 +8,7 @@ Here's a brief guide on how to use Firebase Hosting in your Angular project:
 Create a Firebase account if you don't have one already.
 
 - Install the Firebase CLI by running `npm install -g firebase-tools`.
+- Log out to Firebase CLI by running `firebase logout`.
 - Log in to Firebase CLI by running `firebase login`.
 - Create a Firebase project by running `firebase init`. This will prompt you to select the Firebase features you want to use for your project, such as Firebase Hosting.
 - Follow the prompts to configure Firebase Hosting for your project. This will involve selecting a Firebase project to use, setting up the hosting configuration file (`firebase.json`), and choosing a directory to host your app files.
@@ -22,6 +23,7 @@ Here are the Firebase CLI commands that you can use for Firebase Hosting:
 - `firebase init`: This command initializes Firebase for your project and sets up the necessary configuration files, including firebase.json.
 - `firebase deploy`: This command deploys your `dist/` app to Firebase Hosting.
 
+> If you get this error : "Error: Failed to get Firebase project ..." try to do `firebase logout` and `firebase login`
 
 ### Firebase Hosting Configuration
 Here's an example `firebase.json` configuration file for an Angular project:

@@ -14,10 +14,7 @@ export class FocusDirective implements OnChanges {
   }
 
   private checkFocus() {
-    if (
-      this.appFocus &&
-      document.activeElement !== this.elementRef.nativeElement
-    ) {
+    if (this.appFocus && document.activeElement !== this.elementRef.nativeElement) {
       const focus = () => {
         this.elementRef.nativeElement.focus();
       };

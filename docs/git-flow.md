@@ -18,6 +18,7 @@ Follow [Git branching model](https://nvie.com/posts/a-successful-git-branching-m
 
 You can also use the default git config with `git config --local include.path ../.gitconfig`
 
+> If you receive some error about a branch that doesn't exist, checkout or create it.
 ---
 
 ### Feature
@@ -66,12 +67,24 @@ Finish hotfix and merged to _master_
 
 User [semver](https://semver.org/) for versioning your app
 
-NOTE:
-If this error happen:
+---
+
+### Errors
+
+If you get this error:
 `Fatal: Not a gitflow-enabled repo yet. Please run 'git flow init' first`
 
 Solve by doing this:
 
+- git add .
+- git commit -m "Saving edits"
+- git push
+- git checkout develop
+- git checkout master
+- git flow init -d -f
+
+or you can
+
 - Open the .git\config
-- Remove all the [gitflow * entries and save the file
+- Remove from `[gitflow "xxx"]` till the other brackets.
 - Rerun `git flow init`

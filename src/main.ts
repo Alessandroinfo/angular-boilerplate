@@ -51,18 +51,9 @@ function bootstrapLogManagement() {
   /**
    * Console messages on boot
    */
-  console.group(
-    '%c Welcome to Angular-boilerplate console.',
-    'background: black; color: #2ec4b6'
-  );
-  console.log(
-    '%c Environment: ' + environment.env,
-    'background: black; color: #2ec4b6'
-  );
-  console.log(
-    '%c Version: ' + environment.appVersion,
-    'background: black; color: #2ec4b6'
-  );
+  console.group('%c Welcome to Angular-boilerplate console.', 'background: black; color: #2ec4b6');
+  console.log('%c Environment: ' + environment.env, 'background: black; color: #2ec4b6');
+  console.log('%c Version: ' + environment.appVersion, 'background: black; color: #2ec4b6');
   console.log(
     '%c WARNING: THIS IS A TOOL FOR DEVELOPERS ONLY. BE CAREFUL WHAT YOU DO HERE.',
     'background: black; color: red'

@@ -140,15 +140,17 @@ tsconfig.json                    Root TypeScript configuration file
 tsconfig.server.json             TypeScript configuration file for the server
 tsconfig.spec.json               TypeScript configuration file for tests
 webpack.config.js                Webpack configuration file
-.browserslistrc:                 Contains a list of browser versions to support.
-.depcheckrc:                     Configuration file for the DepCheck tool, which checks dependencies.
-.editorconfig:                   Configuration file that defines coding styles for different editors and IDEs.
-.eslintignore:                   Specifies files and directories to be excluded from ESLint linting.
-.eslintrc.cjs:                    Configuration file for the ESLint tool, which checks for code quality and consistency.
-.firebaserc:                     Configuration file for Firebase projects.
-.lintstagedrc:                   Configuration file for the lint-staged tool, which allows linting only staged files.
-.prettierignore:                 Specifies files and directories to be excluded from Prettier code formatting.
-.prettierrc:                     Configuration file for the Prettier code formatter, which helps enforce consistent code style.
+.browserslistrc                 Contains a list of browser versions to support.
+.depcheckrc                     Configuration file for the DepCheck tool, which checks dependencies.
+.editorconfig                   Configuration file that defines coding styles for different editors and IDEs.
+.eslintignore                   Specifies files and directories to be excluded from ESLint linting.
+.eslintrc.js                    Configuration file for the ESLint tool, which checks for code quality and consistency.
+.firebaserc                     Configuration file for Firebase projects.
+.lintstagedrc                   Configuration file for the lint-staged tool, which allows linting only staged files.
+.prettierignore                 Specifies files and directories to be excluded from Prettier code formatting.
+.prettierrc                     Configuration file for the Prettier code formatter, which helps enforce consistent code style.
+.npmrc                          Configuration file for npm
+.nvmrc                          Configuration file for nvm, it contain the Node.js version target
 ```
 
 ## Main Tasks
@@ -167,12 +169,14 @@ Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 | bundle-analyze                  | Build the app and analyze the bundle size                                                                                                                                  |
 | compress-dist                   | Compress the `dist/` build with gzip                                                                                                                                       |
 | generate-asset                  | Generate PWA assets for the app                                                                                                                                            |
+| firebase-logout                 | Log out from Firebase                                                                                                                                                      |
 | firebase-login                  | Log in to Firebase                                                                                                                                                         |
 | firebase-init                   | Initialize Firebase for the project                                                                                                                                        |
 | firebase-deploy                 | Deploy the app to Firebase                                                                                                                                                 |
 | deploy-app                      | Generate PWA assets, format the index, build the production version, and deploy                                                                                            |
 | deploy-app-shell:demo           | Build and deploy a demo app shell                                                                                                                                          |
 | deploy-app-shell:production     | Build and deploy a production app shell                                                                                                                                    |
+| cordova-install                 | Install Cordova                                                                                                                                                            |
 | cordova-init                    | Create a Cordova project                                                                                                                                                   |
 | cordova-add:osx                 | Add the OSX platform to the Cordova project                                                                                                                                |
 | cordova-add:windows             | Add the Windows platform to the Cordova project                                                                                                                            |

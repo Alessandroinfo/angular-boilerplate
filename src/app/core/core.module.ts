@@ -4,8 +4,8 @@ import {LoaderInterceptorService} from './loader-interceptor/loader-interceptor.
 import {GenericFacilityService} from './generic-facility/generic-facility.service';
 import {ApiService} from './api/api.service';
 import {CommonModule} from '@angular/common';
-import {ApiPrefixInterceptor} from '@app/core/http/api-prefix.interceptor';
-import {ErrorHandlerInterceptor} from '@app/core/http/error-handler.interceptor';
+import {ApiPrefixInterceptor} from '@app/core/http/api-prefix/api-prefix.interceptor';
+import {ErrorHandlerInterceptor} from '@app/core/http/error-handler/error-handler.interceptor';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule],
@@ -32,9 +32,7 @@ import {ErrorHandlerInterceptor} from '@app/core/http/error-handler.interceptor'
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
     if (parentModule) {
-      throw new Error(
-        'CoreModule is already loaded. Import it in the AppModule only'
-      );
+      throw new Error('CoreModule is already loaded. Import it in the AppModule only');
     }
   }
 }

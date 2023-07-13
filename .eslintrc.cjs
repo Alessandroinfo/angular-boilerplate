@@ -29,6 +29,10 @@ module.exports = {
         'plugin:@angular-eslint/template/process-inline-templates',
       ],
       rules: {
+        // Note: you must disable the base rule as it can report incorrect errors
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', {args: 'after-used'}],
+        '@typescript-eslint/no-explicit-any': 'error',
         '@angular-eslint/directive-selector': [
           'error',
           {
