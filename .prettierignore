@@ -2,3 +2,4 @@ node_modules
 .firebase
 .github
 package.json
+cypress
