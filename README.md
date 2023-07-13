@@ -25,6 +25,7 @@ Angular project with all the latest web best practices and libraries.
 - [Prettier](https://prettier.io/)
 - Prettier plugin Tailwind CSS
 - [Firebase](https://firebase.google.com/)
+- [Cypress](https://www.cypress.io/) ready
 
 ### Abilities
 
@@ -143,7 +144,7 @@ webpack.config.js                Webpack configuration file
 .depcheckrc:                     Configuration file for the DepCheck tool, which checks dependencies.
 .editorconfig:                   Configuration file that defines coding styles for different editors and IDEs.
 .eslintignore:                   Specifies files and directories to be excluded from ESLint linting.
-.eslintrc.js:                    Configuration file for the ESLint tool, which checks for code quality and consistency.
+.eslintrc.cjs:                    Configuration file for the ESLint tool, which checks for code quality and consistency.
 .firebaserc:                     Configuration file for Firebase projects.
 .lintstagedrc:                   Configuration file for the lint-staged tool, which allows linting only staged files.
 .prettierignore:                 Specifies files and directories to be excluded from Prettier code formatting.
