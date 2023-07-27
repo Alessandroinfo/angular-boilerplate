@@ -1,6 +1,6 @@
 {
   "name": "angular-boilerplate",
-  "version": "3.1.8",
+  "version": "3.1.9",
   "repository": {
     "url": "https://github.com/Alessandroinfo/angular-boilerplate",
     "type": "git"
@@ -90,7 +90,7 @@
     "@typescript-eslint/eslint-plugin": "~5.53.0",
     "@typescript-eslint/parser": "~5.53.0",
     "autoprefixer": "^10.4.7",
-    "cypress": "~12.5.0",
+    "cypress": "~12.17.2",
     "depcheck": "^1.4.3",
     "eslint": "~8.34.0",
     "eslint-plugin-import": "~2.27.5",
